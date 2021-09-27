@@ -43,6 +43,38 @@ canvas{
   vertical-align:bottom;
 }
 
+h1{
+  font-size: 22px;
+}
+
+h2{
+  font-size: 18px;
+}
+
+P{
+  font-size: 14px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+a:active {
+  text-decoration: underline;
+  color: white;
+}
+
 /* ---- particles.js container ---- */
 
 #particles-js{
@@ -53,4 +85,24 @@ canvas{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
