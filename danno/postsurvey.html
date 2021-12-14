@@ -27,6 +27,7 @@
   </blockquote>
   <!--INSTRUCTIONS-->
   <h6 class="text-center">Please fill out the survey below, based on the video, then click submit! If you would like to withdraw, please close the page. No information is saved until you hit the submit button.</h6>
+  <h6 class="text-center">Hold down <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on Mac) key to unselect.</h6>
   <br>
   <!--FORM-->
   <form method="post" action="https://script.google.com/macros/s/AKfycbyIgzDiEJIUSe_5NiSKDWoI3x36dU4wZWRlwpoRVEpEJ_6a4XfSbc4xGd7-na2OcFkt/exec" class="row g-3 needs-validation" style="padding-right: 100px; padding-left: 100px;" novalidate>
@@ -272,5 +273,15 @@
   </form>
   <br>
   <br>
+  <script>
+    var radios = document.getElementsByTagName('input');
+    for(i=0; i<radios.length; i++ ) {
+        radios[i].onclick = function(e) {
+            if(e.ctrlKey || e.metaKey) {
+                this.checked = false;
+            }
+        }
+    }
+  </script>
 </body>
 </html>
