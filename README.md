@@ -25,7 +25,6 @@
   <a href="#key-features">Key Features</a> •
   <a href="#support">Support</a> •
   <a href="#contributing">Contributing</a> •
-  <a href="#changelog">Changelog</a> •
   <a href="#credits">Credits & Contributors</a>
 </p>
 
@@ -48,10 +47,6 @@ More documentation is available in the **[Documentation](https://github.com/will
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/willtheorangeguy/willtheorangeguy.github.io/compare).
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
-
-## Changelog
-
-See the [`CHANGELOG`](CHANGELOG.md) file for details.
 
 ## Credits
 
