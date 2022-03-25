@@ -1,9 +1,6 @@
 <!-- Logo -->
 <h1 align="center">
   <img src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/logo.png" height="250px" width="400px" alt="willtheorangeguy.github.io">
-  <br>
-  willtheorangeguy.github.io
-  <br>
 </h1>
 
 <!-- Copy -->
@@ -64,9 +61,9 @@ This software uses the following open source packages, projects, services or web
 <table>
   <tr>
     <th align="center"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="150" height="150" alt="GitHub"/></th>
-    <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C%C2%AE_Icon.svg/1200px-W3C%C2%AE_Icon.svg.png" width="250" height="150" alt="W3C"/></th>
+    <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="200" height="150" alt="W3C"/></th>
     <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="250" height="150" alt="W3Schools"/></th>
-    <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png" width="250" height="150" alt="Particles.js"/></th>
+    <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png" width="350" height="150" alt="Particles.js"/></th>
   </tr>
   <tr>
     <td align="center">GitHub</td>
