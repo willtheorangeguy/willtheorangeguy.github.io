@@ -46,7 +46,7 @@
 
 **To access the latest version of the website visit it at [willtheorangeguy.github.io](https://willtheorangeguy.github.io/).** 
 
-**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
+**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub [above](https://github.com/willtheorangeguy/willtheorangeguy.github.io/archive/refs/heads/main.zip). From your command line:
 
 ```bash
 # Clone this repository
@@ -77,7 +77,7 @@ This software uses the following open source packages, projects, services or web
     <th align="center"><img src="https://applets.imgix.net/https%3A%2F%2Fassets.ifttt.com%2Fimages%2Fchannels%2F2107379463%2Ficons%2Fmonochrome_large.png?w=240&h=240&s=8a19bbc158996d098e2fb18310ba7f33" width="150" height="150" alt="GitHub"/></th>
     <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="150" height="150" alt="W3C"/></th>
     <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="150" height="150" alt="W3Schools"/></th>
-    <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png" width="350" height="150" alt="Particles.js"/></th>
+    <th align="center"><img src="https://static.npmjs.com/c426a1116301d1fd178c51522484127a.png" width="150" height="150" alt="Particles.js"/></th>
   </tr>
   <tr>
     <td align="center">GitHub</td>
