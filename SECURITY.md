@@ -6,12 +6,7 @@ If you believe you have found a security vulnerability in any repository, please
 
 ## Supported Versions
 
-The following versions of PyWorkout are currently supported:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| `1.1.x` | :white_check_mark: |
-| `0.x.x` | :x:                |
+All versions of the website are supported, as development is continous.
 
 ## Reporting a Vulnerability
 
