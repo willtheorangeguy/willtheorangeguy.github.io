@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Last updated: March 01, 2022.
+Last updated: August 26, 2022.
 
 Please read these terms and conditions carefully before using willtheorangeguy.github.io.
 
