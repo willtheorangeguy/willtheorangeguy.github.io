@@ -58,8 +58,6 @@ The Company may use Personal Data for the following purposes:
 
 The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
 
-**Personal data is only recorded locally on the computer, and never sent to servers.**
-
 ## Disclosure of Your Personal Data
 
 ### Business Transactions
