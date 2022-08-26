@@ -10,7 +10,11 @@
 <div align="center">
   <!-- Stability -->
   <img alt="GitHub Actions State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/pages/pages-build-deployment/badge.svg">
-    <!-- Issues -->
+  <!-- CodeQL -->
+  <img alt="CodeQL State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/codeql.yml/badge.svg">
+  <!-- Gitleaks -->
+  <img alt="Gitleaks State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/gitleaks.yml/badge.svg">
+  <!-- Issues -->
   <img alt="GitHub Issues" src="https://img.shields.io/github/issues/willtheorangeguy/willtheorangeguy.github.io">
   <!-- Pull Requests -->
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/willtheorangeguy/willtheorangeguy.github.io">
@@ -23,7 +27,7 @@
 <!-- Navigation -->
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#support">Support</a> •
+  <a href="#how-to-use">How To Use</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#credits">Credits & Contributors</a>
 </p>
@@ -38,9 +42,24 @@
 * Displays links to all of my personal projects.
 * Cross platform, web browser based.
 
-## Support
+## How To Use
 
-More documentation is available in the **[Documentation](https://github.com/willtheorangeguy/willtheorangeguy.github.io/tree/main/docs)** and on the **[Wiki](https://github.com/willtheorangeguy/willtheorangeguy.github.io/wiki)**. If more support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/willtheorangeguy.github.io/discussions/new)** or join our **[Discord](https://discord.gg/axMJXSRvTJ)**.
+**To access the latest version of the website visit it at [willtheorangeguy.github.io](https://willtheorangeguy.github.io/).** 
+
+**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub [above](https://github.com/willtheorangeguy/willtheorangeguy.github.io/archive/refs/heads/main.zip). From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/willtheorangeguy/Nginx-File-Directory.git
+
+# Go into the repository
+$ cd Nginx-File-Directory
+
+# Run the webpage
+$ index.html
+```
+
+If support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/willtheorangeguy.github.io/discussions/new)** or join our **[Discord](https://discord.gg/axMJXSRvTJ)**.
 
 ## Contributing
 
@@ -55,10 +74,10 @@ This software uses the following open source packages, projects, services or web
 <!-- Credits Table -->
 <table>
   <tr>
-    <th align="center"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="150" height="150" alt="GitHub"/></th>
-    <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="200" height="150" alt="W3C"/></th>
-    <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="250" height="150" alt="W3Schools"/></th>
-    <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png" width="350" height="150" alt="Particles.js"/></th>
+    <th align="center"><img src="https://applets.imgix.net/https%3A%2F%2Fassets.ifttt.com%2Fimages%2Fchannels%2F2107379463%2Ficons%2Fmonochrome_large.png?w=240&h=240&s=8a19bbc158996d098e2fb18310ba7f33" width="150" height="150" alt="GitHub"/></th>
+    <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="150" height="150" alt="W3C"/></th>
+    <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="150" height="150" alt="W3Schools"/></th>
+    <th align="center"><img src="https://static.npmjs.com/c426a1116301d1fd178c51522484127a.png" width="150" height="150" alt="Particles.js"/></th>
   </tr>
   <tr>
     <td align="center">GitHub</td>
