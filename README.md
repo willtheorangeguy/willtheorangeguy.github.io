@@ -46,7 +46,7 @@
 
 **To access the latest version of the website visit it at [willtheorangeguy.github.io](https://willtheorangeguy.github.io/).** 
 
-**To clone and run your own copy of this website**, you'll need Git installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
+**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
 
 ```bash
 # Clone this repository
