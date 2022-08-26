@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: March 01, 2022.
+Last updated: August 26, 2022.
 
 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
 
@@ -34,34 +34,29 @@ For the purposes of this Privacy Policy:
 
 ### Personal Data
 
-While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to: 
 
-- Usage Data
-- Workout Data
+- Information used to sign up for surveys (surveys)
+- Responses given in a survey (surveys)
+- Comments left on the blog (comments)
 
-### Usage Data
+### Surveys
 
-Usage Data is collected automatically and anonymously when using the Service.
+Information given during the sign up process for a survey is used only to ensure the same person does not sign up twice, and to catagorize data between adults and teenagers. This information is kept seperate from survey responses. Survey responses are stored as the anonymized data from filling out the survey.
 
-Usage Data may include information such as Your Device's operating system, Python version, local time and timezone. If the `video` function is used, it also includes video files in the folders you direct the program to.
+### Comments
 
-### Workout Data
-
-Usage Data is collected automatically and anonymously when using the Service.
-
-Workout Data may include information such as time to complete workout, workout type, number of sets and number of reps.
+Comments left on the blog contain your name and the comment text. This is used to share your comment with others who view the blog, as well as attribute them to your name.
 
 ## Use of Your Personal Data
 
 The Company may use Personal Data for the following purposes:
 
-- **To provide and maintain our Service**, this data is necessary to create a good user experience that follows all of the objectives set out by the code.
+- **To provide and maintain our Service**, this data is necessary to create a good user experience that follows all of the objectives set out by the code. This data is not shared with any third party.
 
 ## Retention of Your Personal Data
 
 The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
-
-**Personal data is only recorded locally on the computer, and never sent to servers.**
 
 ## Disclosure of Your Personal Data
 
