@@ -50,10 +50,10 @@
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/willtheorangeguy/Nginx-File-Directory.git
+$ git clone https://github.com/willtheorangeguy/willtheorangeguy.github.io.git
 
 # Go into the repository
-$ cd Nginx-File-Directory
+$ cd willtheorangeguy.github.io
 
 # Run the webpage
 $ index.html
