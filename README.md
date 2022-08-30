@@ -44,7 +44,7 @@
 
 ## How To Use
 
-**To access the latest version of the website visit it at [willtheorangeguy.github.io](https://willtheorangeguy.github.io/).** 
+**To access the latest version of the website visit it at [willtheorangeguy.github.io](https://willtheorangeguy.github.io/).**
 
 **To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub [above](https://github.com/willtheorangeguy/willtheorangeguy.github.io/archive/refs/heads/main.zip). From your command line:
 
