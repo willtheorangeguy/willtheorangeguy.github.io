@@ -6,7 +6,7 @@ If you believe you have found a security vulnerability in any repository, please
 
 ## Supported Versions
 
-All versions of the website are supported, as development is continous.
+All versions of the website are supported, as development is continuos.
 
 ## Reporting a Vulnerability
 
@@ -21,4 +21,4 @@ Please open an [issue](https://github.com/willtheorangeguy/willtheorangeguy.gith
 * Impact of the issue, including how an attacker might exploit the issue
 * This information will help us triage your report more quickly.
 
-Contributions should follow the [`CODE_OF_CONDUCT`](CODE_OF_CONDUCT.md) and [`CONTRIBUTING`](CONTRIBUTING.md) documents. 
+Contributions should follow the [`CODE_OF_CONDUCT`](CODE_OF_CONDUCT.md) and [`CONTRIBUTING`](CONTRIBUTING.md) documents.
