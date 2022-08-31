@@ -16,6 +16,8 @@
   <img alt="CodeQL State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/codeql.yml/badge.svg">
   <!-- Gitleaks -->
   <img alt="Gitleaks State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/gitleaks.yml/badge.svg">
+  <!-- Version -->
+  <img alt="GitHub Version" src="https://img.shields.io/github/v/release/willtheorangeguy/willtheorangeguy.github.io">
   <!-- Issues -->
   <img alt="GitHub Issues" src="https://img.shields.io/github/issues/willtheorangeguy/willtheorangeguy.github.io">
   <!-- Pull Requests -->
