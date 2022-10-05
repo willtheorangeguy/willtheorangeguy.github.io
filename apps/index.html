@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sindre Sorhus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sindresorhus">
+<meta name="twitter:creator" content="@sindresorhus">
+<meta name="x-build-time" content="Tue, 04 Oct 2022 14:07:03 GMT">
+<link rel="alternate" type="application/rss+xml" title="Sindre Sorhus' blog" href="https://medium.com/feed/sindre-sorhus">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>">
+<script async src="https://gc.zgo.at/count.js" data-goatcounter="https://sindresorhus.goatcounter.com/count"></script>
+<title>Apps — Sindre Sorhus</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Full-Time Open-Sourcerer & Aspiring Rebel" />
+<meta property="og:title" content="Apps — Sindre Sorhus" />
+<meta property="og:description" content="Full-Time Open-Sourcerer & Aspiring Rebel" />
+<meta property="og:url" content="https://sindresorhus.com/apps.html" />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="apps.html" />
+<link rel="stylesheet" href="assets/e924bd92.540a090c.css" /></head>
+<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+<style>
+html {
+	scroll-padding-top: 80px; /* The header has 72px height and we add some padding */
+}
+</style>
+<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+<div class="flex justify-between">
+<a class="flex items-center" href="index.html">
+<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+Sindre Sorhus
+</span>
+</a>
+<div class="flex items-center md:hidden">
+<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-toggle-menu>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16" /><path d="M4 16h16" /></g></svg>
+</button>
+</div>
+</div>
+<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base">
+<li>
+<a href="https://sindresorhus.com/apps" class="underline underline-offset-[7px] decoration-[3px] decoration-secondary-500 font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Apps</a>
+</li>
+
+<li>
+<a href="https://sindresorhus.com/donate" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Donate</a>
+</li>
+<li>
+<a href="https://sindresorhus.com/supporters" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Supporters</a>
+</li>
+<li>
+<a href="https://sindresorhus.com/about" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">About</a>
+</li>
+<li class="md:hidden">
+<a href="https://sindresorhus.com/contact" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Contact</a>
+</li>
+<li>
+<a href="https://medium.com/sindre-sorhus" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Blog ›</a>
+</li>
+
+<li class="md:hidden">
+<a href="https://github.com/sindresorhus" class=" font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">GitHub</a>
+</li>
+</ul>
+<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+<div class="hidden items-center md:flex">
+
+<a href="https://sindresorhus.com/contact" aria-label="Contact" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="2" /><path d="m3 7 9 6 9-6" /></g></svg>
+</a>
+<a href="https://github.com/sindresorhus" aria-label="Sindre Sorhus's Github profile" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg>
+</a>
+</div>
+</div>
+</nav>
+</div>
+</header><main>
+<div class="bg-slate-50 dark:bg-inherit">
+<section class="container sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto">
+<header>
+
+<h1 class="text-center text-4xl md:text-6xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
+Quality crafted
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">apps</span>
+</h1>
+
+
+</header>
+<section class="mx-auto grid sm:gap-12 grid-cols-1 lg:grid-cols-2 sm:p-1 my-12 dark:text-white">
+<a href="https://sindresorhus.com/quick-launch" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/quick-launch/icon.png" width="128" height="128" class="p-[12px]">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Quick Launch</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Open websites, apps, and shortcuts from the Lock Screen</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-teal-100 dark:bg-teal-200">new!</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/favorites-widget" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/favorites-widget/icon.png" width="128" height="128" class="p-[12px]">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Favorites Widget</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Contacts on your Lock Screen and Home Screen</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-teal-100 dark:bg-teal-200">new!</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/lock-screen-one" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/lock-screen-one/icon.png" width="128" height="128" class="p-[12px]">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Lock Screen One</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Put any text on the Lock Screen</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-teal-100 dark:bg-teal-200">new!</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/velja" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/velja/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Velja</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Powerful browser picker</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/folder-peek" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/folder-peek/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Folder Peek</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Put folders in your menu bar</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/pure-paste" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/pure-paste/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Pure Paste</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Paste as plain text by default</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/one-thing" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/one-thing/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">One Thing</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Put a single task or goal in your menu bar</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/speediness" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/speediness/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Speediness</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Check your internet speed</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/actions" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/actions/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Actions</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Additional actions for the Shortcuts app</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span><span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/pandan" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/pandan/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Pandan</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Time awareness in your menu bar</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/system-color-picker" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/system-color-picker/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">System Color Picker</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">The familiar color picker supercharged</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/utc-time" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/utc-time/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">UTC Time</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Show the time in UTC in the menu bar or a widget</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/plug" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/plug/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Plug</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Discover &amp; listen to music from Hype Machine</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/photo-widget" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/photo-widget/icon.png" width="128" height="128" class="p-[12px]">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Photo Widget</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Photos on your home screen using widgets</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span><span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS (Apple Silicon)</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/shareful" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/shareful/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Shareful</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Give the macOS share menu superpowers</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/recordia" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/recordia/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Recordia</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Quickly record audio</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/jiffy" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/jiffy/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Jiffy</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Discover &amp; share the best GIFs</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/pasteboard-viewer" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/pasteboard-viewer/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Pasteboard Viewer</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Inspect the system pasteboards</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/plash" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/plash/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Plash</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Make any website your desktop wallpaper</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/dato" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/dato/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Dato</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Better menu bar clock with calendar and time zones</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/gifski" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/gifski/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Gifski</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Convert videos to high-quality GIFs</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/kap" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/kap/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Kap</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Record your screen</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/black-out" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/black-out/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Black Out</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Hide sensitive parts of an image</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/heic-converter" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/heic-converter/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">HEIC Converter</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Convert HEIC images to JPEG or PNG</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/lungo" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/lungo/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Lungo</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Prevent your Mac from going to sleep</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/touch-bar-simulator" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/touch-bar-simulator/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Touch Bar Simulator</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Use the Touch Bar on any Mac</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/battery-indicator" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/battery-indicator/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Battery Indicator</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Remaining battery time in your menu bar</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span>
+</div>
+</div>
+</a><a href="caprine.html" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/caprine/icon.png" width="128" height="128" class="">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Caprine</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Elegant Facebook Messenger desktop app</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">macOS</span><span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">Linux</span><span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">Windows</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a><a href="https://sindresorhus.com/blear" class="flex py-6 px-2 sm:p-6 bg-white dark:bg-black/40 sm:rounded-xl shadow-md dark:shadow-lg hover:shadow-xl dark:hover:sm:shadow-indigo-500/20 transition duration-500 dark:sm:border dark:border-slate-800">
+<div class="flex-initial flex-shrink-0 justify-center mr-2 sm:mr-3">
+<img src="apps/blear/icon.png" width="128" height="128" class="p-[12px]">
+</div>
+<div class="my-3 mr-2">
+<div class="mb-0.5 text-2xl sm:text-3xl font-bold">Blear</div>
+<div class="text-gray-500 dark:text-gray-400 text-lg sm:text-xl">Transform photos into blurry wallpapers</div>
+<div class="mt-0.5 sm:mt-1">
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-sky-100/90 dark:bg-sky-200">iOS</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">free</span>
+<span class="text-[10px] inline-flex items-center font-bold leading-sm px-1.5 text-black/70 dark:text-black rounded-lg mr-1 bg-neutral-100 dark:bg-neutral-200">open-source</span>
+</div>
+</div>
+</a>
+</section>
+</section>
+</div>
+</main><footer class="border-t border-gray-200 dark:border-slate-800">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+<ul class="justify-center flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+<li>
+<a href="https://twitter.com/sindresorhus" aria-label="Twitter" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z" /></svg>
+</a>
+</li>
+<li>
+<a href="https://instagram.com/sindresorhus" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="4" /><circle cx="12" cy="12" r="3" /><path d="M16.5 7.5v.001" /></g></svg>
+</a>
+</li>
+<li>
+<a href="https://unsplash.com/@sindresorhus" aria-label="Unsplash" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-unsplash"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11h5v4h6v-4h5v9H4zm5-7h6v4H9z" /></svg>
+</a>
+</li>
+
+<li>
+<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="GitHub" href="https://github.com/sindresorhus">
+<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg>
+</a>
+</li>
+</ul>
+<div class="hidden md:inline text-xs text-gray-700 mr-4 dark:text-slate-400">
+<q>The people who are crazy enough to think they can change the world are the ones who do</q>
+</div>
+</div>
+</div>
+</footer>
+<script type="module">
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('[data-toggle-menu]', 'click', element => {
+			element.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+	};
+
+	window.onpageshow = () => {
+		const element = document.querySelector('[data-toggle-menu]');
+		if (element) {
+			element.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+</body>
+</html>
