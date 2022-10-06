@@ -117,6 +117,7 @@ This software uses the following open source packages, projects, services or web
 ## Contributors
 
 * [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
+* [@JASKIRAT11011](https://github.com/JASKIRAT11011)
 
 ## You may also like...
 
