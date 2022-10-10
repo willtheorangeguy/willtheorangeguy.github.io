@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: August 26, 2022.
+Last updated: October 9, 2022.
 
 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
 
@@ -20,7 +20,7 @@ For the purposes of this Privacy Policy:
 - **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
 - **Application** means the software program provided by the Company downloaded by You on any electronic device, named willtheorangeguy.github.io.
 - **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to @willtheorangeguy.
-- **Country** refers to: British Columbia,  Canada
+- **Country** refers to: British Columbia, Canada
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 - **Personal Data** is any information that relates to an identified or identifiable individual.
 - **Service** refers to the Application.
@@ -34,19 +34,26 @@ For the purposes of this Privacy Policy:
 
 ### Personal Data
 
-While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to: 
+While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
 
 - Information used to sign up for surveys (surveys)
 - Responses given in a survey (surveys)
 - Comments left on the blog (comments)
+- Analytical Data
 
 ### Surveys
 
-Information given during the sign up process for a survey is used only to ensure the same person does not sign up twice, and to catagorize data between adults and teenagers. This information is kept seperate from survey responses. Survey responses are stored as the anonymized data from filling out the survey.
+Information given during the sign up process for a survey is used only to ensure the same person does not sign up twice, and to catagorize data between adults and teenagers. This information is kept separate from survey responses. Survey responses are stored as the anonymized data from filling out the survey.
 
 ### Comments
 
 Comments left on the blog contain your name and the comment text. This is used to share your comment with others who view the blog, as well as attribute them to your name.
+
+### Analytical Data
+
+We use [Simple Analytics](https://simpleanalytics.com/?referral=willtheorangeguy) to see who uses our website. Simple Analytics is privacy-focused, and they only "collect information that is necessary to show ... simple analytics, but unlike other analytics tools, [do not] collect more than absolutely necessary." They do not collect cookies, and are GDPR friendly.
+
+Their privacy policy is available [here](https://simpleanalytics.com/privacy-policy).
 
 ## Use of Your Personal Data
 
