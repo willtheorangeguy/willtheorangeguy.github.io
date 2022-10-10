@@ -20,7 +20,7 @@ For the purposes of this Privacy Policy:
 - **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
 - **Application** means the software program provided by the Company downloaded by You on any electronic device, named willtheorangeguy.github.io.
 - **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to @willtheorangeguy.
-- **Country** refers to: British Columbia,  Canada
+- **Country** refers to: British Columbia, Canada
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 - **Personal Data** is any information that relates to an identified or identifiable individual.
 - **Service** refers to the Application.
