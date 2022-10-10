@@ -38,14 +38,15 @@
 </p>
 
 <!-- Screenshot(s) -->
+
 ![screenshot](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/homepage.png)
 
 ## Key Features
 
-* Welcomes the visitor with a fun, _particles.js_ splash page.
-* Shows a hacky video background.
-* Displays links to all of my personal projects.
-* Cross platform, web browser based.
+- Welcomes the visitor with a fun, _particles.js_ splash page.
+- Shows a hacky video background.
+- Displays links to all of my personal projects.
+- Cross platform, web browser based.
 
 ## How To Use
 
@@ -119,14 +120,14 @@ This software uses the following open source packages, projects, services or web
 
 ## Contributors
 
-* [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
-* [@JASKIRAT11011](https://github.com/JASKIRAT11011)
+- [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
+- [@JASKIRAT11011](https://github.com/JASKIRAT11011)
 
 ## You may also like...
 
-* [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
-* [Python Logo Widgets](https://github.com/willtheorangeguy/Python-Logo-Widgets) - Python Powered Logo widgets that can be added to any GUI project.
-* [Random Lotto Number Chooser](https://github.com/willtheorangeguy/Random-Lotto-Number-Chooser) - Randomly pick lucky lotto numbers.
+- [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
+- [Python Logo Widgets](https://github.com/willtheorangeguy/Python-Logo-Widgets) - Python Powered Logo widgets that can be added to any GUI project.
+- [Random Lotto Number Chooser](https://github.com/willtheorangeguy/Random-Lotto-Number-Chooser) - Randomly pick lucky lotto numbers.
 
 ## License
 
