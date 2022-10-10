@@ -99,18 +99,21 @@ This software uses the following open source packages, projects, services or web
     <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="150" height="150" alt="W3C"/></th>
     <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="150" height="150" alt="W3Schools"/></th>
     <th align="center"><img src="https://static.npmjs.com/c426a1116301d1fd178c51522484127a.png" width="150" height="150" alt="Particles.js"/></th>
+    <th align="center"><img src="https://assets.simpleanalytics.com/press/logo-ratio-1-1/square.svg" width="150" height="150" alt="Simple Analytics"/></th>
   </tr>
   <tr>
     <td align="center">GitHub</td>
     <td align="center">W3C</td>
     <td align="center">W3Schools</td>
     <td align="center">Particles.js</td>
+    <td align="center">Simple Analytics</td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/">Web</a> - <a href="https://github.com/pricing">Plans</a></td>
     <td align="center"><a href="https://www.w3.org">Web</a> - <a href="https://www.w3.org/support/">Donate</a></td>
     <td align="center"><a href="https://www.w3schools.com">Web</a> - <a href="https://www.w3schools.com/pro/index.php">Pro</a></td>
     <td align="center"><a href="https://vincentgarreau.com/particles.js/">Web</a></td>
+    <td align="center"><a href="https://simpleanalytics.com/?referral=willtheorangeguy">Web</a> - <a href="https://www.simpleanalytics.com/pricing">Plans</a></td>
   </tr>
 </table>
 
