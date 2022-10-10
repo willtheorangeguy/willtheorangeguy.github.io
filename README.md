@@ -38,14 +38,15 @@
 </p>
 
 <!-- Screenshot(s) -->
+
 ![screenshot](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/homepage.png)
 
 ## Key Features
 
-* Welcomes the visitor with a fun, _particles.js_ splash page.
-* Shows a hacky video background.
-* Displays links to all of my personal projects.
-* Cross platform, web browser based.
+- Welcomes the visitor with a fun, _particles.js_ splash page.
+- Shows a hacky video background.
+- Displays links to all of my personal projects.
+- Cross platform, web browser based.
 
 ## How To Use
 
@@ -99,31 +100,34 @@ This software uses the following open source packages, projects, services or web
     <th align="center"><img src="https://pbs.twimg.com/profile_images/1069553420854591489/stZUQMcC_400x400.jpg" width="150" height="150" alt="W3C"/></th>
     <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="150" height="150" alt="W3Schools"/></th>
     <th align="center"><img src="https://static.npmjs.com/c426a1116301d1fd178c51522484127a.png" width="150" height="150" alt="Particles.js"/></th>
+    <th align="center"><img src="https://assets.simpleanalytics.com/press/logo-ratio-1-1/square.svg" width="150" height="150" alt="Simple Analytics"/></th>
   </tr>
   <tr>
     <td align="center">GitHub</td>
     <td align="center">W3C</td>
     <td align="center">W3Schools</td>
     <td align="center">Particles.js</td>
+    <td align="center">Simple Analytics</td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/">Web</a> - <a href="https://github.com/pricing">Plans</a></td>
     <td align="center"><a href="https://www.w3.org">Web</a> - <a href="https://www.w3.org/support/">Donate</a></td>
     <td align="center"><a href="https://www.w3schools.com">Web</a> - <a href="https://www.w3schools.com/pro/index.php">Pro</a></td>
     <td align="center"><a href="https://vincentgarreau.com/particles.js/">Web</a></td>
+    <td align="center"><a href="https://simpleanalytics.com/?referral=willtheorangeguy">Web</a> - <a href="https://www.simpleanalytics.com/pricing">Plans</a></td>
   </tr>
 </table>
 
 ## Contributors
 
-* [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
-* [@JASKIRAT11011](https://github.com/JASKIRAT11011)
+- [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
+- [@JASKIRAT11011](https://github.com/JASKIRAT11011)
 
 ## You may also like...
 
-* [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
-* [Python Logo Widgets](https://github.com/willtheorangeguy/Python-Logo-Widgets) - Python Powered Logo widgets that can be added to any GUI project.
-* [Random Lotto Number Chooser](https://github.com/willtheorangeguy/Random-Lotto-Number-Chooser) - Randomly pick lucky lotto numbers.
+- [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
+- [Python Logo Widgets](https://github.com/willtheorangeguy/Python-Logo-Widgets) - Python Powered Logo widgets that can be added to any GUI project.
+- [Random Lotto Number Chooser](https://github.com/willtheorangeguy/Random-Lotto-Number-Chooser) - Randomly pick lucky lotto numbers.
 
 ## License
 
