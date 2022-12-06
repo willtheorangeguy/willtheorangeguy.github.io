@@ -1861,7 +1861,8 @@ button[disabled] {
     grid-area: copy;
     margin-top: 15px;
     padding-bottom: 20px;
-    position: relative
+    position: relative;
+    text-align: center;
 }
 
 div[data-name=mediavine-gdpr-button] {
