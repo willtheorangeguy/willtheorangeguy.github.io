@@ -916,9 +916,10 @@ ul.page-nav__list .page-nav__item--language .icon {
   margin-bottom: 10px;
 }
 
-.planning-list .salt-icon__container .icon-round-shape {
+.planning-list .salt-icon__container {
   color: #eadfde;
   opacity: 0.5;
+  position: relative; 
 }
 
 .planning-item {
@@ -1463,8 +1464,8 @@ button[disabled] {
   background-color: #fff;
   display: inline-block;
   height: 28px;
-  -webkit-mask: url(/build/images/saltinourhair-logo.png) no-repeat center/cover;
-  mask: url(/build/images/saltinourhair-logo.png) no-repeat center/cover;
+  -webkit-mask: url(https://static.saltinourhair.com/build/images/saltinourhair-logo.png) no-repeat center/cover;
+  mask: url(https://static.saltinourhair.com/build/images/saltinourhair-logo.png) no-repeat center/cover;
   -webkit-transition: height 0.2s, width 0.2s, opacity 0.1s;
   transition: height 0.2s, width 0.2s, opacity 0.1s;
   opacity: 1;
@@ -1533,6 +1534,7 @@ button[disabled] {
 
 .salt-icon__container .icon-round-shape {
   color: var(--lightpink);
+  position: absolute;
   height: 100%;
   width: 100%;
   z-index: 0;
@@ -4527,4 +4529,8 @@ html.page-head--loaded .home-cover__content-container {
   .nav-burger__text .icon-burger {
     fill: #141414;
   }
+}
+
+.fa-download { 
+  position: absolute; 
 }
