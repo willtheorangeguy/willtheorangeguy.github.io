@@ -1327,7 +1327,14 @@ button[disabled] {
 
 .page-cover__container {
   position: relative;
+  background-image: url("https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin: -20px -15px;
+  overflow: hidden;
+  padding: 0 15px;
   z-index: 97;
+
 }
 
 .page-cover__background {
@@ -3139,7 +3146,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .user-started .sustainable {
-  background-image: url(/build/images/home/sustainable-s.jpg);
+  background-image: url(https://www.saltinourhair.com/build/images/home/sustainable-s.jpg);
 }
 
 .sustainable:after {
@@ -3489,7 +3496,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .salt-icon {
-  background-image: url(/build/images/sprite/sprite1651864839100.png);
+  background-image: url(https://www.saltinourhair.com/build/images/sprite/sprite1651864839100.png);
 }
 
 @media (min-width: 361px) {
@@ -3500,7 +3507,7 @@ html.page-head--loaded .home-cover__content-container {
 
 @media (min-width: 667px) {
   .salt-icon {
-    background-image: url(/build/images/sprite/sprite1651864839100.png);
+    background-image: url(https://www.saltinourhair.com/build/images/sprite/sprite1651864839100.png);
   }
 }
 
@@ -4258,7 +4265,7 @@ html.page-head--loaded .home-cover__content-container {
     padding-left: 0;
   }
   .user-started .sustainable {
-    background-image: url(/build/images/home/sustainable-m.jpg);
+    background-image: url(https://www.saltinourhair.com/build/images/home/sustainable-s.jpg);
   }
   .sustainable__articles {
     width: 400px;
@@ -4353,7 +4360,7 @@ html.page-head--loaded .home-cover__content-container {
     gap: 50px;
   }
   .user-started .sustainable {
-    background-image: url(/build/images/home/sustainable-l.jpg);
+    background-image: url(https://www.saltinourhair.com/build/images/home/sustainable-s.jpg);
   }
   .handpicked__right {
     margin-left: 60px;
@@ -4411,7 +4418,7 @@ html.page-head--loaded .home-cover__content-container {
 
 @media (min-width: 1920px) {
   .user-started .sustainable {
-    background-image: url(/build/images/home/sustainable-xl.jpg);
+    background-image: url(https://www.saltinourhair.com/build/images/home/sustainable-s.jpg);
   }
   .handpicked .article-block--high {
     min-width: 340px;
