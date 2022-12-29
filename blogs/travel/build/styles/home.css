@@ -530,7 +530,7 @@ ul.page-nav__list .page-nav__item--language .icon {
   display: inline-flex;
   height: 50px;
   line-height: 1;
-  padding: 12px 7px;
+  padding: 12px 0px;
   position: relative;
   white-space: nowrap;
   width: 100%;
@@ -4322,7 +4322,7 @@ html.page-head--loaded .home-cover__content-container {
 
 @media (min-width: 1200px) {
   .page-nav__item--home a {
-    padding: 0 28px 0 0;
+    padding: 0 16px 0 16px;
   }
   .page-nav__link {
     padding: 0 12px;
