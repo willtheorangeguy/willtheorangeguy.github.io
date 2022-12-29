@@ -545,10 +545,8 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__link .icon-arrow-small {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
   margin-left: 5px;
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 1px;
 }
 
@@ -1074,8 +1072,6 @@ ul.page-nav__list .page-nav__item--language .icon {
 .icon-external {
   font-size: 0.85em;
   margin-left: 5px;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
 }
 
 .label,
@@ -1824,9 +1820,8 @@ button[disabled] {
 .foot-instagram .icon-arrow {
   -webkit-animation: bounceArrow 1.6s infinite ease-in;
   animation: bounceArrow 1.6s infinite ease-in;
+  font-size: 16px;
   color: #fff;
-  -webkit-transform: translateX(0) rotate(-90deg);
-  transform: translateX(0) rotate(-90deg);
   position: relative;
   top: 0;
   left: 5px;
