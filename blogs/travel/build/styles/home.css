@@ -1505,6 +1505,7 @@ button[disabled] {
   display: inline-block;
   width: 1em;
   height: 1em;
+  vertical-align: -0.125em;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -4537,8 +4538,4 @@ html.page-head--loaded .home-cover__content-container {
   .nav-burger__text .icon-burger {
     fill: #141414;
   }
-}
-
-.fa-download {
-  position: absolute;
 }
