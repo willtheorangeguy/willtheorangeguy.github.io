@@ -3419,7 +3419,7 @@ html.page-head--loaded .home-cover__content-container {
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -3469,7 +3469,6 @@ html.page-head--loaded .home-cover__content-container {
   font-size: 1em;
   letter-spacing: 0.5px;
   line-height: 1.85em;
-  margin: 10px 0 0;
   text-align: right;
 }
 
@@ -3658,6 +3657,8 @@ html.page-head--loaded .home-cover__content-container {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
   }
   .about-image {
     max-width: 100%;
@@ -3668,6 +3669,8 @@ html.page-head--loaded .home-cover__content-container {
     max-width: 50%;
     margin-left: 70px;
     width: 50%;
+    -webkit-transform: translateX(30%);
+    transform: translateX(30%);
   }
   .about-content__title {
     font-size: 5.5em;
@@ -3678,6 +3681,13 @@ html.page-head--loaded .home-cover__content-container {
     top: -20px;
     -webkit-transform: translateX(-60%);
     transform: translateX(-60%);
+  }
+  .about-content__text {
+    margin-bottom: 0px;
+    margin-top: -50px;
+  }
+  .about-image {
+    margin-top: 16px;
   }
 }
 
@@ -3833,7 +3843,7 @@ html.page-head--loaded .home-cover__content-container {
   }
   .page-nav__subcontainer-continent {
     padding: 0 15px;
-    width: 50%;
+    width: 100%;
   }
   .page-nav__subcontainer-tiplist {
     font-size: 16px;
@@ -4372,7 +4382,7 @@ html.page-head--loaded .home-cover__content-container {
 @media (min-width: 1280px) {
   .page-nav__subcontainer {
     left: 130px;
-    width: 990px;
+    width: 720px;
   }
   .page-nav__subcontainer--planning,
   .page-nav__subcontainer--tips {
@@ -4489,11 +4499,18 @@ html.page-head--loaded .home-cover__content-container {
     -webkit-mask: none !important;
     mask: none !important;
   }
+  .page-cover__container {
+    background-image: url("https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce");
+    padding-bottom: 0px;
+  } 
 }
 
 @media (max-width: 667px) {
   .user-started .salt-icon {
     background-image: url(/build/images/sprite/sprite1651864839100.png);
+  }
+  td {
+    display: table-row;
   }
 }
 
