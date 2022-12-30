@@ -1735,12 +1735,11 @@ button[disabled] {
 }
 
 .page-foot__container {
-  display: grid;
   grid-area: sm;
   grid-template-areas: "newsletter" "instagram" "sitemap" "logo";
   margin: 0 auto;
   max-width: 68.75rem;
-  width: 100%;
+  width: 50%;
 }
 
 .foot-instagram {
@@ -3528,7 +3527,7 @@ html.page-head--loaded .home-cover__content-container {
   }
   .page-foot {
     font-size: 1rem;
-    margin-top: 239px;
+    margin-top: 15px;
     padding: 15px 15px 0;
   }
   .page-foot__background--mobile {
