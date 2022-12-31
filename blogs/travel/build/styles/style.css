@@ -786,7 +786,7 @@
             text-align: center
         }
 
-        .sustainable {
+        .fit {
             background-color: #040301;
             grid-area: sustain;
             background-size: 100% auto;
@@ -893,7 +893,7 @@
             width: 40px
         }
 
-        .sustainable__container {
+        .fit__container {
             display: flex;
             flex-direction: column;
             margin: 0 auto;
@@ -914,7 +914,7 @@
             .home-cover__content-container p {
                 font-size: 18px
             }
-            .sustainable__container {
+            .fit__container {
                 flex-direction: row;
                 padding: 70px 0
             }
