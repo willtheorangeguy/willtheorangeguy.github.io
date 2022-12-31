@@ -1426,7 +1426,6 @@ button[disabled] {
 .socials__item .icon-mastodon,
 .socials__item .icon-twitter,
 .socials__item .icon-youtube {
-  
   color: #000;
   font-size: 0.5em;
   position: relative;
