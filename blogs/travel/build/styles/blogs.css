@@ -51,18 +51,11 @@
     --btn-cta: #F1BC68;
     --lightgray: #F5F4F2;
     --darkgray: #757575;
-    --shop: #6d937e;
     --white-panel: #FFF;
     --black-panel: #353535;
     --lightpink: #F0E8E7;
     --darkpink: #D8C4C3;
     --lightblue: #C0E2E2;
-    --shop: #D1835A;
-    --shop-background: #F5F2EF;
-    --shop-gray: #fdfdfc;
-    --pin: #EE2D2F;
-    --fb: #4C65A5;
-    --wa: #039E00
 }
 
 * {
@@ -578,11 +571,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     margin-top: 1px
 }
 
-.page-nav__link .icon-shopcart {
-    font-size: 14px;
-    margin-left: 5px
-}
-
 .page-nav__item-subcontainer {
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .08), 2px 2px 2px rgba(0, 0, 0, .15), 0 0 2px rgba(0, 0, 0, .08);
@@ -866,10 +854,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     border-color: var(--lightblue)
 }
 
-.page-nav__list--maintopic .page-nav__link.topic-active.page-nav__link--planning {
-    border-color: var(--shop)
-}
-
 .page-nav__subcontainer--planning {
     max-height: none
 }
@@ -1064,27 +1048,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     position: relative;
     width: 16px;
     z-index: 1
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-    background-color: #f5f4f2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    text-transform: none
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a {
-    height: 45px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a+a {
-    border-left: 1px solid #ddd
 }
 
 .icon-external {
@@ -1439,9 +1402,7 @@ button[disabled] {
     top: 0
 }
 
-.socials__item .icon-facebook,
 .socials__item .icon-instagram,
-.socials__item .icon-pinterest,
 .socials__item .icon-youtube {
     color: var(--text-black);
     font-size: .5em;
@@ -3688,143 +3649,6 @@ h4+.products__container {
     width: 1.8em
 }
 
-.block-pinterest {
-    background: #f8f3f3 center left/auto 370px;
-    border-radius: 15px;
-    cursor: pointer;
-    display: block;
-    height: 220px;
-    margin: 36px 0;
-    overflow: hidden;
-    padding: 0 1.3em;
-    text-decoration: none;
-    width: 100%
-}
-
-.block-pinterest:focus,
-.block-pinterest:hover {
-    text-decoration: none
-}
-
-.block-pinterest:focus .block-pinterest__image,
-.block-pinterest:hover .block-pinterest__image {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px)
-}
-
-.block-pinterest:focus .block-pinterest__button .icon,
-.block-pinterest:hover .block-pinterest__button .icon {
-    -webkit-animation: bounceArrow 1.6s infinite ease-in;
-    animation: bounceArrow 1.6s infinite ease-in
-}
-
-.block-pinterest__container {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 100%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-}
-
-.block-pinterest__content {
-    margin-bottom: 1em;
-    margin-top: 1em;
-    margin-right: 8px;
-    position: relative;
-    min-width: 55%
-}
-
-.block-pinterest__title {
-    font-weight: 900;
-    font-size: 23px;
-    line-height: 1.3;
-    margin-bottom: 5px
-}
-
-.block-pinterest__subtitle {
-    font-family: montserrat, Arial;
-    font-size: 13px;
-    letter-spacing: .5px;
-    line-height: 1.65em
-}
-
-.block-pinterest__image {
-    -ms-flex-item-align: start;
-    align-self: start;
-    border: 6px solid #fff;
-    border-radius: 15px;
-    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .04), 2px 2px 2px rgba(0, 0, 0, .05);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .04), 2px 2px 2px rgba(0, 0, 0, .05);
-    height: 100%;
-    margin-top: 15px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
-    pointer-events: none;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: -webkit-transform .2s !important;
-    transition: transform .2s !important;
-    transition: transform .2s, -webkit-transform .2s !important;
-    width: 100%;
-    will-change: transform
-}
-
-.block-pinterest__image-wrap {
-    -ms-flex-item-align: start;
-    align-self: start;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    height: 105%;
-    max-width: 150px;
-    width: 100%
-}
-
-.block-pinterest__button {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #fff;
-    background-size: 30px;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    font-family: headings, Arial;
-    font-size: 13px;
-    font-weight: 700;
-    height: 30px;
-    left: -3px;
-    letter-spacing: 1.1px;
-    margin-top: 15px;
-    text-transform: uppercase;
-    padding: 0 20px 0 40px;
-    position: relative;
-    white-space: nowrap
-}
-
-.block-pinterest__button .icon {
-    -webkit-transform: translateX(0) rotate(-90deg);
-    transform: translateX(0) rotate(-90deg);
-    margin-left: 8px
-}
-
-.user-started .block-pinterest {
-    background-image: url(../images/search-bubbles.png), url(../images/search-bubbles.png), url(../images/search-bubbles.png), url(../images/search-bubbles.png), url(../images/search-bubbles.png)
-}
-
 .block-kofi {
     background: #eadfde center left/auto 370px;
     border-radius: 15px;
@@ -4484,20 +4308,6 @@ html:lang(nl) .post-chapters:after {
     margin-right: -10px
 }
 
-.blog-share .share-link--facebook {
-    background-color: var(--fb)
-}
-
-.blog-share .share-link--pinterest {
-    background-color: var(--pin)
-}
-
-.blog-share .share-link--whatsapp {
-    background-color: var(--wa);
-    max-width: 85px;
-    padding-right: 4px
-}
-
 .related-posts {
     grid-area: related;
     margin-top: 120px;
@@ -4577,14 +4387,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     z-index: 3
 }
 
-.image-wrapper .pinit:focus,
-.image-wrapper .pinit:hover {
-    background-size: 18px 18px;
-    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .7);
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, .7);
-    text-decoration: none
-}
-
 .image-wrapper+figcaption {
     font-size: 12px;
     line-height: 1.65;
@@ -4606,10 +4408,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     -webkit-transition: opacity .2s;
     transition: opacity .2s;
     opacity: 1
-}
-
-.nopin .pinit {
-    display: none
 }
 
 .quickjump {
@@ -4728,11 +4526,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     border-top: 0
 }
 
-.user-started .block-pinterest__button,
-.user-started .image-wrapper img.lazyloaded+.pinit {
-    background-image: url(../images/pin-btn.png)
-}
-
 .adunitwrapper,
 .mv-ad-box {
     border-radius: 6px;
@@ -4815,9 +4608,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
 }
 
 @media(min-width:375px) {
-    .block-pinterest__content {
-        min-width: 50%
-    }
     .single .page-cover {
         height: 410px
     }
@@ -4866,9 +4656,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     .planning-link .planning-link__link-icon.salt-icon {
         -webkit-transform: translate(-50%, -50%) scale(.8);
         transform: translate(-50%, -50%) scale(.8)
-    }
-    .page-nav__item-subcontainer--shop {
-        padding-bottom: 45px
     }
     .page-foot {
         font-size: 1rem;
@@ -5054,36 +4841,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     .block-budget li:nth-last-child(2):nth-child(odd) {
         margin-bottom: 0
     }
-    .block-pinterest {
-        background-position: top right;
-        background-size: auto 370px;
-        padding: 0 2em
-    }
-    .block-pinterest__container {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row
-    }
-    .block-pinterest__content {
-        margin-right: 15px;
-        min-width: 60%
-    }
-    .block-pinterest__title {
-        font-size: 30px
-    }
-    .block-pinterest__subtitle {
-        font-size: 15px
-    }
-    .block-pinterest__image-wrap {
-        max-width: 210px;
-        margin-right: 20px
-    }
-    .block-pinterest__button {
-        background-size: 40px;
-        height: 40px;
-        padding: 0 25px 0 50px
-    }
     .block-kofi {
         background-position: top right;
         background-size: auto 370px;
@@ -5153,9 +4910,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     .blog-share .share-link .share-number {
         font-size: 14px;
         padding: 0 14px
-    }
-    .blog-share .share-link--whatsapp {
-        max-width: 105px
     }
     .related-posts {
         margin-top: 170px
@@ -5475,13 +5229,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     .nav-burger,
     .visible-mobile {
         display: none
-    }
-    .page-nav__item-subcontainer--shop {
-        width: 215px
-    }
-    .page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px
     }
     .socials {
         margin: 0;
@@ -6030,7 +5777,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     }
     .block-googlemaps,
     .block-kofi,
-    .block-pinterest,
     .blog-affiliates,
     .blog-foot,
     .blog-info,
@@ -6044,7 +5790,6 @@ figure.vertical-image .image-wrapper img.lazyloaded {
     .page-foot,
     .page-head,
     .page-nav,
-    .pinit,
     .post-chapters,
     .products__container,
     .related-category,

@@ -51,18 +51,11 @@
     --btn-cta: #F1BC68;
     --lightgray: #F5F4F2;
     --darkgray: #757575;
-    --shop: #6d937e;
     --white-panel: #FFF;
     --black-panel: #353535;
     --lightpink: #F0E8E7;
     --darkpink: #D8C4C3;
     --lightblue: #C0E2E2;
-    --shop: #D1835A;
-    --shop-background: #F5F2EF;
-    --shop-gray: #fdfdfc;
-    --pin: #EE2D2F;
-    --fb: #4C65A5;
-    --wa: #039E00
 }
 
 * {
@@ -603,11 +596,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     margin-top: 1px
 }
 
-.page-nav__link .icon-shopcart {
-    font-size: 14px;
-    margin-left: 5px
-}
-
 .page-nav__item-subcontainer {
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .08), 2px 2px 2px rgba(0, 0, 0, .15), 0 0 2px rgba(0, 0, 0, .08);
@@ -891,10 +879,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     border-color: var(--lightblue)
 }
 
-.page-nav__list--maintopic .page-nav__link.topic-active.page-nav__link--planning {
-    border-color: var(--shop)
-}
-
 .page-nav__subcontainer--planning {
     max-height: none
 }
@@ -1089,27 +1073,6 @@ ul.page-nav__list .page-nav__item--language .icon {
     position: relative;
     width: 16px;
     z-index: 1
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-    background-color: #f5f4f2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    text-transform: none
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a {
-    height: 45px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a+a {
-    border-left: 1px solid #ddd
 }
 
 .icon-external {
@@ -1460,9 +1423,7 @@ button[disabled] {
     top: 0
 }
 
-.socials__item .icon-facebook,
 .socials__item .icon-instagram,
-.socials__item .icon-pinterest,
 .socials__item .icon-youtube {
     color: var(--text-black);
     font-size: .5em;
@@ -3037,9 +2998,6 @@ body.tag .page-content__container {
         -webkit-transform: translate(-50%, -50%) scale(.8);
         transform: translate(-50%, -50%) scale(.8)
     }
-    .page-nav__item-subcontainer--shop {
-        padding-bottom: 45px
-    }
     .page-foot {
         font-size: 1rem;
         margin-top: 239px;
@@ -3457,13 +3415,6 @@ body.tag .page-content__container {
     .visible-mobile {
         display: none
     }
-    .page-nav__item-subcontainer--shop {
-        width: 215px
-    }
-    .page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px
-    }
     .socials {
         margin: 0;
         z-index: 99
@@ -3863,7 +3814,6 @@ body.tag .page-content__container {
     }
     .block-googlemaps,
     .block-kofi,
-    .block-pinterest,
     .blog-affiliates,
     .blog-foot,
     .blog-info,
@@ -3877,7 +3827,6 @@ body.tag .page-content__container {
     .page-foot,
     .page-head,
     .page-nav,
-    .pinit,
     .post-chapters,
     .products__container,
     .related-category,
