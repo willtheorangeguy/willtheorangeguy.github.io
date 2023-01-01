@@ -550,11 +550,6 @@ ul.page-nav__list .page-nav__item--language .icon {
   margin-top: 1px;
 }
 
-.page-nav__link .icon-shopcart {
-  font-size: 14px;
-  margin-left: 5px;
-}
-
 .page-nav__item-subcontainer {
   background-color: #fff;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05),
@@ -846,11 +841,6 @@ ul.page-nav__list .page-nav__item--language .icon {
   border-color: var(--lightblue);
 }
 
-.page-nav__list--maintopic
-  .page-nav__link.topic-active.page-nav__link--planning {
-  border-color: var(--shop);
-}
-
 .page-nav__subcontainer--planning {
   max-height: none;
 }
@@ -1046,27 +1036,6 @@ ul.page-nav__list .page-nav__item--language .icon {
   position: relative;
   width: 16px;
   z-index: 1;
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-  background-color: #f5f4f2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a {
-  height: 45px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.page-nav__item-subcontainer--shop .page-nav__subcontainer-button a + a {
-  border-left: 1px solid #ddd;
 }
 
 .icon-external {
@@ -3269,18 +3238,11 @@ html.page-head--loaded .home-cover__content-container {
   --btn-cta: #f1bc68;
   --lightgray: #f5f4f2;
   --darkgray: #757575;
-  --shop-green: #6d937e;
   --white-panel: #fff;
   --black-panel: #353535;
   --lightpink: #f0e8e7;
   --darkpink: #d8c4c3;
   --lightblue: #c0e2e2;
-  --shop: #d1835a;
-  --shop-background: #f5f2ef;
-  --shop-gray: #fdfdfc;
-  --pin: #ee2d2f;
-  --fb: #4c65a5;
-  --wa: #039e00;
 }
 
 .scroller {
@@ -3522,9 +3484,6 @@ html.page-head--loaded .home-cover__content-container {
   .planning-link .planning-link__link-icon.salt-icon {
     -webkit-transform: translate(-50%, -50%) scale(0.8);
     transform: translate(-50%, -50%) scale(0.8);
-  }
-  .page-nav__item-subcontainer--shop {
-    padding-bottom: 45px;
   }
   .page-foot {
     font-size: 1rem;
@@ -4008,13 +3967,6 @@ html.page-head--loaded .home-cover__content-container {
   .nav-burger,
   .visible-mobile {
     display: none;
-  }
-  .page-nav__item-subcontainer--shop {
-    width: 215px;
-  }
-  .page-nav__item-subcontainer--shop .page-nav__subcontainer-button {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
   }
   .socials {
     margin: 0;
