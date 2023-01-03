@@ -1719,7 +1719,6 @@ button[disabled] {
   margin-top: 0;
 }
 
-.foot-instagram .icon-instagram,
 .page-foot {
   display: block;
   -ms-flex-negative: 0;
@@ -1763,92 +1762,10 @@ button[disabled] {
   width: 100%;
 }
 
-.foot-instagram {
-  grid-area: instagram;
-  position: relative;
-  margin-top: 35px;
-  text-align: right;
-}
-
-.foot-instagram__image {
-  display: block;
-  left: 0;
-  margin-left: auto;
-  height: 220px;
-  position: relative;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
-
-.foot-instagram__image:before {
-  background-color: #000;
-  bottom: 0;
-  content: "";
-  left: 0;
-  opacity: 0.18;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  z-index: 1;
-}
-
-.foot-instagram__image:hover:before {
-  opacity: 0.25;
-}
-
-.foot-instagram img {
-  max-height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: 0 40%;
-  object-position: 0 40%;
-}
-
-.foot-instagram__content,
 .sitemap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.foot-instagram__content {
-  color: var(--white);
-  font-size: 14px;
-  font-family: headings, Arial, sans-serif;
-  line-height: 1.3;
-  left: 51%;
-  position: absolute;
-  text-align: left;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 76%;
-  width: 245px;
-  text-shadow: 3px 2px 20px rgba(0, 0, 0, 0.4588235294);
-  z-index: 2;
-}
-
-.foot-instagram .icon-instagram {
-  font-size: 28px;
-  margin: 3px 15px 0 0;
-}
-
-.foot-instagram .icon-arrow {
-  -webkit-animation: bounceArrow 1.6s infinite ease-in;
-  animation: bounceArrow 1.6s infinite ease-in;
-  color: #fff;
-  -webkit-transform: translateX(0) rotate(-90deg);
-  transform: translateX(0) rotate(-90deg);
-  position: relative;
-  top: 0;
-  left: 5px;
-}
-
-.sitemap {
   grid-area: sitemap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1869,30 +1786,6 @@ button[disabled] {
   font-weight: 700;
   letter-spacing: 1.1px;
   text-transform: uppercase;
-}
-
-.foot-logo {
-  align-self: center;
-  grid-area: logo;
-  margin: 0 auto 15px;
-}
-
-.foot-logo__list {
-  margin-right: 10px;
-}
-
-.foot-logo__link {
-  display: block;
-  position: relative;
-}
-
-.foot-logo__image {
-  background-color: var(--text-black);
-  -webkit-mask: url(../images/saltinourhair-logo.png) no-repeat center/cover;
-  mask: url(../images/saltinourhair-logo.png) no-repeat center/cover;
-  margin: 0 auto;
-  height: 30px;
-  width: 148px;
 }
 
 .copyright {
@@ -1916,67 +1809,15 @@ div[data-name="mediavine-gdpr-button"] {
   grid-area: newsletter;
 }
 
-.newsletter__form,
-.newsletter__title {
+.newsletter__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.newsletter__title {
-  font-size: 2.875em;
-  margin: 0 0 -5px;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
-  font-family: headings, Arial, sans-serif;
-}
-
-.newsletter__title span {
-  font-family: written, Arial, sans-serif;
-  letter-spacing: 0;
-  font-weight: 100;
-  margin-left: 12px;
-  margin-top: 5px;
-}
-
-.newsletter__form {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   max-width: 675px;
-}
-
-.newsletter__input input {
-  background-color: #fff;
-  border: 0;
-  border-radius: 20px;
-  padding-left: 20px;
-}
-
-.newsletter__input input::-webkit-input-placeholder {
-  color: #c1afae;
-  opacity: 1;
-}
-
-.newsletter__input input::-moz-placeholder {
-  color: #c1afae;
-  opacity: 1;
-}
-
-.newsletter__input input:-ms-input-placeholder,
-.newsletter__input input::-ms-input-placeholder {
-  opacity: 1;
-}
-
-.newsletter__input input::placeholder {
-  color: #c1afae;
-  opacity: 1;
-}
-
-.newsletter__input input:-ms-input-placeholder,
-.newsletter__input input::-ms-input-placeholder {
-  color: #c1afae;
 }
 
 .article-block {
@@ -3072,20 +2913,6 @@ body.tag .page-content__container {
     grid-template-columns: 3fr 1fr 1fr;
     grid-template-areas: "newsletter instagram instagram" "sitemap sitemap sitemap" "logo logo logo";
   }
-  .foot-instagram__image {
-    -webkit-mask-position: top right;
-    mask-position: top right;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    height: auto;
-    position: absolute;
-    top: -230px;
-    max-width: 400px;
-  }
-  .foot-instagram__content {
-    left: 55%;
-    top: 67%;
-  }
   .sitemap {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -3529,21 +3356,11 @@ body.tag .page-content__container {
   .page-foot__container {
     grid-template-areas: "newsletter instagram instagram" "sitemap sitemap logo";
   }
-  .foot-logo {
-    margin: 0 0 15px auto;
-  }
   .newsletter__form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  .newsletter__input {
-    width: 60%;
-  }
-  .newsletter__submit {
-    margin-left: 20px;
-    width: 40%;
   }
   .article-block__content {
     margin-left: 30px;
@@ -3834,13 +3651,6 @@ body.tag .page-content__container {
   }
   .page-nav--active .nav-burger__text {
     color: var(--white);
-  }
-}
-
-@media (max-width: 767px) {
-  .foot-instagram__image {
-    -webkit-mask: none !important;
-    mask: none !important;
   }
 }
 
