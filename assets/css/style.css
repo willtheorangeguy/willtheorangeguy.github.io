@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=audiowide:400|ubuntu-mono:400,700);
+
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
@@ -24,9 +26,9 @@ li{list-style:none}
 
 /* ---- base ---- */
 
-html,body{ 
-	width:100%;
-	height:100%;
+html{ 
+	width: 100%;
+	height: 100%;
 	background:#111;
 }
 
@@ -35,24 +37,28 @@ html{
 }
 
 body{
-  font:normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas{
-  display:block;
-  vertical-align:bottom;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1579567761406-4684ee0c75b6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1{
-  font-size: 22px;
+  font-size: 26px;
+  font-family: 'Audiowide', display;
 }
 
 h2{
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Audiowide', display;
 }
 
-P{
-  font-size: 14px;
+p{
+  font-size: 16px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: 400;
 }
 
 a:link {
@@ -75,34 +81,10 @@ a:active {
   color: white;
 }
 
-/* ---- particles.js container ---- */
-
-#particles-js{
-  width: 100%;
-  height: 100%;
-  background-color: #ff3700;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 /* Add some content at the bottom of the video/page */
 .content {
-  position: fixed;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.55);
   color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
