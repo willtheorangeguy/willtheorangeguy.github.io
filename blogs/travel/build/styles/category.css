@@ -1502,22 +1502,24 @@ button[disabled] {
     background-color: #fff;
     display: inline-block;
     height: 28px;
-    -webkit-mask: url(/build/images/saltinourhair-logo.png) no-repeat center/cover;
-    mask: url(/build/images/saltinourhair-logo.png) no-repeat center/cover;
-    -webkit-transition: height .2s, width .2s, opacity .1s;
-    transition: height .2s, width .2s, opacity .1s;
+    -webkit-mask: url(https://static.saltinourhair.com/build/images/saltinourhair-logo.png)
+      no-repeat center/cover;
+    mask: url(https://static.saltinourhair.com/build/images/saltinourhair-logo.png)
+      no-repeat center/cover;
+    -webkit-transition: height 0.2s, width 0.2s, opacity 0.1s;
+    transition: height 0.2s, width 0.2s, opacity 0.1s;
     opacity: 1;
-    width: 142px
-}
-
-.logo--shadow {
-    background-color: rgba(0, 0, 0, .05) !important;
+    width: 142px;
+  }
+  
+  .logo--shadow {
+    background-color: rgba(0, 0, 0, 0.05) !important;
     position: absolute;
     margin: 2px 0 0 2px;
-    z-index: -1
-}
-
-.logo__container {
+    z-index: -1;
+  }
+  
+  .logo__container {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1528,8 +1530,8 @@ button[disabled] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    position: relative
-}
+    position: relative;
+  }
 
 .icon {
     display: inline-block;
@@ -1773,7 +1775,7 @@ button[disabled] {
     grid-template-areas: "newsletter" "instagram" "sitemap" "logo";
     margin: 0 auto;
     max-width: 68.75rem;
-    width: 100%
+    width: 50%
 }
 
 .foot-instagram {
@@ -1862,33 +1864,33 @@ button[disabled] {
 }
 
 .sitemap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .sitemap {
     grid-area: sitemap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    font-size: .875em;
-    margin: 35px 0
-}
-
-.sitemap__list {
+    font-size: 0.875em;
+    margin: 35px 0;
+  }
+  
+  .sitemap__list {
     margin-top: 15px;
-    width: 50%
-}
-
-.sitemap__list-title {
+    width: 50%;
+  }
+  
+  .sitemap__list-title {
     font-family: headings, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1.1px;
-    text-transform: uppercase
-}
-
-.sitemap__list-item>a {
-    display: inline-block;
-    min-height: 24px;
-    margin-bottom: 8px
-}
+    text-transform: uppercase;
+  }
 
 .foot-logo {
     align-self: center;
@@ -1920,7 +1922,8 @@ button[disabled] {
     grid-area: copy;
     margin-top: 15px;
     padding-bottom: 20px;
-    position: relative
+    position: relative;
+    text-align: center;
 }
 
 div[data-name=mediavine-gdpr-button] {
@@ -3975,10 +3978,21 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         padding-bottom: 45px
     }
     .page-foot {
-        font-size: 1rem;
-        margin-top: 239px;
-        padding: 15px 15px 0
+        display: block;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
     }
+      
+    .page-foot {
+        background-color: var(--lightpink);
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 14px;
+        margin-top: 80px;
+        padding: 50px 15px 0;
+        position: relative;
+        z-index: 0;
+    }
+    
     .page-foot__background--mobile {
         display: none
     }
@@ -3986,9 +4000,12 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         display: block
     }
     .page-foot__container {
-        grid-template-columns: 3fr 1fr 1fr;
-        grid-template-areas: "newsletter instagram instagram" "sitemap sitemap sitemap" "logo logo logo"
-    }
+        grid-area: sm;
+        grid-template-areas: "newsletter" "instagram" "sitemap" "logo";
+        margin: 0 auto;
+        max-width: 68.75rem;
+        width: 50%;
+      }
     .foot-instagram__image {
         -webkit-mask-position: top right;
         mask-position: top right;
@@ -4006,12 +4023,12 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     .sitemap {
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        margin: 50px 0
-    }
+        margin: 50px 0;
+      }
     .sitemap__list {
         padding-right: 8px;
-        width: 25%
-    }
+        width: 25%;
+      }
     .article-block__content {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -4587,6 +4604,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         z-index: 99
     }
     .logo {
+        padding: 0 16px 0 16px;
         height: 21px;
         width: 103px
     }
@@ -4594,19 +4612,46 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         display: none
     }
     .page-foot {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto;
-        grid-template-areas: "wave wave" "sm sm" "copy gdpr"
-    }
-    .page-foot__background {
-        left: -15px;
-        top: -15px;
-        width: calc(100% + 30px)
-    }
-    .page-foot__container {
-        grid-template-areas: "newsletter instagram instagram" "sitemap sitemap logo"
-    }
+        display: block;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+      
+      .page-foot {
+        background-color: var(--lightpink);
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 14px;
+        margin-top: 80px;
+        padding: 50px 15px 0;
+        position: relative;
+        z-index: 0;
+      }
+      
+      .page-foot__background {
+        fill: var(--lightpink);
+        grid-area: wave;
+        left: 0;
+        position: absolute;
+        top: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+      
+      .page-foot__background--mobile {
+        display: block;
+      }
+      
+      .page-foot__background--desktop {
+        display: none;
+      }
+      
+      .page-foot__container {
+        grid-area: sm;
+        grid-template-areas: "newsletter" "instagram" "sitemap" "logo";
+        margin: 0 auto;
+        max-width: 68.75rem;
+        width: 50%;
+      }
     .foot-logo {
         margin: 0 0 15px auto
     }
@@ -4926,11 +4971,11 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
 
 @media (min-width:1200px) {
     .page-nav__item--home a {
-        padding: 0 28px 0 0
-    }
-    .page-nav__link {
-        padding: 0 12px
-    }
+        padding: 0 16px 0 16px;
+      }
+      .page-nav__link {
+        padding: 0 12px;
+      }
     .logo {
         height: 23px;
         width: 114px
@@ -5153,3 +5198,22 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         margin-bottom: 3px
     }
 }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto; /* center the container */
+  }
+  
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px; /* add rounded corners */
+  }
+  
