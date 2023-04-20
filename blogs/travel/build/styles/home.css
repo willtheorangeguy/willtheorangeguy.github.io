@@ -2731,7 +2731,7 @@ html.page-head--loaded .home-cover__content-container {
   font-size: 1em;
   letter-spacing: 0.5px;
   line-height: 1.85em;
-  text-align: right;
+  text-align: left;
 }
 
 .about-content__text a {
