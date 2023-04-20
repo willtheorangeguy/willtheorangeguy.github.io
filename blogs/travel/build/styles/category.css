@@ -422,7 +422,7 @@ sup {
 .page-nav__list--menu > .page-nav__item > .page-nav__link:before {
   content: "";
   background: #f0f0f0;
-  border-radius: 16px;
+  border-radius: 4px;
   height: 32px;
   left: 0;
   position: absolute;
@@ -464,7 +464,7 @@ sup {
 .page-nav__item--button:before {
   background: var(--lightgray);
   bottom: 0;
-  border-radius: 17px;
+  border-radius: 4px;
   content: "";
   left: 0;
   position: absolute;
@@ -716,7 +716,7 @@ ul.page-nav__list .page-nav__item--language .icon {
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--lightgray);
-  border-radius: 20px;
+  border-radius: 4px;
   color: var(--text-black);
   display: block;
   font-size: 15px;
@@ -852,7 +852,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__subcontainer--planning .page-nav__sub-link {
-  border-radius: 60px;
+  border-radius: 4px;
   font-size: 15px;
   padding: 20px 5px;
 }
@@ -917,7 +917,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 .planning-item:before {
     content: "";
     background: #f5f4f2;
-    border-radius: 7px;
+    border-radius: 4px;
     bottom: 0;
     left: -10px;
     right: 0;
@@ -1455,7 +1455,7 @@ button[disabled] {
 .article-block {
     -ms-flex-item-align: start;
     align-self: flex-start;
-    border-radius: 7px;
+    border-radius: 4px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1511,7 +1511,7 @@ button[disabled] {
 .article-block__image {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 7px;
+    border-radius: 4px;
     bottom: 0;
     left: 0;
     height: inherit;
@@ -1816,7 +1816,7 @@ button[disabled] {
 
 .post-tag:before {
     background-color: var(--lightblue);
-    border-radius: 20px;
+    border-radius: 4px;
     content: "";
     height: 100%;
     left: 0;
@@ -1886,7 +1886,7 @@ button[disabled] {
 
 .nav-panel {
     background-color: var(--white-panel);
-    border-radius: 20px;
+    border-radius: 4px;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .04), 2px 2px 2px rgba(0, 0, 0, .05), 0 0 2px rgba(0, 0, 0, .08);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .05), -2px 2px 2px rgba(0, 0, 0, .04), 2px 2px 2px rgba(0, 0, 0, .05), 0 0 2px rgba(0, 0, 0, .08);
     position: relative
@@ -1963,8 +1963,8 @@ button[disabled] {
 .nav-panel--tags:after {
     background: -webkit-gradient(linear, right top, left top, from(#fff), to(rgba(255, 255, 255, .001)));
     background: linear-gradient(to left, #fff, rgba(255, 255, 255, .001));
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     content: "";
     height: 100%;
     position: absolute;
@@ -2181,8 +2181,8 @@ button[disabled] {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -ms-flex-direction: column;
+    flex-direction: column;
     font-size: 12px;
     gap: 10px;
     letter-spacing: .03em;
@@ -2190,9 +2190,7 @@ button[disabled] {
     overflow-x: scroll;
     width: calc(100% + 30px);
     left: -15px;
-    margin-bottom: 15px;
     position: relative;
-    padding-left: 15px
 }
 
 .category-cover__details::-webkit-scrollbar {
@@ -5817,7 +5815,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 7px; /* add rounded corners */
+  border-radius: 4px; /* add rounded corners */
   max-width: 100%;
   overflow: hidden;
   margin: 0 auto; /* center the container */
@@ -5839,6 +5837,6 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 7px; /* add rounded corners */
+    border-radius: 4px; /* add rounded corners */
   }
   
