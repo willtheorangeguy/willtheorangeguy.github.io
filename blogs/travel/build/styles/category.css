@@ -72,7 +72,7 @@ html {
     overflow-x: hidden;
     background-color: var(--whitel);
     -webkit-hyphenate-character: "-";
-    background-color: var(--white)
+    background-color: #fff
 }
 
 body {
@@ -386,7 +386,7 @@ sup {
 
 .page-nav__list {
   background-color: transparent;
-  color: var(--white);
+  color: #fff;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -776,7 +776,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav--sticked {
-  color: var(--white);
+  color: #fff;
   height: 60px;
   left: 0;
   top: 0;
@@ -993,7 +993,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 
 .nav-burger {
     background-color: transparent;
-    color: var(--white);
+    color: #fff;
     cursor: pointer;
     font-size: 14px;
     height: 60px;
@@ -2598,7 +2598,7 @@ button[disabled] {
 
 .category-articles--banner .banner-scroller .article-text-block__title,
 .category-articles--banner .category-articles__title h3 {
-    color: var(--white)
+    color: #fff
 }
 
 .category-articles--banner .category-articles__title h3 a {
@@ -3233,7 +3233,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     transition: opacity 0.3s ease-in-out;
   }
   .page-nav__list {
-    color: var(--white);
+    color: #fff;
     top: 0;
   }
   .page-nav__list--menu {
@@ -3368,7 +3368,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
   }
   .page-nav--sticked {
     background-color: var(--black-panel);
-    color: var(--white);
+    color: #fff;
     position: fixed;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -3387,14 +3387,14 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     background-color: #212121;
   }
   .page-nav--sticked .search-form__input {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input::-webkit-input-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::-moz-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
@@ -3402,17 +3402,17 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
   .page-nav--sticked .search-form__input::-ms-input-placeholder {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input:-webkit-autofill,
   .page-nav--sticked .search-form__input:-webkit-autofill:focus,
   .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-    -webkit-text-fill-color: var(--white);
+    -webkit-text-fill-color: #fff;
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
   }
@@ -3966,7 +3966,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     transition: opacity 0.3s ease-in-out;
   }
   .page-nav__list {
-    color: var(--white);
+    color: #fff;
     top: 0;
   }
   .page-nav__list--menu {
@@ -4101,7 +4101,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
   }
   .page-nav--sticked {
     background-color: var(--black-panel);
-    color: var(--white);
+    color: #fff;
     position: fixed;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -4120,14 +4120,14 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     background-color: #212121;
   }
   .page-nav--sticked .search-form__input {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input::-webkit-input-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::-moz-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
@@ -4135,17 +4135,17 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
   .page-nav--sticked .search-form__input::-ms-input-placeholder {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input:-webkit-autofill,
   .page-nav--sticked .search-form__input:-webkit-autofill:focus,
   .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-    -webkit-text-fill-color: var(--white);
+    -webkit-text-fill-color: #fff;
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
   }
@@ -4483,7 +4483,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
   .page-nav--sticked .search-form__input:-webkit-autofill,
   .page-nav--sticked .search-form__input:-webkit-autofill:focus,
   .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-    -webkit-text-fill-color: var(--white);
+    -webkit-text-fill-color: #fff;
   }
 }
 
@@ -4646,7 +4646,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     display: block;
   }
   .page-nav--active .nav-burger__text {
-    color: var(--white);
+    color: #fff;
   }
 }
 
@@ -5077,7 +5077,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         transition: opacity .3s ease-in-out
     }
     .page-nav__list {
-        color: var(--white);
+        color: #fff;
         top: 0
     }
     .page-nav__list--menu {
@@ -5208,7 +5208,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     }
     .page-nav--sticked {
         background-color: var(--black-panel);
-        color: var(--white);
+        color: #fff;
         position: fixed;
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
@@ -5224,34 +5224,34 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         background-color: #212121
     }
     .page-nav--sticked .search-form__input {
-        color: var(--white)
+        color: #fff
     }
     .page-nav--sticked .search-form__input::-webkit-input-placeholder {
-        color: var(--white);
+        color: #fff;
         opacity: 1
     }
     .page-nav--sticked .search-form__input::-moz-placeholder {
-        color: var(--white);
+        color: #fff;
         opacity: 1
     }
     .page-nav--sticked .search-form__input:-ms-input-placeholder {
         opacity: 1;
-        color: var(--white)
+        color: #fff
     }
     .page-nav--sticked .search-form__input::-ms-input-placeholder {
         opacity: 1
     }
     .page-nav--sticked .search-form__input::placeholder {
-        color: var(--white);
+        color: #fff;
         opacity: 1
     }
     .page-nav--sticked .search-form__input::-ms-input-placeholder {
-        color: var(--white)
+        color: #fff
     }
     .page-nav--sticked .search-form__input:-webkit-autofill,
     .page-nav--sticked .search-form__input:-webkit-autofill:focus,
     .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-        -webkit-text-fill-color: var(--white);
+        -webkit-text-fill-color: #fff;
         -webkit-transition: background-color 5000s ease-in-out 0s;
         transition: background-color 5000s ease-in-out 0s
     }
@@ -5536,7 +5536,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     .page-nav--sticked .search-form__input:-webkit-autofill,
     .page-nav--sticked .search-form__input:-webkit-autofill:focus,
     .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-        -webkit-text-fill-color: var(--white)
+        -webkit-text-fill-color: #fff
     }
 }
 
@@ -5755,7 +5755,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         display: block
     }
     .page-nav--active .nav-burger__text {
-        color: var(--white)
+        color: #fff
     }
 }
 

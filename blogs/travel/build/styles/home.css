@@ -74,9 +74,9 @@
 html {
   height: 100%;
   overflow-x: hidden;
-  background-color: var(--white);
+  background-color: #fff;
   -webkit-hyphenate-character: "-";
-  background-color: var(--white);
+  background-color: #fff;
 }
 
 body {
@@ -385,7 +385,7 @@ sup {
 
 .page-nav__list {
   background-color: transparent;
-  color: var(--white);
+  color: #fff;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -487,7 +487,7 @@ sup {
 }
 
 ul.page-nav__list .page-nav__item--language {
-  color: var(--white);
+  color: #fff;
   height: 32px;
   margin-left: auto;
   margin-right: -1px;
@@ -551,7 +551,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__item-subcontainer {
-  background-color: var(--white);
+  background-color: #fff;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05),
     -2px 2px 2px rgba(0, 0, 0, 0.08), 2px 2px 2px rgba(0, 0, 0, 0.15),
     0 0 2px rgba(0, 0, 0, 0.08);
@@ -617,7 +617,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__subcontainer {
-  background-color: var(--white);
+  background-color: #fff;
   -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
@@ -738,7 +738,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__sub-continent {
-  background-color: var(--white);
+  background-color: #fff;
   border-bottom: 1px solid var(--lightgray);
   color: var(--text-black);
   display: block;
@@ -775,7 +775,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav--sticked {
-  color: var(--white);
+  color: #fff;
   height: 60px;
   left: 0;
   top: 0;
@@ -826,7 +826,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__list--maintopic .page-nav__link.topic-active {
-  background: var(--white);
+  background: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: var(--text-black);
@@ -894,7 +894,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .page-nav__planning-textarticles .article-text-block + .article-text-block {
-  border-color: var(--white);
+  border-color: #fff;
 }
 
 .planning-list {
@@ -993,7 +993,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 
 .nav-burger {
   background-color: transparent;
-  color: var(--white);
+  color: #fff;
   cursor: pointer;
   font-size: 14px;
   height: 60px;
@@ -1258,7 +1258,7 @@ button[disabled] {
 }
 
 .logo {
-  background-color: var(--white);
+  background-color: #fff;
   display: inline-block;
   height: 28px;
   -webkit-mask: url(https://static.saltinourhair.com/build/images/saltinourhair-logo.png)
@@ -1564,11 +1564,11 @@ button[disabled] {
 }
 
 .article-block__title span {
-  background: var(--white);
-  -webkit-box-shadow: .4em 0 0 var(--white), -.4em 0 0 var(--white);
-  box-shadow: .4em 0 0 var(--white), -.4em 0 0 var(--white);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0, var(--lightblue))), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0, var(--white)));
-  background-image: linear-gradient(transparent calc(100% - .4em), var(--lightblue) 0), linear-gradient(transparent calc(100% - .4em), var(--white) 0);
+  background: #fff;
+  -webkit-box-shadow: .4em 0 0 #fff, -.4em 0 0 #fff;
+  box-shadow: .4em 0 0 #fff, -.4em 0 0 #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0, var(--lightblue))), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0, #fff));
+  background-image: linear-gradient(transparent calc(100% - .4em), var(--lightblue) 0), linear-gradient(transparent calc(100% - .4em), #fff 0);
   background-repeat: no-repeat;
   background-size: 0 88%, 0 88%;
   text-shadow: 0 0 var(--black-panel), .06em 0 0 rgba(255, 255, 255, .7), 0 .05em 0 rgba(255, 255, 255, .7), -.06em 0 0 rgba(255, 255, 255, .7);
@@ -1688,7 +1688,7 @@ button[disabled] {
 
 .article-block--high .article-block__content {
   bottom: 20px;
-  color: var(--white);
+  color: #fff;
   left: 15px;
   margin: 0;
   right: 15px;
@@ -1705,13 +1705,13 @@ button[disabled] {
 
 .article-block--high .article-block__title {
   line-height: 1.3;
-  color: var(--white);
+  color: #fff;
   font-size: 1.45em;
   margin: 0;
 }
 
 .article-block--high .article-block__subtitle {
-  color: var(--white);
+  color: #fff;
   font-family: Montserrat, Arial, sans-serif;
   font-weight: 100;
   font-size: 1em;
@@ -1984,7 +1984,7 @@ button[disabled] {
 }
 
 .nav-panel--tags:before {
-  background-color: var(--white);
+  background-color: #fff;
   content: "Go to: ";
   color: var(--darkgray);
   height: 36px;
@@ -2002,10 +2002,10 @@ button[disabled] {
     linear,
     right top,
     left top,
-    from(var(--white)),
+    from(#fff),
     to(rgba(255, 255, 255, 0.001))
   );
-  background: linear-gradient(to left, var(--white), rgba(255, 255, 255, 0.001));
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0.001));
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   content: "";
@@ -2128,7 +2128,7 @@ button[disabled] {
 
 .home-cover__content {
   bottom: 0;
-  color: var(--white);
+  color: #fff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2290,7 +2290,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .top-posts .article-block .salt-icon__container:before {
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: 99em;
   content: "";
   position: absolute;
@@ -2331,10 +2331,10 @@ html.page-head--loaded .home-cover__content-container {
     linear,
     right top,
     left top,
-    from(var(--white)),
+    from(#fff),
     to(rgba(255, 255, 255, 0))
   );
-  background: linear-gradient(to left, var(--white), rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
   right: 0;
 }
 
@@ -2458,7 +2458,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .fit__left {
-  color: var(--white);
+  color: #fff;
   font-size: 7px;
 }
 
@@ -2519,7 +2519,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .fit__articles-all {
-  color: var(--white);
+  color: #fff;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.03em;
@@ -2631,7 +2631,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .handpicked__left .article-text-block {
-  border-color: var(--white);
+  border-color: #fff;
   font-size: 11px;
 }
 
@@ -2979,7 +2979,7 @@ html.page-head--loaded .home-cover__content-container {
     transition: opacity 0.3s ease-in-out;
   }
   .page-nav__list {
-    color: var(--white);
+    color: #fff;
     top: 0;
   }
   .page-nav__list--menu {
@@ -3114,7 +3114,7 @@ html.page-head--loaded .home-cover__content-container {
   }
   .page-nav--sticked {
     background-color: var(--black-panel);
-    color: var(--white);
+    color: #fff;
     position: fixed;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -3133,14 +3133,14 @@ html.page-head--loaded .home-cover__content-container {
     background-color: #212121;
   }
   .page-nav--sticked .search-form__input {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input::-webkit-input-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::-moz-placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
@@ -3148,23 +3148,23 @@ html.page-head--loaded .home-cover__content-container {
     opacity: 1;
   }
   .page-nav--sticked .search-form__input::placeholder {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
   }
   .page-nav--sticked .search-form__input:-ms-input-placeholder,
   .page-nav--sticked .search-form__input::-ms-input-placeholder {
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked .search-form__input:-webkit-autofill,
   .page-nav--sticked .search-form__input:-webkit-autofill:focus,
   .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-    -webkit-text-fill-color: var(--white);
+    -webkit-text-fill-color: #fff;
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
   }
   .page-nav--sticked .search-form__btn {
     background: radial-gradient(circle, #000 60%, rgba(255, 255, 255, 0) 60%);
-    color: var(--white);
+    color: #fff;
   }
   .page-nav--sticked--visible {
     -webkit-transform: translateY(0);
@@ -3496,7 +3496,7 @@ html.page-head--loaded .home-cover__content-container {
   .page-nav--sticked .search-form__input:-webkit-autofill,
   .page-nav--sticked .search-form__input:-webkit-autofill:focus,
   .page-nav--sticked .search-form__input:-webkit-autofill:hover {
-    -webkit-text-fill-color: var(--white);
+    -webkit-text-fill-color: #fff;
   }
 }
 
@@ -3659,7 +3659,7 @@ html.page-head--loaded .home-cover__content-container {
     display: block;
   }
   .page-nav--active .nav-burger__text {
-    color: var(--white);
+    color: #fff;
   }
 }
 
