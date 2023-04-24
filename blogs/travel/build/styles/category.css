@@ -41,24 +41,24 @@
 }
 
 @font-face {
-    font-family: "headings";
-    font-display: swap;
-    font-weight: 700;
-    src: url(/build/fonts/SaltHeading.woff2) format("woff2"), url(/build/fonts/SaltHeading.woff) format("woff")
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(../fonts/natural/Natural.otf);
 }
 
 @font-face {
-    font-family: "written";
-    font-display: block;
-    font-weight: 300;
-    src: url(/build/fonts/SaltWritten.woff2) format("woff2"), url(/build/fonts/SaltWritten.woff) format("woff")
+  font-family: Verdana;
+  font-display: swap;
+  font-weight: 500;
+  src: url(../fonts/verdana/verdana.ttf);
 }
 
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    font-weight: 400;
-    src: url(/build/fonts/montserrat-reg.woff2) format("woff2"), url(/build/fonts/montserrat-reg.woff) format("woff")
+  font-family: Titillium;
+  font-display: swap;
+  font-weight: 300;
+  src: url(../fonts/titillium/TitilliumWeb-Black.ttf);
 }
 
 * {
@@ -220,7 +220,7 @@ textarea {
 
 a:focus,
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 hr {
@@ -264,7 +264,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 700
 }
 
@@ -905,9 +905,10 @@ ul.page-nav__list .page-nav__item--language .icon {
     margin-bottom: 10px
 }
 
-.planning-list .salt-icon__container .icon-round-shape {
-    color: #eadfde;
-    opacity: .5
+.planning-list .salt-icon__container {
+  color: #eadfde;
+  opacity: 0.5;
+  position: relative;
 }
 
 .planning-item {
@@ -943,7 +944,7 @@ ul.page-nav__list .page-nav__item--language .icon {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     padding: 5px 0;
     width: 100%;
     color: var(--text-black) !important;
@@ -969,7 +970,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 
 .planning-learnmore,
 .planning-link__sublabel {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-weight: 100;
     font-size: 14px
 }
@@ -1072,7 +1073,7 @@ ul.page-nav__list .page-nav__item--language .icon {
     color: var(--text-black);
     cursor: pointer;
     display: inline-block;
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.1px;
@@ -1375,7 +1376,7 @@ button[disabled] {
 
 .page-foot {
     background-color: var(--lightblue);
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 14px;
     margin-top: 80px;
     padding: 50px 15px 0;
@@ -1432,14 +1433,16 @@ button[disabled] {
 }
   
 .sitemap__list-title {
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 700;
+    text-decoration: none!important;
     letter-spacing: 1.1px;
     text-transform: uppercase;
 }
 
 .copyright {
   color: var(--black-panel);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
   grid-area: copy;
   margin-top: 15px;
@@ -1709,7 +1712,7 @@ button[disabled] {
 
 .article-block--high .article-block__subtitle {
     color: #fff;
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-weight: 100;
     font-size: 1em;
     letter-spacing: 0;
@@ -1803,7 +1806,7 @@ button[disabled] {
 }
 
 .post-tag {
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 700;
     display: inline-block;
     line-height: 1;
@@ -1868,7 +1871,7 @@ button[disabled] {
 
 .articles-section__title {
     color: var(--lightgray);
-    font-family: written, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-size: 85px;
     left: 50%;
     margin: 0;
@@ -1894,7 +1897,7 @@ button[disabled] {
 
 .nav-panel__list {
     border-radius: inherit;
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 900;
     overflow: hidden;
     padding: 10px 0 2px
@@ -1951,7 +1954,7 @@ button[disabled] {
     content: "Go to: ";
     color: var(--darkgray);
     height: 36px;
-    font-family: headings, Arial;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 700;
     line-height: 1;
     position: absolute;
@@ -2121,7 +2124,7 @@ button[disabled] {
 
 .category-cover__subtitle {
     display: block;
-    font-family: written, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-size: 2.7em;
     font-weight: 100;
     left: -7px;
@@ -2163,7 +2166,7 @@ button[disabled] {
 }
 
 .category-cover__excerpt {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 1em;
     letter-spacing: .03em;
     line-height: 1.65em;
@@ -2242,7 +2245,7 @@ button[disabled] {
 }
 
 .category-details__title {
-    font-family: headings, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-size: 1.2em;
     line-height: 1.4;
     letter-spacing: 0
@@ -2284,7 +2287,7 @@ button[disabled] {
 }
 
 .category-details p {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     margin: 0
 }
 
@@ -2314,7 +2317,7 @@ button[disabled] {
 }
 
 .category-intro__title {
-    font-family: written, Arial, sans-serif;
+    font-family: headings, 'Times New Roman', Times, serif;
     font-weight: 300;
     font-size: 35px;
     letter-spacing: 0;
@@ -2783,7 +2786,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
 }
 
 .basic-category__subtitle {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     max-width: 380px;
     margin: 0 auto 1em;
     padding: 0 15px
@@ -2994,7 +2997,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     padding: 10px 15px;
     min-height: 50px;
     margin-bottom: 15px;
@@ -3040,6 +3043,14 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
   .planning-link .planning-link__link-icon.salt-icon {
     -webkit-transform: translate(-50%, -50%) scale(0.8);
     transform: translate(-50%, -50%) scale(0.8);
+  }
+  .planning-link__icon-container {
+    height: 50px;
+    margin-left: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+    padding: 5px;
+    width: 50px;
   }
   .page-foot {
     font-size: 1rem;
@@ -3741,6 +3752,14 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     top: -25px;
     -webkit-transform: translateX(-70%);
     transform: translateX(-70%);
+  }
+  .planning-link__icon-container {
+    height: 50px;
+    margin-left: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+    padding: 5px;
+    width: 50px;
   }
 }
 
@@ -4474,6 +4493,14 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
     top: -25px;
     -webkit-transform: translateX(-70%);
     transform: translateX(-70%);
+  }
+  .planning-link__icon-container {
+    height: 50px;
+    margin-left: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+    padding: 5px;
+    width: 50px;
   }
 }
 
@@ -5289,9 +5316,12 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         width: 90%
     }
     .planning-link .salt-icon__container.planning-link__icon-container {
-        margin-left: -5px;
-        overflow: hidden;
-        padding: 5px
+      height: 50px;
+      margin-left: -5px;
+      margin-right: 20px;
+      overflow: hidden;
+      padding: 5px;
+      width: 50px;
     }
     .page-nav__destinations--active .page-nav__subcontainer--destinations,
     .page-nav__planning--active .page-nav__subcontainer--planning,
@@ -5478,7 +5508,7 @@ html.page-head--loaded .category-cover__intro .category-cover__title:before {
         width: 50px
     }
     .category-details__title {
-        font-family: written, Arial, sans-serif;
+        font-family: headings, 'Times New Roman', Times, serif;
         font-size: 2em;
         margin-top: 10px;
         margin-bottom: 10px
