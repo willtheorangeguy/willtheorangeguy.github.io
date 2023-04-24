@@ -44,25 +44,21 @@
   font-family: headings;
   font-display: swap;
   font-weight: 700;
-  src: url(../fonts/natural/Natural.otf) format("otf"),
-    url(../fonts/natural/Natural.ttf) format("ttf");
+  src: url(../fonts/natural/Natural.otf);
 }
 
 @font-face {
-  font-family: merriweather;
+  font-family: Verdana;
   font-display: swap;
-  font-weight: 300;
-  src: url(/build/fonts/merriweather.woff2) format("woff2"),
-    url(/build/fonts/merriweather.woff) format("woff");
+  font-weight: 500;
+  src: url(../fonts/verdana/verdana.ttf);
 }
 
 @font-face {
-  font-family: merriweather;
+  font-family: Titillium;
   font-display: swap;
-  font-style: italic;
   font-weight: 300;
-  src: url(/build/fonts/merriweather-italic.woff2) format("woff2"),
-    url(/build/fonts/merriweather-italic.woff) format("woff");
+  src: url(../fonts/titillium/TitilliumWeb-Black.ttf);
 }
 
 * {
@@ -111,7 +107,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: default;
-  font: 16px/1.85 Merriweather, Georgia, serif;
+  font: 16px/1.85 copy, Georgia, serif;
   text-rendering: optimizeLegibility;
   color: var(--text-black);
 }
@@ -264,7 +260,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: headings, "Natural", Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
@@ -943,7 +939,7 @@ ul.page-nav__list .page-nav__item--language .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   padding: 5px 0;
   width: 100%;
 }
@@ -966,7 +962,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 }
 
 .planning-link__sublabel {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-weight: 100;
   font-size: 14px;
 }
@@ -979,7 +975,7 @@ ul.page-nav__list .page-nav__item--language .icon {
 
 .planning-learnmore {
   color: var(--text-black);
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-weight: 100;
   font-size: 14px;
   line-height: 1.4;
@@ -1051,7 +1047,7 @@ ul.page-nav__list .page-nav__item--language .icon {
   color: var(--text-black);
   cursor: pointer;
   display: inline-block;
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.1px;
@@ -1357,7 +1353,7 @@ button[disabled] {
 
 .page-foot {
   background-color: var(--lightblue);
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-size: 14px;
   margin-top: 80px;
   padding: 50px 15px 0;
@@ -1414,8 +1410,9 @@ button[disabled] {
 }
 
 .sitemap__list-title {
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-weight: 700;
+  text-decoration: none!important;
   letter-spacing: 1.1px;
   text-transform: uppercase;
 }
@@ -1423,6 +1420,7 @@ button[disabled] {
 .copyright {
   color: var(--black-panel);
   font-size: 12px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   grid-area: copy;
   margin-top: 15px;
   padding-bottom: 20px;
@@ -1712,7 +1710,7 @@ button[disabled] {
 
 .article-block--high .article-block__subtitle {
   color: #fff;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-weight: 100;
   font-size: 1em;
   letter-spacing: 0;
@@ -1816,7 +1814,7 @@ button[disabled] {
 }
 
 .post-tag {
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-weight: 700;
   display: inline-block;
   line-height: 1;
@@ -1902,7 +1900,7 @@ button[disabled] {
 
 .articles-section__title {
   color: var(--lightgray);
-  font-family: written, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-size: 85px;
   left: 50%;
   margin: 0;
@@ -1931,7 +1929,7 @@ button[disabled] {
 
 .nav-panel__list {
   border-radius: inherit;
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-weight: 900;
   overflow: hidden;
   padding: 10px 0 2px;
@@ -1988,7 +1986,7 @@ button[disabled] {
   content: "Go to: ";
   color: var(--darkgray);
   height: 36px;
-  font-family: headings, Arial;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-weight: 700;
   line-height: 1;
   position: absolute;
@@ -2204,7 +2202,7 @@ button[disabled] {
 
 .destination-dropdown {
   display: none;
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-size: 16px;
   font-weight: 700;
   padding-top: 28px;
@@ -2314,7 +2312,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .wheretonext__container {
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -2339,7 +2337,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .wheretonext__mtitle {
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 15px;
@@ -2485,7 +2483,7 @@ html.page-head--loaded .home-cover__content-container {
 
 .fit__subtitle,
 .fit__title {
-  font-family: headings, Arial, sans-serif;
+  font-family: written, 'Times New Roman', Times, serif;
   position: relative;
 }
 
@@ -2505,7 +2503,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .fit__excerpt {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.03em;
   line-height: 1.65em;
@@ -2520,7 +2518,7 @@ html.page-head--loaded .home-cover__content-container {
 
 .fit__articles-all {
   color: #fff;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.03em;
   padding: 10px 0;
@@ -2702,7 +2700,7 @@ html.page-head--loaded .home-cover__content-container {
 
 .about-content__title {
   color: var(--lightorange);
-  font-family: headings, Arial, sans-serif;
+  font-family: headings, 'Times New Roman', Times, serif;
   font-size: 3.3em;
   letter-spacing: 4px;
 }
@@ -2727,7 +2725,7 @@ html.page-head--loaded .home-cover__content-container {
 }
 
 .about-content__text {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
   font-size: 1em;
   letter-spacing: 0.5px;
   line-height: 1.85em;
