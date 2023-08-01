@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>European Flags</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=titillium-web:200,300,400,600,700,900" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            text-align: center;
+        }
+        .image-container {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .image-container img {
+            width: 1280px;
+            height: 720px;
+        }
+        .image-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+        
+        /* Media query for mobile devices */
+        @media screen and (max-width: 480px) {
+            .image-container {
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Photography Showcase</h1>
+
+    <!-- Image container 1 -->
+    <div class="image-container" data-video-id="zKJhPOtLXo8" onclick="playVideo(this)">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="Image 1">
+    </div>
+    <div class="image-title">Sunset at the Beach</div>
+    <div class="image-description">Click on the image to play the embedded YouTube video.</div>
+
+    <script>
+        function playVideo(container) {
+            var videoId = container.getAttribute("data-video-id");
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("width", "1280");
+            iframe.setAttribute("height", "720");
+            iframe.setAttribute("src", "https://www.youtube.com/embed/" + videoId + "?autoplay=1&controls=0&modestbranding&rel=0&loop=1");
+            iframe.setAttribute("frameborder", "0");
+            iframe.setAttribute("autoplay", "1");
+            iframe.setAttribute("controls", "0");
+            iframe.setAttribute("allowfullscreen", "true");
+            iframe.setAttribute("modestbranding", "true");
+            iframe.setAttribute("loop", "1");
+            iframe.setAttribute("rel", "0");
+
+            container.innerHTML = ""; // Clear the container
+            container.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
