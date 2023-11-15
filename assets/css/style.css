@@ -169,7 +169,10 @@ html {
 }
 
 body {
-  font: normal 75% Arial, Helvetica, sans-serif;
+  font:
+    normal 75% Arial,
+    Helvetica,
+    sans-serif;
   background-image: url(https://images.unsplash.com/photo-1579567761406-4684ee0c75b6);
   background-size: cover;
   background-repeat: no-repeat;
