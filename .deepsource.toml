@@ -1,16 +1,25 @@
 version = 1
 
 [[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
 name = "docker"
-enabled = true
 
   [analyzers.meta]
   dockerfile_paths = ["Dockerfile"]
 
 [[analyzers]]
 name = "javascript"
-enabled = true
+
+  [analyzers.meta]
+  environment = [
+    "browser",
+    "nodejs"
+  ]
 
 [[transformers]]
 name = "prettier"
-enabled = true
