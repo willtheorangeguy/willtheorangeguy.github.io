@@ -844,13 +844,12 @@
             !i.default(this._element).hasClass("show") &&
             (this._parent &&
               (e = [].slice
-                  .call(this._parent.querySelectorAll(".show, .collapsing"))
-                  .filter(function (t) {
-                    return typeof o._config.parent == "string"
-                      ? t.getAttribute("data-parent") === o._config.parent
-                      : t.classList.contains("collapse");
-                  })).length ===
-                0 &&
+                .call(this._parent.querySelectorAll(".show, .collapsing"))
+                .filter(function (t) {
+                  return typeof o._config.parent == "string"
+                    ? t.getAttribute("data-parent") === o._config.parent
+                    : t.classList.contains("collapse");
+                })).length === 0 &&
               (e = null),
             !(
               e &&
@@ -3527,12 +3526,12 @@
               Kt.indexOf(t) !== -1 && delete e[t];
             }),
             typeof (t = a(
-                {},
-                this.constructor.Default,
-                e,
-                typeof t == "object" && t ? t : {},
-              )).delay ==
-              "number" && (t.delay = { show: t.delay, hide: t.delay }),
+              {},
+              this.constructor.Default,
+              e,
+              typeof t == "object" && t ? t : {},
+            )).delay == "number" &&
+              (t.delay = { show: t.delay, hide: t.delay }),
             typeof t.title == "number" && (t.title = t.title.toString()),
             typeof t.content == "number" && (t.content = t.content.toString()),
             l.typeCheckConfig(Yt, t, this.constructor.DefaultType),
@@ -3847,8 +3846,7 @@
         }),
         (e._getConfig = function (t) {
           if (
-            typeof (t = a({}, fe, typeof t == "object" && t ? t : {}))
-                .target !=
+            typeof (t = a({}, fe, typeof t == "object" && t ? t : {})).target !=
               "string" &&
             l.isElement(t.target)
           ) {
