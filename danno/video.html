@@ -1,66 +1,87 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AP Research Video</title>
-    <meta name="description" content="AP Research Video">
+    <meta name="description" content="AP Research Video" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
       body {
-      overflow: hidden;
+        overflow: hidden;
       }
       iframe {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
       }
     </style>
   </head>
   <body class="text-center">
     <div id="player"></div>
     <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        // create youtube player
-        var player;
-        function onYouTubePlayerAPIReady() {
-            player = new YT.Player('player', {
-               height: '',
-               width: '',
-               videoId: 'UYXejp0UBiQ',
-               playerVars:{'controls':0, 'showinfo':0, 'disablekb':0, 'modestbranding':1, 'autoplay':1},
-               events: {
-                'onStateChange': onPlayerStateChange
-              }
-            });
-        }
-        // when video ends
-        function onPlayerStateChange(event) {
-          //alert (event.data);
-          if (event.data == 0)
-                  GoHome();
-        }
-        function GoHome(){
-            window.location = 'https://willtheorangeguy.github.io/danno/postsurvey.html';
-        }
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      // create youtube player
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player("player", {
+          height: "",
+          width: "",
+          videoId: "UYXejp0UBiQ",
+          playerVars: {
+            controls: 0,
+            showinfo: 0,
+            disablekb: 0,
+            modestbranding: 1,
+            autoplay: 1,
+          },
+          events: {
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+      // when video ends
+      function onPlayerStateChange(event) {
+        //alert (event.data);
+        if (event.data == 0) GoHome();
+      }
+      function GoHome() {
+        window.location =
+          "https://willtheorangeguy.github.io/danno/postsurvey.html";
+      }
     </script>
     <script>
-      $(function(){
-        $('#player').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+      $(function () {
+        $("#player").css({
+          width: $(window).innerWidth() + "px",
+          height: $(window).innerHeight() + "px",
+        });
 
-        $(window).resize(function(){
-          $('#player').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+        $(window).resize(function () {
+          $("#player").css({
+            width: $(window).innerWidth() + "px",
+            height: $(window).innerHeight() + "px",
+          });
         });
       });
     </script>
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
   </body>
 </html>

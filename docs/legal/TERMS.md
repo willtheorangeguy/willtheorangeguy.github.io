@@ -17,7 +17,7 @@ For the purposes of these Terms and Conditions:
 - **Application** means the software program provided by @willtheorangeguy downloaded by you on any electronic device, named willtheorangeguy.github.io.
 - **Application Store** means the digital distribution service operated and developed by Apple Inc. (Apple App Store), Google Inc. (Google Play Store) or Microsoft Inc (GitHub), in which the Application has been downloaded.
 - **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
-- **Country** refers to: British Columbia,  Canada
+- **Country** refers to: British Columbia, Canada
 - **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to the developer named as @willtheorangeguy.
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 - **Service** refers to the Application.
