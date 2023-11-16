@@ -1,1 +1,13 @@
-.background-animate:where(.astro-D2X7YZ4B){background-size:400%;animation:AnimationName 4s ease infinite}@keyframes AnimationName{0%,to{background-position:0% 50%}50%{background-position:100% 50%}}
+.background-animate:where(.astro-D2X7YZ4B) {
+  background-size: 400%;
+  animation: AnimationName 4s ease infinite;
+}
+@keyframes AnimationName {
+  0%,
+  to {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
