@@ -4,20 +4,20 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 !(function (t, e) {
-  "object" == typeof exports && "undefined" != typeof module
+  typeof exports == "object" && typeof module != "undefined"
     ? e(exports, require("jquery"))
-    : "function" == typeof define && define.amd
+    : typeof define == "function" && define.amd
     ? define(["exports", "jquery"], e)
     : e(
         ((t =
-          "undefined" != typeof globalThis ? globalThis : t || self).bootstrap =
+          typeof globalThis != "undefined" ? globalThis : t || self).bootstrap =
           {}),
         t.jQuery,
       );
 })(this, function (t, e) {
   "use strict";
   function n(t) {
-    return t && "object" == typeof t && "default" in t ? t : { default: t };
+    return t && typeof t == "object" && "default" in t ? t : { default: t };
   }
   var i = n(e);
   function o(t, e) {
@@ -67,9 +67,9 @@
     },
     getSelectorFromElement: function (t) {
       var e = t.getAttribute("data-target");
-      if (!e || "#" === e) {
+      if (!e || e === "#") {
         var n = t.getAttribute("href");
-        e = n && "#" !== n ? n.trim() : "";
+        e = n && n !== "#" ? n.trim() : "";
       }
       try {
         return document.querySelector(e) ? e : null;
@@ -109,7 +109,7 @@
             a =
               r && l.isElement(r)
                 ? "element"
-                : null === (s = r) || "undefined" == typeof s
+                : (s = r) === null || typeof s == "undefined"
                 ? "" + s
                 : {}.toString
                     .call(s)
@@ -131,7 +131,7 @@
     },
     findShadowRoot: function (t) {
       if (!document.documentElement.attachShadow) return null;
-      if ("function" == typeof t.getRootNode) {
+      if (typeof t.getRootNode == "function") {
         var e = t.getRootNode();
         return e instanceof ShadowRoot ? e : null;
       }
@@ -142,14 +142,14 @@
         : null;
     },
     jQueryDetection: function () {
-      if ("undefined" == typeof i.default)
+      if (typeof i.default == "undefined")
         throw new TypeError(
           "Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.",
         );
       var t = i.default.fn.jquery.split(" ")[0].split(".");
       if (
         (t[0] < 2 && t[1] < 9) ||
-        (1 === t[0] && 9 === t[1] && t[2] < 1) ||
+        (t[0] === 1 && t[1] === 9 && t[2] < 1) ||
         t[0] >= 4
       )
         throw new Error(
@@ -219,7 +219,7 @@
             var n = i.default(this),
               o = n.data("bs.alert");
             o || ((o = new t(this)), n.data("bs.alert", o)),
-              "close" === e && o[e](this);
+              e === "close" && o[e](this);
           });
         }),
         (t._handleDismiss = function (t) {
@@ -264,7 +264,7 @@
           if (n) {
             var o = this._element.querySelector('input:not([type="hidden"])');
             if (o) {
-              if ("radio" === o.type)
+              if (o.type === "radio")
                 if (o.checked && this._element.classList.contains("active"))
                   t = !1;
                 else {
@@ -272,7 +272,7 @@
                   r && i.default(r).removeClass("active");
                 }
               t &&
-                (("checkbox" !== o.type && "radio" !== o.type) ||
+                ((o.type !== "checkbox" && o.type !== "radio") ||
                   (o.checked = !this._element.classList.contains("active")),
                 this.shouldAvoidTriggerChange ||
                   i.default(o).trigger("change")),
@@ -299,7 +299,7 @@
               r = o.data("bs.button");
             r || ((r = new t(this)), o.data("bs.button", r)),
               (r.shouldAvoidTriggerChange = n),
-              "toggle" === e && r[e]();
+              e === "toggle" && r[e]();
           });
         }),
         r(t, null, [
@@ -330,11 +330,11 @@
           (o.hasAttribute("disabled") || o.classList.contains("disabled"))
         )
           return void t.preventDefault();
-        ("INPUT" !== n.tagName && "LABEL" === e.tagName) ||
+        (n.tagName !== "INPUT" && e.tagName === "LABEL") ||
           h._jQueryInterface.call(
             i.default(e),
             "toggle",
-            "INPUT" === n.tagName,
+            n.tagName === "INPUT",
           );
       }
     })
@@ -371,7 +371,7 @@
         r++
       ) {
         var s = t[r];
-        "true" === s.getAttribute("aria-pressed")
+        s.getAttribute("aria-pressed") === "true"
           ? s.classList.add("active")
           : s.classList.remove("active");
       }
@@ -433,7 +433,7 @@
           var t = i.default(this._element);
           !document.hidden &&
             t.is(":visible") &&
-            "hidden" !== t.css("visibility") &&
+            t.css("visibility") !== "hidden" &&
             this.next();
         }),
         (e.prev = function () {
@@ -507,7 +507,7 @@
             i.default(this._element).on("keydown.bs.carousel", function (e) {
               return t._keydown(e);
             }),
-            "hover" === this._config.pause &&
+            this._config.pause === "hover" &&
               i
                 .default(this._element)
                 .on("mouseenter.bs.carousel", function (e) {
@@ -532,7 +532,7 @@
                   b[e.originalEvent.pointerType.toUpperCase()] &&
                   (t.touchDeltaX = e.originalEvent.clientX - t.touchStartX),
                   t._handleSwipe(),
-                  "hover" === t._config.pause &&
+                  t._config.pause === "hover" &&
                     (t.pause(),
                     t.touchTimeout && clearTimeout(t.touchTimeout),
                     (t.touchTimeout = setTimeout(function (e) {
@@ -600,14 +600,14 @@
           );
         }),
         (e._getItemByDirection = function (t, e) {
-          var n = "next" === t,
-            i = "prev" === t,
+          var n = t === "next",
+            i = t === "prev",
             o = this._getItemIndex(e),
             r = this._items.length - 1;
-          if (((i && 0 === o) || (n && o === r)) && !this._config.wrap)
+          if (((i && o === 0) || (n && o === r)) && !this._config.wrap)
             return e;
-          var a = (o + ("prev" === t ? -1 : 1)) % this._items.length;
-          return -1 === a
+          var a = (o + (t === "prev" ? -1 : 1)) % this._items.length;
+          return a === -1
             ? this._items[this._items.length - 1]
             : this._items[a];
         }),
@@ -659,7 +659,7 @@
             d = this._getItemIndex(f),
             c = Boolean(this._interval);
           if (
-            ("next" === t
+            (t === "next"
               ? ((n = "carousel-item-left"),
                 (o = "carousel-item-next"),
                 (r = "left"))
@@ -715,16 +715,16 @@
           return this.each(function () {
             var n = i.default(this).data("bs.carousel"),
               o = a({}, v, i.default(this).data());
-            "object" == typeof e && (o = a({}, o, e));
-            var r = "string" == typeof e ? e : o.slide;
+            typeof e == "object" && (o = a({}, o, e));
+            var r = typeof e == "string" ? e : o.slide;
             if (
               (n ||
                 ((n = new t(this, o)), i.default(this).data("bs.carousel", n)),
-              "number" == typeof e)
+              typeof e == "number")
             )
               n.to(e);
-            else if ("string" == typeof r) {
-              if ("undefined" == typeof n[r])
+            else if (typeof r == "string") {
+              if (typeof n[r] == "undefined")
                 throw new TypeError('No method named "' + r + '"');
               n[r]();
             } else o.interval && o.ride && (n.pause(), n.cycle());
@@ -821,7 +821,7 @@
               .filter(function (e) {
                 return e === t;
               });
-          null !== a &&
+          a !== null &&
             s.length > 0 &&
             ((this._selector = a), this._triggerArray.push(r));
         }
@@ -843,14 +843,14 @@
             !this._isTransitioning &&
             !i.default(this._element).hasClass("show") &&
             (this._parent &&
-              0 ===
-                (e = [].slice
+              (e = [].slice
                   .call(this._parent.querySelectorAll(".show, .collapsing"))
                   .filter(function (t) {
-                    return "string" == typeof o._config.parent
+                    return typeof o._config.parent == "string"
                       ? t.getAttribute("data-parent") === o._config.parent
                       : t.classList.contains("collapse");
-                  })).length &&
+                  })).length ===
+                0 &&
               (e = null),
             !(
               e &&
@@ -921,7 +921,7 @@
                 for (var r = 0; r < o; r++) {
                   var a = this._triggerArray[r],
                     s = l.getSelectorFromElement(a);
-                  if (null !== s)
+                  if (s !== null)
                     i
                       .default([].slice.call(document.querySelectorAll(s)))
                       .hasClass("show") ||
@@ -974,7 +974,7 @@
             n = this;
           l.isElement(this._config.parent)
             ? ((e = this._config.parent),
-              "undefined" != typeof this._config.parent.jquery &&
+              typeof this._config.parent.jquery != "undefined" &&
                 (e = this._config.parent[0]))
             : (e = document.querySelector(this._config.parent));
           var o =
@@ -1002,17 +1002,17 @@
           return this.each(function () {
             var n = i.default(this),
               o = n.data("bs.collapse"),
-              r = a({}, T, n.data(), "object" == typeof e && e ? e : {});
+              r = a({}, T, n.data(), typeof e == "object" && e ? e : {});
             if (
               (!o &&
                 r.toggle &&
-                "string" == typeof e &&
+                typeof e == "string" &&
                 /show|hide/.test(e) &&
                 (r.toggle = !1),
               o || ((o = new t(this, r)), n.data("bs.collapse", o)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof o[e])
+              if (typeof o[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               o[e]();
             }
@@ -1038,7 +1038,7 @@
   i
     .default(document)
     .on("click.bs.collapse.data-api", '[data-toggle="collapse"]', function (t) {
-      "A" === t.currentTarget.tagName && t.preventDefault();
+      t.currentTarget.tagName === "A" && t.preventDefault();
       var e = i.default(this),
         n = l.getSelectorFromElement(this),
         o = [].slice.call(document.querySelectorAll(n));
@@ -1054,9 +1054,9 @@
       return (i.default.fn[w] = E), S._jQueryInterface;
     });
   var D =
-      "undefined" != typeof window &&
-      "undefined" != typeof document &&
-      "undefined" != typeof navigator,
+      typeof window != "undefined" &&
+      typeof document != "undefined" &&
+      typeof navigator != "undefined",
     N = (function () {
       for (var t = ["Edge", "Trident", "Firefox"], e = 0; e < t.length; e += 1)
         if (D && navigator.userAgent.indexOf(t[e]) >= 0) return 1;
@@ -1085,15 +1085,15 @@
           };
         };
   function A(t) {
-    return t && "[object Function]" === {}.toString.call(t);
+    return t && {}.toString.call(t) === "[object Function]";
   }
   function I(t, e) {
-    if (1 !== t.nodeType) return [];
+    if (t.nodeType !== 1) return [];
     var n = t.ownerDocument.defaultView.getComputedStyle(t, null);
     return e ? n[e] : n;
   }
   function O(t) {
-    return "HTML" === t.nodeName ? t : t.parentNode || t.host;
+    return t.nodeName === "HTML" ? t : t.parentNode || t.host;
   }
   function x(t) {
     if (!t) return document.body;
@@ -1116,7 +1116,7 @@
   var L = D && !(!window.MSInputMethodContext || !document.documentMode),
     P = D && /MSIE 10/.test(navigator.userAgent);
   function F(t) {
-    return 11 === t ? L : 10 === t ? P : L || P;
+    return t === 11 ? L : t === 10 ? P : L || P;
   }
   function R(t) {
     if (!t) return document.documentElement;
@@ -1127,9 +1127,9 @@
     )
       n = (t = t.nextElementSibling).offsetParent;
     var i = n && n.nodeName;
-    return i && "BODY" !== i && "HTML" !== i
-      ? -1 !== ["TH", "TD", "TABLE"].indexOf(n.nodeName) &&
-        "static" === I(n, "position")
+    return i && i !== "BODY" && i !== "HTML"
+      ? ["TH", "TD", "TABLE"].indexOf(n.nodeName) !== -1 &&
+        I(n, "position") === "static"
         ? R(n)
         : n
       : t
@@ -1137,7 +1137,7 @@
       : document.documentElement;
   }
   function H(t) {
-    return null !== t.parentNode ? H(t.parentNode) : t;
+    return t.parentNode !== null ? H(t.parentNode) : t;
   }
   function M(t, e) {
     if (!(t && t.nodeType && e && e.nodeType)) return document.documentElement;
@@ -1150,8 +1150,8 @@
       s,
       l = r.commonAncestorContainer;
     if ((t !== l && e !== l) || i.contains(o))
-      return "BODY" === (s = (a = l).nodeName) ||
-        ("HTML" !== s && R(a.firstElementChild) !== a)
+      return (s = (a = l).nodeName) === "BODY" ||
+        (s !== "HTML" && R(a.firstElementChild) !== a)
         ? R(l)
         : l;
     var u = H(t);
@@ -1160,9 +1160,9 @@
   function q(t) {
     var e =
         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
-      n = "top" === e ? "scrollTop" : "scrollLeft",
+      n = e === "top" ? "scrollTop" : "scrollLeft",
       i = t.nodeName;
-    if ("BODY" === i || "HTML" === i) {
+    if (i === "BODY" || i === "HTML") {
       var o = t.ownerDocument.documentElement,
         r = t.ownerDocument.scrollingElement || o;
       return r[n];
@@ -1183,8 +1183,8 @@
     );
   }
   function Q(t, e) {
-    var n = "x" === e ? "Left" : "Top",
-      i = "Left" === n ? "Right" : "Bottom";
+    var n = e === "x" ? "Left" : "Top",
+      i = n === "Left" ? "Right" : "Bottom";
     return (
       parseFloat(t["border" + n + "Width"]) +
       parseFloat(t["border" + i + "Width"])
@@ -1199,8 +1199,8 @@
       n["scroll" + t],
       F(10)
         ? parseInt(n["offset" + t]) +
-            parseInt(i["margin" + ("Height" === t ? "Top" : "Left")]) +
-            parseInt(i["margin" + ("Height" === t ? "Bottom" : "Right")])
+            parseInt(i["margin" + (t === "Height" ? "Top" : "Left")]) +
+            parseInt(i["margin" + (t === "Height" ? "Bottom" : "Right")])
         : 0,
     );
   }
@@ -1270,7 +1270,7 @@
         width: e.right - e.left,
         height: e.bottom - e.top,
       },
-      r = "HTML" === t.nodeName ? U(t.ownerDocument) : {},
+      r = t.nodeName === "HTML" ? U(t.ownerDocument) : {},
       a = r.width || t.clientWidth || o.width,
       s = r.height || t.clientHeight || o.height,
       l = t.offsetWidth - a,
@@ -1284,7 +1284,7 @@
   function $(t, e) {
     var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       i = F(10),
-      o = "HTML" === e.nodeName,
+      o = e.nodeName === "HTML",
       r = G(t),
       a = G(e),
       s = x(t),
@@ -1309,7 +1309,7 @@
         (d.marginLeft = h);
     }
     return (
-      (i && !n ? e.contains(s) : e === s && "BODY" !== s.nodeName) &&
+      (i && !n ? e.contains(s) : e === s && s.nodeName !== "BODY") &&
         (d = B(d, e)),
       d
     );
@@ -1332,14 +1332,14 @@
   }
   function Z(t) {
     var e = t.nodeName;
-    if ("BODY" === e || "HTML" === e) return !1;
-    if ("fixed" === I(t, "position")) return !0;
+    if (e === "BODY" || e === "HTML") return !1;
+    if (I(t, "position") === "fixed") return !0;
     var n = O(t);
     return !!n && Z(n);
   }
   function tt(t) {
     if (!t || !t.parentElement || F()) return document.documentElement;
-    for (var e = t.parentElement; e && "none" === I(e, "transform"); )
+    for (var e = t.parentElement; e && I(e, "transform") === "none"; )
       e = e.parentElement;
     return e || document.documentElement;
   }
@@ -1347,15 +1347,15 @@
     var o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
       r = { top: 0, left: 0 },
       a = o ? tt(t) : M(t, j(e));
-    if ("viewport" === i) r = J(a, o);
+    if (i === "viewport") r = J(a, o);
     else {
       var s = void 0;
-      "scrollParent" === i
-        ? "BODY" === (s = x(O(e))).nodeName &&
+      i === "scrollParent"
+        ? (s = x(O(e))).nodeName === "BODY" &&
           (s = t.ownerDocument.documentElement)
-        : (s = "window" === i ? t.ownerDocument.documentElement : i);
+        : (s = i === "window" ? t.ownerDocument.documentElement : i);
       var l = $(s, a, o);
-      if ("HTML" !== s.nodeName || Z(a)) r = l;
+      if (s.nodeName !== "HTML" || Z(a)) r = l;
       else {
         var u = U(t.ownerDocument),
           f = u.height,
@@ -1366,7 +1366,7 @@
           (r.right = d + l.left);
       }
     }
-    var c = "number" == typeof (n = n || 0);
+    var c = typeof (n = n || 0) == "number";
     return (
       (r.left += c ? n : n.left || 0),
       (r.top += c ? n : n.top || 0),
@@ -1380,7 +1380,7 @@
   }
   function it(t, e, n, i, o) {
     var r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-    if (-1 === t.indexOf("auto")) return t;
+    if (t.indexOf("auto") === -1) return t;
     var a = et(n, i, r, o),
       s = {
         top: { width: a.width, height: e.top - a.top },
@@ -1426,7 +1426,7 @@
     n = n.split("-")[0];
     var i = rt(t),
       o = { width: i.width, height: i.height },
-      r = -1 !== ["right", "left"].indexOf(n),
+      r = ["right", "left"].indexOf(n) !== -1,
       a = r ? "top" : "left",
       s = r ? "left" : "top",
       l = r ? "height" : "width",
@@ -1522,7 +1522,7 @@
     ) {
       var o = e[i],
         r = o ? "" + o + n : t;
-      if ("undefined" != typeof document.body.style[r]) return r;
+      if (typeof document.body.style[r] != "undefined") return r;
     }
     return null;
   }
@@ -1554,7 +1554,7 @@
     var o = x(t);
     return (
       (function t(e, n, i, o) {
-        var r = "BODY" === e.nodeName,
+        var r = e.nodeName === "BODY",
           a = r ? e.ownerDocument.defaultView : e;
         a.addEventListener(n, i, { passive: !0 }),
           r || t(x(a.parentNode), n, i, o),
@@ -1592,12 +1592,12 @@
         e)));
   }
   function _t(t) {
-    return "" !== t && !isNaN(parseFloat(t)) && isFinite(t);
+    return t !== "" && !isNaN(parseFloat(t)) && isFinite(t);
   }
   function bt(t, e) {
     Object.keys(e).forEach(function (n) {
       var i = "";
-      -1 !== ["width", "height", "top", "right", "bottom", "left"].indexOf(n) &&
+      ["width", "height", "top", "right", "bottom", "left"].indexOf(n) !== -1 &&
         _t(e[n]) &&
         (i = "px"),
         (t.style[n] = e[n] + i);
@@ -1656,23 +1656,23 @@
     Nt = "counterclockwise";
   function kt(t, e, n, i) {
     var o = [0, 0],
-      r = -1 !== ["right", "left"].indexOf(i),
+      r = ["right", "left"].indexOf(i) !== -1,
       a = t.split(/(\+|\-)/).map(function (t) {
         return t.trim();
       }),
       s = a.indexOf(
         lt(a, function (t) {
-          return -1 !== t.search(/,|\s/);
+          return t.search(/,|\s/) !== -1;
         }),
       );
     a[s] &&
-      -1 === a[s].indexOf(",") &&
+      a[s].indexOf(",") === -1 &&
       console.warn(
         "Offsets separated by white space(s) are deprecated, use a comma (,) instead.",
       );
     var l = /\s*,\s*|\s+/,
       u =
-        -1 !== s
+        s !== -1
           ? [
               a.slice(0, s).concat([a[s].split(l)[0]]),
               [a[s].split(l)[1]].concat(a.slice(s + 1)),
@@ -1680,11 +1680,11 @@
           : [a];
     return (
       (u = u.map(function (t, i) {
-        var o = (1 === i ? !r : r) ? "height" : "width",
+        var o = (i === 1 ? !r : r) ? "height" : "width",
           a = !1;
         return t
           .reduce(function (t, e) {
-            return "" === t[t.length - 1] && -1 !== ["+", "-"].indexOf(e)
+            return t[t.length - 1] === "" && ["+", "-"].indexOf(e) !== -1
               ? ((t[t.length - 1] = e), (a = !0), t)
               : a
               ? ((t[t.length - 1] += e), (a = !1), t)
@@ -1696,7 +1696,7 @@
                 r = +o[1],
                 a = o[2];
               if (!r) return t;
-              if (0 === a.indexOf("%")) {
+              if (a.indexOf("%") === 0) {
                 var s = void 0;
                 switch (a) {
                   case "%p":
@@ -1709,9 +1709,9 @@
                 }
                 return (K(s)[e] / 100) * r;
               }
-              if ("vh" === a || "vw" === a)
+              if (a === "vh" || a === "vw")
                 return (
-                  (("vh" === a
+                  ((a === "vh"
                     ? Math.max(
                         document.documentElement.clientHeight,
                         window.innerHeight || 0,
@@ -1728,7 +1728,7 @@
           });
       })).forEach(function (t, e) {
         t.forEach(function (n, i) {
-          _t(n) && (o[e] += n * ("-" === t[i - 1] ? -1 : 1));
+          _t(n) && (o[e] += n * (t[i - 1] === "-" ? -1 : 1));
         });
       }),
       o
@@ -1753,7 +1753,7 @@
               var o = t.offsets,
                 r = o.reference,
                 a = o.popper,
-                s = -1 !== ["bottom", "top"].indexOf(n),
+                s = ["bottom", "top"].indexOf(n) !== -1,
                 l = s ? "left" : "top",
                 u = s ? "width" : "height",
                 f = {
@@ -1778,13 +1778,13 @@
               l = void 0;
             return (
               (l = _t(+n) ? [+n, 0] : kt(n, r, a, s)),
-              "left" === s
+              s === "left"
                 ? ((r.top += l[0]), (r.left -= l[1]))
-                : "right" === s
+                : s === "right"
                 ? ((r.top += l[0]), (r.left += l[1]))
-                : "top" === s
+                : s === "top"
                 ? ((r.left += l[0]), (r.top -= l[1]))
-                : "bottom" === s && ((r.left += l[0]), (r.top += l[1])),
+                : s === "bottom" && ((r.left += l[0]), (r.top += l[1])),
               (t.popper = r),
               t
             );
@@ -1824,14 +1824,14 @@
                   );
                 },
                 secondary: function (t) {
-                  var n = "right" === t ? "left" : "top",
+                  var n = t === "right" ? "left" : "top",
                     i = f[n];
                   return (
                     f[t] > l[t] &&
                       !e.escapeWithReference &&
                       (i = Math.min(
                         f[n],
-                        l[t] - ("right" === t ? f.width : f.height),
+                        l[t] - (t === "right" ? f.width : f.height),
                       )),
                     z({}, n, i)
                   );
@@ -1840,7 +1840,7 @@
             return (
               u.forEach(function (t) {
                 var e =
-                  -1 !== ["left", "top"].indexOf(t) ? "primary" : "secondary";
+                  ["left", "top"].indexOf(t) !== -1 ? "primary" : "secondary";
                 f = X({}, f, d[e](t));
               }),
               (t.offsets.popper = f),
@@ -1860,7 +1860,7 @@
               i = e.reference,
               o = t.placement.split("-")[0],
               r = Math.floor,
-              a = -1 !== ["top", "bottom"].indexOf(o),
+              a = ["top", "bottom"].indexOf(o) !== -1,
               s = a ? "right" : "bottom",
               l = a ? "left" : "top",
               u = a ? "width" : "height";
@@ -1878,7 +1878,7 @@
             var n;
             if (!wt(t.instance.modifiers, "arrow", "keepTogether")) return t;
             var i = e.element;
-            if ("string" == typeof i) {
+            if (typeof i == "string") {
               if (!(i = t.instance.popper.querySelector(i))) return t;
             } else if (!t.instance.popper.contains(i))
               return (
@@ -1891,7 +1891,7 @@
               r = t.offsets,
               a = r.popper,
               s = r.reference,
-              l = -1 !== ["left", "right"].indexOf(o),
+              l = ["left", "right"].indexOf(o) !== -1,
               u = l ? "height" : "width",
               f = l ? "Top" : "Left",
               d = f.toLowerCase(),
@@ -1954,39 +1954,39 @@
                   f = t.offsets.reference,
                   d = Math.floor,
                   c =
-                    ("left" === i && d(u.right) > d(f.left)) ||
-                    ("right" === i && d(u.left) < d(f.right)) ||
-                    ("top" === i && d(u.bottom) > d(f.top)) ||
-                    ("bottom" === i && d(u.top) < d(f.bottom)),
+                    (i === "left" && d(u.right) > d(f.left)) ||
+                    (i === "right" && d(u.left) < d(f.right)) ||
+                    (i === "top" && d(u.bottom) > d(f.top)) ||
+                    (i === "bottom" && d(u.top) < d(f.bottom)),
                   h = d(u.left) < d(n.left),
                   p = d(u.right) > d(n.right),
                   m = d(u.top) < d(n.top),
                   g = d(u.bottom) > d(n.bottom),
                   v =
-                    ("left" === i && h) ||
-                    ("right" === i && p) ||
-                    ("top" === i && m) ||
-                    ("bottom" === i && g),
-                  _ = -1 !== ["top", "bottom"].indexOf(i),
+                    (i === "left" && h) ||
+                    (i === "right" && p) ||
+                    (i === "top" && m) ||
+                    (i === "bottom" && g),
+                  _ = ["top", "bottom"].indexOf(i) !== -1,
                   b =
                     !!e.flipVariations &&
-                    ((_ && "start" === r && h) ||
-                      (_ && "end" === r && p) ||
-                      (!_ && "start" === r && m) ||
-                      (!_ && "end" === r && g)),
+                    ((_ && r === "start" && h) ||
+                      (_ && r === "end" && p) ||
+                      (!_ && r === "start" && m) ||
+                      (!_ && r === "end" && g)),
                   y =
                     !!e.flipVariationsByContent &&
-                    ((_ && "start" === r && p) ||
-                      (_ && "end" === r && h) ||
-                      (!_ && "start" === r && g) ||
-                      (!_ && "end" === r && m)),
+                    ((_ && r === "start" && p) ||
+                      (_ && r === "end" && h) ||
+                      (!_ && r === "start" && g) ||
+                      (!_ && r === "end" && m)),
                   w = b || y;
                 (c || v || w) &&
                   ((t.flipped = !0),
                   (c || v) && (i = a[l + 1]),
                   w &&
                     (r = (function (t) {
-                      return "end" === t ? "start" : "start" === t ? "end" : t;
+                      return t === "end" ? "start" : t === "start" ? "end" : t;
                     })(r)),
                   (t.placement = i + (r ? "-" + r : "")),
                   (t.offsets.popper = X(
@@ -2014,8 +2014,8 @@
               i = t.offsets,
               o = i.popper,
               r = i.reference,
-              a = -1 !== ["left", "right"].indexOf(n),
-              s = -1 === ["top", "left"].indexOf(n);
+              a = ["left", "right"].indexOf(n) !== -1,
+              s = ["top", "left"].indexOf(n) === -1;
             return (
               (o[a ? "left" : "top"] =
                 r[n] - (s ? o[a ? "width" : "height"] : 0)),
@@ -2032,7 +2032,7 @@
             if (!wt(t.instance.modifiers, "hide", "preventOverflow")) return t;
             var e = t.offsets.reference,
               n = lt(t.instance.modifiers, function (t) {
-                return "preventOverflow" === t.name;
+                return t.name === "preventOverflow";
               }).boundaries;
             if (
               e.bottom < n.top ||
@@ -2057,7 +2057,7 @@
               i = e.y,
               o = t.offsets.popper,
               r = lt(t.instance.modifiers, function (t) {
-                return "applyStyle" === t.name;
+                return t.name === "applyStyle";
               }).gpuAcceleration;
             void 0 !== r &&
               console.warn(
@@ -2078,8 +2078,8 @@
                   },
                   l = r(o.width),
                   u = r(i.width),
-                  f = -1 !== ["left", "right"].indexOf(t.placement),
-                  d = -1 !== t.placement.indexOf("-"),
+                  f = ["left", "right"].indexOf(t.placement) !== -1,
+                  d = t.placement.indexOf("-") !== -1,
                   c = e ? (f || d || l % 2 == u % 2 ? r : a) : s,
                   h = e ? r : s;
                 return {
@@ -2091,21 +2091,21 @@
                   right: c(i.right),
                 };
               })(t, window.devicePixelRatio < 2 || !yt),
-              d = "bottom" === n ? "top" : "bottom",
-              c = "right" === i ? "left" : "right",
+              d = n === "bottom" ? "top" : "bottom",
+              c = i === "right" ? "left" : "right",
               h = ct("transform"),
               p = void 0,
               m = void 0;
             if (
               ((m =
-                "bottom" === d
-                  ? "HTML" === s.nodeName
+                d === "bottom"
+                  ? s.nodeName === "HTML"
                     ? -s.clientHeight + f.bottom
                     : -l.height + f.bottom
                   : f.top),
               (p =
-                "right" === c
-                  ? "HTML" === s.nodeName
+                c === "right"
+                  ? s.nodeName === "HTML"
                     ? -s.clientWidth + f.right
                     : -l.width + f.right
                   : f.left),
@@ -2116,8 +2116,8 @@
                 (u[c] = 0),
                 (u.willChange = "transform");
             else {
-              var g = "bottom" === d ? -1 : 1,
-                v = "right" === c ? -1 : 1;
+              var g = d === "bottom" ? -1 : 1,
+                v = c === "right" ? -1 : 1;
               (u[d] = m * g), (u[c] = p * v), (u.willChange = d + ", " + c);
             }
             var _ = { "x-placement": t.placement };
@@ -2240,7 +2240,7 @@
         t
       );
     })();
-  (It.Utils = ("undefined" != typeof window ? window : global).PopperUtils),
+  (It.Utils = (typeof window != "undefined" ? window : global).PopperUtils),
     (It.placements = Et),
     (It.Defaults = At);
   var Ot = "dropdown",
@@ -2296,18 +2296,18 @@
               r = t._getParentFromElement(this._element);
             if ((i.default(r).trigger(o), !o.isDefaultPrevented())) {
               if (!this._inNavbar && e) {
-                if ("undefined" == typeof It)
+                if (typeof It == "undefined")
                   throw new TypeError(
                     "Bootstrap's dropdowns require Popper (https://popper.js.org)",
                   );
                 var a = this._element;
-                "parent" === this._config.reference
+                this._config.reference === "parent"
                   ? (a = r)
                   : l.isElement(this._config.reference) &&
                     ((a = this._config.reference),
-                    "undefined" != typeof this._config.reference.jquery &&
+                    typeof this._config.reference.jquery != "undefined" &&
                       (a = this._config.reference[0])),
-                  "scrollParent" !== this._config.boundary &&
+                  this._config.boundary !== "scrollParent" &&
                     i.default(r).addClass("position-static"),
                   (this._popper = new It(
                     a,
@@ -2316,7 +2316,7 @@
                   ));
               }
               "ontouchstart" in document.documentElement &&
-                0 === i.default(r).closest(".navbar-nav").length &&
+                i.default(r).closest(".navbar-nav").length === 0 &&
                 i
                   .default(document.body)
                   .children()
@@ -2355,12 +2355,12 @@
             i.default(this._element).off(".bs.dropdown"),
             (this._element = null),
             (this._menu = null),
-            null !== this._popper &&
+            this._popper !== null &&
               (this._popper.destroy(), (this._popper = null));
         }),
         (e.update = function () {
           (this._inNavbar = this._detectNavbar()),
-            null !== this._popper && this._popper.scheduleUpdate();
+            this._popper !== null && this._popper.scheduleUpdate();
         }),
         (e._addEventListeners = function () {
           var t = this;
@@ -2411,7 +2411,7 @@
           var t = this,
             e = {};
           return (
-            "function" == typeof this._config.offset
+            typeof this._config.offset == "function"
               ? (e.fn = function (e) {
                   return (
                     (e.offsets = a(
@@ -2436,7 +2436,7 @@
             },
           };
           return (
-            "static" === this._config.display &&
+            this._config.display === "static" &&
               (t.modifiers.applyStyle = { enabled: !1 }),
             a({}, t, this._config.popperConfig)
           );
@@ -2446,18 +2446,18 @@
             var n = i.default(this).data("bs.dropdown");
             if (
               (n ||
-                ((n = new t(this, "object" == typeof e ? e : null)),
+                ((n = new t(this, typeof e == "object" ? e : null)),
                 i.default(this).data("bs.dropdown", n)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof n[e])
+              if (typeof n[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               n[e]();
             }
           });
         }),
         (t._clearMenus = function (e) {
-          if (!e || (3 !== e.which && ("keyup" !== e.type || 9 === e.which)))
+          if (!e || (e.which !== 3 && (e.type !== "keyup" || e.which === 9)))
             for (
               var n = [].slice.call(
                   document.querySelectorAll('[data-toggle="dropdown"]'),
@@ -2470,15 +2470,15 @@
               var a = t._getParentFromElement(n[o]),
                 s = i.default(n[o]).data("bs.dropdown"),
                 l = { relatedTarget: n[o] };
-              if ((e && "click" === e.type && (l.clickEvent = e), s)) {
+              if ((e && e.type === "click" && (l.clickEvent = e), s)) {
                 var u = s._menu;
                 if (
                   i.default(a).hasClass("show") &&
                   !(
                     e &&
-                    (("click" === e.type &&
+                    ((e.type === "click" &&
                       /input|textarea/i.test(e.target.tagName)) ||
-                      ("keyup" === e.type && 9 === e.which)) &&
+                      (e.type === "keyup" && e.which === 9)) &&
                     i.default.contains(a, e.target)
                   )
                 ) {
@@ -2509,9 +2509,9 @@
         (t._dataApiKeydownHandler = function (e) {
           if (
             !(/input|textarea/i.test(e.target.tagName)
-              ? 32 === e.which ||
-                (27 !== e.which &&
-                  ((40 !== e.which && 38 !== e.which) ||
+              ? e.which === 32 ||
+                (e.which !== 27 &&
+                  ((e.which !== 40 && e.which !== 38) ||
                     i.default(e.target).closest(".dropdown-menu").length))
               : !jt.test(e.which)) &&
             !this.disabled &&
@@ -2519,14 +2519,14 @@
           ) {
             var n = t._getParentFromElement(this),
               o = i.default(n).hasClass("show");
-            if (o || 27 !== e.which) {
+            if (o || e.which !== 27) {
               if (
                 (e.preventDefault(),
                 e.stopPropagation(),
-                !o || 27 === e.which || 32 === e.which)
+                !o || e.which === 27 || e.which === 32)
               )
                 return (
-                  27 === e.which &&
+                  e.which === 27 &&
                     i
                       .default(n.querySelector('[data-toggle="dropdown"]'))
                       .trigger("focus"),
@@ -2541,10 +2541,10 @@
                 .filter(function (t) {
                   return i.default(t).is(":visible");
                 });
-              if (0 !== r.length) {
+              if (r.length !== 0) {
                 var a = r.indexOf(e.target);
-                38 === e.which && a > 0 && a--,
-                  40 === e.which && a < r.length - 1 && a++,
+                e.which === 38 && a > 0 && a--,
+                  e.which === 40 && a < r.length - 1 && a++,
                   a < 0 && (a = 0),
                   r[a].focus();
               }
@@ -2783,7 +2783,7 @@
             .on("focusin.bs.modal", function (e) {
               document !== e.target &&
                 t._element !== e.target &&
-                0 === i.default(t._element).has(e.target).length &&
+                i.default(t._element).has(e.target).length === 0 &&
                 t._element.focus();
             });
         }),
@@ -2793,10 +2793,10 @@
             ? i
                 .default(this._element)
                 .on("keydown.dismiss.bs.modal", function (e) {
-                  t._config.keyboard && 27 === e.which
+                  t._config.keyboard && e.which === 27
                     ? (e.preventDefault(), t.hide())
                     : t._config.keyboard ||
-                      27 !== e.which ||
+                      e.which !== 27 ||
                       t._triggerBackdropTransition();
                 })
             : this._isShown ||
@@ -2843,7 +2843,7 @@
                   e._ignoreBackdropClick
                     ? (e._ignoreBackdropClick = !1)
                     : t.target === t.currentTarget &&
-                      ("static" === e._config.backdrop
+                      (e._config.backdrop === "static"
                         ? e._triggerBackdropTransition()
                         : e.hide());
                 }),
@@ -2941,7 +2941,7 @@
           var e = [].slice.call(document.querySelectorAll(".sticky-top"));
           i.default(e).each(function (t, e) {
             var n = i.default(e).data("margin-right");
-            "undefined" != typeof n &&
+            typeof n != "undefined" &&
               i.default(e).css("margin-right", n).removeData("margin-right");
           });
           var n = i.default(document.body).data("padding-right");
@@ -2962,13 +2962,13 @@
                 {},
                 Ht,
                 i.default(this).data(),
-                "object" == typeof e && e ? e : {},
+                typeof e == "object" && e ? e : {},
               );
             if (
               (o || ((o = new t(this, r)), i.default(this).data("bs.modal", o)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof o[e])
+              if (typeof o[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               o[e](n);
             } else r.show && o.show(n);
@@ -3001,7 +3001,7 @@
       var r = i.default(e).data("bs.modal")
         ? "toggle"
         : a({}, i.default(e).data(), i.default(this).data());
-      ("A" !== this.tagName && "AREA" !== this.tagName) || t.preventDefault();
+      (this.tagName !== "A" && this.tagName !== "AREA") || t.preventDefault();
       var s = i.default(e).one("show.bs.modal", function (t) {
         t.isDefaultPrevented() ||
           s.one("hidden.bs.modal", function () {
@@ -3061,8 +3061,8 @@
     Ut =
       /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
   function Vt(t, e, n) {
-    if (0 === t.length) return t;
-    if (n && "function" == typeof n) return n(t);
+    if (t.length === 0) return t;
+    if (n && typeof n == "function") return n(t);
     for (
       var i = new window.DOMParser().parseFromString(t, "text/html"),
         o = Object.keys(e),
@@ -3070,16 +3070,16 @@
         a = function (t, n) {
           var i = r[t],
             a = i.nodeName.toLowerCase();
-          if (-1 === o.indexOf(i.nodeName.toLowerCase()))
+          if (o.indexOf(i.nodeName.toLowerCase()) === -1)
             return i.parentNode.removeChild(i), "continue";
           var s = [].slice.call(i.attributes),
             l = [].concat(e["*"] || [], e[a] || []);
           s.forEach(function (t) {
             (function (t, e) {
               var n = t.nodeName.toLowerCase();
-              if (-1 !== e.indexOf(n))
+              if (e.indexOf(n) !== -1)
                 return (
-                  -1 === Bt.indexOf(n) ||
+                  Bt.indexOf(n) === -1 ||
                   Boolean(t.nodeValue.match(Wt) || t.nodeValue.match(Ut))
                 );
               for (
@@ -3168,7 +3168,7 @@
     },
     te = (function () {
       function t(t, e) {
-        if ("undefined" == typeof It)
+        if (typeof It == "undefined")
           throw new TypeError(
             "Bootstrap's tooltips require Popper (https://popper.js.org)",
           );
@@ -3235,14 +3235,14 @@
         }),
         (e.show = function () {
           var t = this;
-          if ("none" === i.default(this.element).css("display"))
+          if (i.default(this.element).css("display") === "none")
             throw new Error("Please use show on visible elements");
           var e = i.default.Event(this.constructor.Event.SHOW);
           if (this.isWithContent() && this._isEnabled) {
             i.default(this.element).trigger(e);
             var n = l.findShadowRoot(this.element),
               o = i.default.contains(
-                null !== n ? n : this.element.ownerDocument.documentElement,
+                n !== null ? n : this.element.ownerDocument.documentElement,
                 this.element,
               );
             if (e.isDefaultPrevented() || !o) return;
@@ -3253,7 +3253,7 @@
               this.setContent(),
               this.config.animation && i.default(r).addClass("fade");
             var s =
-                "function" == typeof this.config.placement
+                typeof this.config.placement == "function"
                   ? this.config.placement.call(this, r, this.element)
                   : this.config.placement,
               u = this._getAttachment(s);
@@ -3282,7 +3282,7 @@
               var e = t._hoverState;
               (t._hoverState = null),
                 i.default(t.element).trigger(t.constructor.Event.SHOWN),
-                "out" === e && t._leave(null, t);
+                e === "out" && t._leave(null, t);
             };
             if (i.default(this.tip).hasClass("fade")) {
               var c = l.getTransitionDurationFromElement(this.tip);
@@ -3297,13 +3297,13 @@
             n = this.getTipElement(),
             o = i.default.Event(this.constructor.Event.HIDE),
             r = function () {
-              "show" !== e._hoverState &&
+              e._hoverState !== "show" &&
                 n.parentNode &&
                 n.parentNode.removeChild(n),
                 e._cleanTipClass(),
                 e.element.removeAttribute("aria-describedby"),
                 i.default(e.element).trigger(e.constructor.Event.HIDDEN),
-                null !== e._popper && e._popper.destroy(),
+                e._popper !== null && e._popper.destroy(),
                 t && t();
             };
           if ((i.default(this.element).trigger(o), !o.isDefaultPrevented())) {
@@ -3326,7 +3326,7 @@
           }
         }),
         (e.update = function () {
-          null !== this._popper && this._popper.scheduleUpdate();
+          this._popper !== null && this._popper.scheduleUpdate();
         }),
         (e.isWithContent = function () {
           return Boolean(this.getTitle());
@@ -3349,7 +3349,7 @@
             i.default(t).removeClass("fade show");
         }),
         (e.setElementContent = function (t, e) {
-          "object" != typeof e || (!e.nodeType && !e.jquery)
+          typeof e != "object" || (!e.nodeType && !e.jquery)
             ? this.config.html
               ? (this.config.sanitize &&
                   (e = Vt(e, this.config.whiteList, this.config.sanitizeFn)),
@@ -3364,7 +3364,7 @@
           return (
             t ||
               (t =
-                "function" == typeof this.config.title
+                typeof this.config.title == "function"
                   ? this.config.title.call(this.element)
                   : this.config.title),
             t
@@ -3397,7 +3397,7 @@
           var t = this,
             e = {};
           return (
-            "function" == typeof this.config.offset
+            typeof this.config.offset == "function"
               ? (e.fn = function (e) {
                   return (
                     (e.offsets = a(
@@ -3425,7 +3425,7 @@
         (e._setListeners = function () {
           var t = this;
           this.config.trigger.split(" ").forEach(function (e) {
-            if ("click" === e)
+            if (e === "click")
               i.default(t.element).on(
                 t.constructor.Event.CLICK,
                 t.config.selector,
@@ -3433,13 +3433,13 @@
                   return t.toggle(e);
                 },
               );
-            else if ("manual" !== e) {
+            else if (e !== "manual") {
               var n =
-                  "hover" === e
+                  e === "hover"
                     ? t.constructor.Event.MOUSEENTER
                     : t.constructor.Event.FOCUSIN,
                 o =
-                  "hover" === e
+                  e === "hover"
                     ? t.constructor.Event.MOUSELEAVE
                     : t.constructor.Event.FOCUSOUT;
               i.default(t.element)
@@ -3467,7 +3467,7 @@
         }),
         (e._fixTitle = function () {
           var t = typeof this.element.getAttribute("data-original-title");
-          (this.element.getAttribute("title") || "string" !== t) &&
+          (this.element.getAttribute("title") || t !== "string") &&
             (this.element.setAttribute(
               "data-original-title",
               this.element.getAttribute("title") || "",
@@ -3483,15 +3483,15 @@
             )),
             i.default(t.currentTarget).data(n, e)),
             t &&
-              (e._activeTrigger["focusin" === t.type ? "focus" : "hover"] = !0),
+              (e._activeTrigger[t.type === "focusin" ? "focus" : "hover"] = !0),
             i.default(e.getTipElement()).hasClass("show") ||
-            "show" === e._hoverState
+            e._hoverState === "show"
               ? (e._hoverState = "show")
               : (clearTimeout(e._timeout),
                 (e._hoverState = "show"),
                 e.config.delay && e.config.delay.show
                   ? (e._timeout = setTimeout(function () {
-                      "show" === e._hoverState && e.show();
+                      e._hoverState === "show" && e.show();
                     }, e.config.delay.show))
                   : e.show());
         }),
@@ -3504,14 +3504,14 @@
             )),
             i.default(t.currentTarget).data(n, e)),
             t &&
-              (e._activeTrigger["focusout" === t.type ? "focus" : "hover"] =
+              (e._activeTrigger[t.type === "focusout" ? "focus" : "hover"] =
                 !1),
             e._isWithActiveTrigger() ||
               (clearTimeout(e._timeout),
               (e._hoverState = "out"),
               e.config.delay && e.config.delay.hide
                 ? (e._timeout = setTimeout(function () {
-                    "out" === e._hoverState && e.hide();
+                    e._hoverState === "out" && e.hide();
                   }, e.config.delay.hide))
                 : e.hide());
         }),
@@ -3524,17 +3524,17 @@
           var e = i.default(this.element).data();
           return (
             Object.keys(e).forEach(function (t) {
-              -1 !== Kt.indexOf(t) && delete e[t];
+              Kt.indexOf(t) !== -1 && delete e[t];
             }),
-            "number" ==
-              typeof (t = a(
+            typeof (t = a(
                 {},
                 this.constructor.Default,
                 e,
-                "object" == typeof t && t ? t : {},
-              )).delay && (t.delay = { show: t.delay, hide: t.delay }),
-            "number" == typeof t.title && (t.title = t.title.toString()),
-            "number" == typeof t.content && (t.content = t.content.toString()),
+                typeof t == "object" && t ? t : {},
+              )).delay ==
+              "number" && (t.delay = { show: t.delay, hide: t.delay }),
+            typeof t.title == "number" && (t.title = t.title.toString()),
+            typeof t.content == "number" && (t.content = t.content.toString()),
             l.typeCheckConfig(Yt, t, this.constructor.DefaultType),
             t.sanitize &&
               (t.template = Vt(t.template, t.whiteList, t.sanitizeFn)),
@@ -3552,7 +3552,7 @@
         (e._cleanTipClass = function () {
           var t = i.default(this.getTipElement()),
             e = t.attr("class").match(Xt);
-          null !== e && e.length && t.removeClass(e.join(""));
+          e !== null && e.length && t.removeClass(e.join(""));
         }),
         (e._handlePopperPlacementChange = function (t) {
           (this.tip = t.instance.popper),
@@ -3562,7 +3562,7 @@
         (e._fixTransition = function () {
           var t = this.getTipElement(),
             e = this.config.animation;
-          null === t.getAttribute("x-placement") &&
+          t.getAttribute("x-placement") === null &&
             (i.default(t).removeClass("fade"),
             (this.config.animation = !1),
             this.hide(),
@@ -3573,13 +3573,13 @@
           return this.each(function () {
             var n = i.default(this),
               o = n.data("bs.tooltip"),
-              r = "object" == typeof e && e;
+              r = typeof e == "object" && e;
             if (
               (o || !/dispose|hide/.test(e)) &&
               (o || ((o = new t(this, r)), n.data("bs.tooltip", o)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof o[e])
+              if (typeof o[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               o[e]();
             }
@@ -3687,7 +3687,7 @@
           var t = i.default(this.getTipElement());
           this.setElementContent(t.find(".popover-header"), this.getTitle());
           var e = this._getContent();
-          "function" == typeof e && (e = e.call(this.element)),
+          typeof e == "function" && (e = e.call(this.element)),
             this.setElementContent(t.find(".popover-body"), e),
             t.removeClass("fade show");
         }),
@@ -3699,19 +3699,19 @@
         (a._cleanTipClass = function () {
           var t = i.default(this.getTipElement()),
             e = t.attr("class").match(ie);
-          null !== e && e.length > 0 && t.removeClass(e.join(""));
+          e !== null && e.length > 0 && t.removeClass(e.join(""));
         }),
         (o._jQueryInterface = function (t) {
           return this.each(function () {
             var e = i.default(this).data("bs.popover"),
-              n = "object" == typeof t ? t : null;
+              n = typeof t == "object" ? t : null;
             if (
               (e || !/dispose|hide/.test(t)) &&
               (e ||
                 ((e = new o(this, n)), i.default(this).data("bs.popover", e)),
-              "string" == typeof t)
+              typeof t == "string")
             ) {
-              if ("undefined" == typeof e[t])
+              if (typeof e[t] == "undefined")
                 throw new TypeError('No method named "' + t + '"');
               e[t]();
             }
@@ -3777,7 +3777,7 @@
       function t(t, e) {
         var n = this;
         (this._element = t),
-          (this._scrollElement = "BODY" === t.tagName ? window : t),
+          (this._scrollElement = t.tagName === "BODY" ? window : t),
           (this._config = this._getConfig(e)),
           (this._selector =
             this._config.target +
@@ -3806,8 +3806,8 @@
               this._scrollElement === this._scrollElement.window
                 ? "offset"
                 : "position",
-            n = "auto" === this._config.method ? e : this._config.method,
-            o = "position" === n ? this._getScrollTop() : 0;
+            n = this._config.method === "auto" ? e : this._config.method,
+            o = n === "position" ? this._getScrollTop() : 0;
           (this._offsets = []),
             (this._targets = []),
             (this._scrollHeight = this._getScrollHeight()),
@@ -3847,9 +3847,9 @@
         }),
         (e._getConfig = function (t) {
           if (
-            "string" !=
-              typeof (t = a({}, fe, "object" == typeof t && t ? t : {}))
-                .target &&
+            typeof (t = a({}, fe, typeof t == "object" && t ? t : {}))
+                .target !=
+              "string" &&
             l.isElement(t.target)
           ) {
             var e = i.default(t.target).attr("id");
@@ -3894,7 +3894,7 @@
             for (var o = this._offsets.length; o--; ) {
               this._activeTarget !== this._targets[o] &&
                 t >= this._offsets[o] &&
-                ("undefined" == typeof this._offsets[o + 1] ||
+                (typeof this._offsets[o + 1] == "undefined" ||
                   t < this._offsets[o + 1]) &&
                 this._activate(this._targets[o]);
             }
@@ -3945,11 +3945,11 @@
             var n = i.default(this).data("bs.scrollspy");
             if (
               (n ||
-                ((n = new t(this, "object" == typeof e && e)),
+                ((n = new t(this, typeof e == "object" && e)),
                 i.default(this).data("bs.scrollspy", n)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof n[e])
+              if (typeof n[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               n[e]();
             }
@@ -4011,7 +4011,7 @@
               r = l.getSelectorFromElement(this._element);
             if (o) {
               var a =
-                "UL" === o.nodeName || "OL" === o.nodeName
+                o.nodeName === "UL" || o.nodeName === "OL"
                   ? "> li > .active"
                   : ".active";
               n = (n = i.default.makeArray(i.default(o).find(a)))[n.length - 1];
@@ -4044,7 +4044,7 @@
         (e._activate = function (t, e, n) {
           var o = this,
             r = (
-              !e || ("UL" !== e.nodeName && "OL" !== e.nodeName)
+              !e || (e.nodeName !== "UL" && e.nodeName !== "OL")
                 ? i.default(e).children(".active")
                 : i.default(e).find("> li > .active")
             )[0],
@@ -4065,12 +4065,12 @@
             i.default(e).removeClass("active");
             var o = i.default(e.parentNode).find("> .dropdown-menu .active")[0];
             o && i.default(o).removeClass("active"),
-              "tab" === e.getAttribute("role") &&
+              e.getAttribute("role") === "tab" &&
                 e.setAttribute("aria-selected", !1);
           }
           if (
             (i.default(t).addClass("active"),
-            "tab" === t.getAttribute("role") &&
+            t.getAttribute("role") === "tab" &&
               t.setAttribute("aria-selected", !0),
             l.reflow(t),
             t.classList.contains("fade") && t.classList.add("show"),
@@ -4091,9 +4091,9 @@
               o = n.data("bs.tab");
             if (
               (o || ((o = new t(this)), n.data("bs.tab", o)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof o[e])
+              if (typeof o[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               o[e]();
             }
@@ -4186,7 +4186,7 @@
               {},
               ve,
               i.default(this._element).data(),
-              "object" == typeof t && t ? t : {},
+              typeof t == "object" && t ? t : {},
             )),
             l.typeCheckConfig("toast", t, this.constructor.DefaultType),
             t
@@ -4226,11 +4226,11 @@
               o = n.data("bs.toast");
             if (
               (o ||
-                ((o = new t(this, "object" == typeof e && e)),
+                ((o = new t(this, typeof e == "object" && e)),
                 n.data("bs.toast", o)),
-              "string" == typeof e)
+              typeof e == "string")
             ) {
-              if ("undefined" == typeof o[e])
+              if (typeof o[e] == "undefined")
                 throw new TypeError('No method named "' + e + '"');
               o[e](this);
             }
