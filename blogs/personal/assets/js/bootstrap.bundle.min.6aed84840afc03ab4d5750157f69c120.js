@@ -7,13 +7,14 @@
   typeof exports == "object" && typeof module != "undefined"
     ? e(exports, require("jquery"))
     : typeof define == "function" && define.amd
-    ? define(["exports", "jquery"], e)
-    : e(
-        ((t =
-          typeof globalThis != "undefined" ? globalThis : t || self).bootstrap =
-          {}),
-        t.jQuery,
-      );
+      ? define(["exports", "jquery"], e)
+      : e(
+          ((t =
+            typeof globalThis != "undefined"
+              ? globalThis
+              : t || self).bootstrap = {}),
+          t.jQuery,
+        );
 })(this, function (t, e) {
   "use strict";
   function n(t) {
@@ -110,11 +111,11 @@
               r && l.isElement(r)
                 ? "element"
                 : (s = r) === null || typeof s == "undefined"
-                ? "" + s
-                : {}.toString
-                    .call(s)
-                    .match(/\s([a-z]+)/i)[1]
-                    .toLowerCase();
+                  ? "" + s
+                  : {}.toString
+                      .call(s)
+                      .match(/\s([a-z]+)/i)[1]
+                      .toLowerCase();
           if (!new RegExp(o).test(a))
             throw new Error(
               t.toUpperCase() +
@@ -138,8 +139,8 @@
       return t instanceof ShadowRoot
         ? t
         : t.parentNode
-        ? l.findShadowRoot(t.parentNode)
-        : null;
+          ? l.findShadowRoot(t.parentNode)
+          : null;
     },
     jQueryDetection: function () {
       if (typeof i.default == "undefined")
@@ -1132,8 +1133,8 @@
         ? R(n)
         : n
       : t
-      ? t.ownerDocument.documentElement
-      : document.documentElement;
+        ? t.ownerDocument.documentElement
+        : document.documentElement;
   }
   function H(t) {
     return t.parentNode !== null ? H(t.parentNode) : t;
@@ -1686,8 +1687,8 @@
             return t[t.length - 1] === "" && ["+", "-"].indexOf(e) !== -1
               ? ((t[t.length - 1] = e), (a = !0), t)
               : a
-              ? ((t[t.length - 1] += e), (a = !1), t)
-              : t.concat(e);
+                ? ((t[t.length - 1] += e), (a = !1), t)
+                : t.concat(e);
           }, [])
           .map(function (t) {
             return (function (t, e, n, i) {
@@ -1780,10 +1781,10 @@
               s === "left"
                 ? ((r.top += l[0]), (r.left -= l[1]))
                 : s === "right"
-                ? ((r.top += l[0]), (r.left += l[1]))
-                : s === "top"
-                ? ((r.left += l[0]), (r.top -= l[1]))
-                : s === "bottom" && ((r.left += l[0]), (r.top += l[1])),
+                  ? ((r.top += l[0]), (r.left += l[1]))
+                  : s === "top"
+                    ? ((r.left += l[0]), (r.top -= l[1]))
+                    : s === "bottom" && ((r.left += l[0]), (r.top += l[1])),
               (t.popper = r),
               t
             );
@@ -2395,11 +2396,11 @@
                   ? "top-end"
                   : "top-start")
               : t.hasClass("dropright")
-              ? (e = "right-start")
-              : t.hasClass("dropleft")
-              ? (e = "left-start")
-              : i.default(this._menu).hasClass("dropdown-menu-right") &&
-                (e = "bottom-end"),
+                ? (e = "right-start")
+                : t.hasClass("dropleft")
+                  ? (e = "left-start")
+                  : i.default(this._menu).hasClass("dropdown-menu-right") &&
+                    (e = "bottom-end"),
             e
           );
         }),
@@ -3355,8 +3356,8 @@
                 t.html(e))
               : t.text(e)
             : this.config.html
-            ? i.default(e).parent().is(t) || t.empty().append(e)
-            : t.text(i.default(e).text());
+              ? i.default(e).parent().is(t) || t.empty().append(e)
+              : t.text(i.default(e).text());
         }),
         (e.getTitle = function () {
           var t = this.element.getAttribute("data-original-title");
@@ -3415,8 +3416,8 @@
           return !1 === this.config.container
             ? document.body
             : l.isElement(this.config.container)
-            ? i.default(this.config.container)
-            : i.default(document).find(this.config.container);
+              ? i.default(this.config.container)
+              : i.default(document).find(this.config.container);
         }),
         (e._getAttachment = function (t) {
           return $t[t.toUpperCase()];

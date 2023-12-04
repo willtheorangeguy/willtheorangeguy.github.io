@@ -47,12 +47,12 @@
           return Array.isArray(e)
             ? e.filter(i)
             : G(e)
-            ? [].slice.call(e).filter(i)
-            : a(e)
-            ? [e].filter(i)
-            : typeof e == "string"
-            ? [].slice.call(document.querySelectorAll(e)).filter(i)
-            : [];
+              ? [].slice.call(e).filter(i)
+              : a(e)
+                ? [e].filter(i)
+                : typeof e == "string"
+                  ? [].slice.call(document.querySelectorAll(e)).filter(i)
+                  : [];
         } catch (e) {
           throw new TypeError(
             "The provided selector is invalid.\nExpects a CSS selector, a Node element, a NodeList or an array.\nSee: https://github.com/francoischalifour/medium-zoom",
@@ -379,17 +379,17 @@
                         u());
                     }, 10)))
                   : t.original.hasAttribute("srcset")
-                  ? ((t.zoomedHd = t.zoomed.cloneNode()),
-                    t.zoomedHd.removeAttribute("sizes"),
-                    t.zoomedHd.removeAttribute("loading"),
-                    (g = t.zoomedHd.addEventListener("load", function () {
-                      t.zoomedHd.removeEventListener("load", g),
-                        t.zoomedHd.classList.add("medium-zoom-image--opened"),
-                        t.zoomedHd.addEventListener("click", r),
-                        document.body.appendChild(t.zoomedHd),
-                        u();
-                    })))
-                  : u();
+                    ? ((t.zoomedHd = t.zoomed.cloneNode()),
+                      t.zoomedHd.removeAttribute("sizes"),
+                      t.zoomedHd.removeAttribute("loading"),
+                      (g = t.zoomedHd.addEventListener("load", function () {
+                        t.zoomedHd.removeEventListener("load", g),
+                          t.zoomedHd.classList.add("medium-zoom-image--opened"),
+                          t.zoomedHd.addEventListener("click", r),
+                          document.body.appendChild(t.zoomedHd),
+                          u();
+                      })))
+                    : u();
             });
           },
           r = function () {
@@ -585,8 +585,8 @@
           window.matchMedia("(prefers-color-scheme: dark)").matches
             ? (e = !0)
             : window.matchMedia("(prefers-color-scheme: light)").matches
-            ? (e = !1)
-            : (e = window.wc.isSiteThemeDark);
+              ? (e = !1)
+              : (e = window.wc.isSiteThemeDark);
           break;
       }
       return (
@@ -622,8 +622,8 @@
             window.matchMedia("(prefers-color-scheme: dark)").matches
               ? (e = !0)
               : window.matchMedia("(prefers-color-scheme: light)").matches
-              ? (e = !1)
-              : (e = window.wc.isSiteThemeDark),
+                ? (e = !1)
+                : (e = window.wc.isSiteThemeDark),
             console.debug("User changed theme variation to Auto.");
           break;
       }
@@ -727,8 +727,8 @@
         (window.matchMedia("(prefers-color-scheme: dark)").matches
           ? (e = !0)
           : window.matchMedia("(prefers-color-scheme: light)").matches
-          ? (e = !1)
-          : (e = window.wc.isSiteThemeDark),
+            ? (e = !1)
+            : (e = window.wc.isSiteThemeDark),
         b(e, t));
     }
     console.debug(`Environment: ${f}`);
