@@ -36,8 +36,8 @@
           window.matchMedia("(prefers-color-scheme: dark)").matches
             ? (t = !0)
             : window.matchMedia("(prefers-color-scheme: light)").matches
-            ? (t = !1)
-            : (t = window.wc.isSiteThemeDark);
+              ? (t = !1)
+              : (t = window.wc.isSiteThemeDark);
           break;
       }
       return (
