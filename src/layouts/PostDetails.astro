@@ -13,7 +13,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
+const { title, author, description, ogImage, canonicalURL, pubDatetime, tags, readingTime } =
   post.data;
 
 const { Content } = await post.render();
