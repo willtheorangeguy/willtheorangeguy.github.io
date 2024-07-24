@@ -51,6 +51,12 @@ export const SOCIALS: SocialObjects = [
         active: true,
     },
     {
+        name: "StackOverflow",
+        href: "https://stackoverflow.com/users/6806860/william-v",
+        linkTitle: `as William V on StackOverflow`,
+        active: true,
+    },
+    {
         name: "YouTube",
         href: "https://www.youtube.com/@willtheorangeguy",
         linkTitle: `@willtheorangeguy on YouTube`,
