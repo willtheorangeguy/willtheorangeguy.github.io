@@ -3,8 +3,8 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
     website: "https://williamvdg.me/",
     author: "William Vandergraaf",
-    desc: "A dev blog, with random personal thoughts, tech stuff, and travel musing.",
-    title: "To Be Continued...",
+    desc: "A dev blog, with random personal thoughts, tech stuff, and travel musings.",
+    title: "William Vandergraaf",
     ogImage: "hero.jpg",
     lightAndDarkMode: true,
     postPerPage: 3,
