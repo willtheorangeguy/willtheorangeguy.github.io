@@ -3,7 +3,7 @@ layout: ../layouts/UsesLayout.astro
 title: "Uses"
 ---
 
-This is an informational page that details the hardware, software, and tools that I use in my daily work or hobbies. Based on [https://nicknisi.com/uses/](https://nicknisi.com/uses/).
+This is an informational page that details the hardware, software, and tools that I use in my daily work or hobbies. Inspired by [https://nicknisi.com/uses/](https://nicknisi.com/uses/).
 
 ![Uses Desktop](/assets/imgs/uses-desktop.png)
 
