@@ -37,7 +37,8 @@ const { noMarginTop = false } = Astro.props;
     color: inherit;
   }
   .footer-link:hover {
-    color: #ff6b01;
+    --tw-text-opacity: 1;
+    color: rgba(var(--color-accent), var(--tw-text-opacity));
   }
   .link-button {
     @apply my-1 p-2 hover:rotate-6;

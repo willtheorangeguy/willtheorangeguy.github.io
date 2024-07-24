@@ -24,19 +24,19 @@ const { frontmatter } = Astro.props;
       <slot />
     </section>
     <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-      <a href="/link1" class="card">
+      <a href="/link1" class="card border-skin-line">
         <div class="card-content">
           <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Card Title 1</h2>
           <p>Card description 1</p>
         </div>
       </a>
-      <a href="/link2" class="card">
+      <a href="/link2" class="card border-skin-line">
         <div class="card-content">
           <h2>Card Title 2</h2>
           <p>Card description 2</p>
         </div>
       </a>
-      <a href="/link3" class="card">
+      <a href="/link3" class="card border-skin-line">
         <div class="card-content">
           <h2>Card Title 3</h2>
           <p>Card description 3</p>
@@ -51,12 +51,16 @@ const { frontmatter } = Astro.props;
 <style>
   .card {
     display: block;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
     padding: 16px;
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .border-skin-line {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--color-border), var(--tw-border-opacity));
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
   }
   .card:hover {
     transform: translateY(-5px);
