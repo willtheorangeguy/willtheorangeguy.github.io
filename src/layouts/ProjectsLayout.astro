@@ -24,25 +24,24 @@ const { frontmatter } = Astro.props;
       <slot />
     </section>
     <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-      <a href="/link1" class="card border-skin-line">
+      <a href="/link1" target="_blank" class="card border-skin-line">
         <div class="card-content">
           <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Card Title 1</h2>
           <p>Card description 1</p>
         </div>
       </a>
-      <a href="/link2" class="card border-skin-line">
+      <a href="/link1" target="_blank" class="card border-skin-line">
         <div class="card-content">
-          <h2>Card Title 2</h2>
-          <p>Card description 2</p>
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Card Title 1</h2>
+          <p>Card description 1</p>
         </div>
       </a>
-      <a href="/link3" class="card border-skin-line">
+      <a href="/link1" target="_blank" class="card border-skin-line">
         <div class="card-content">
-          <h2>Card Title 3</h2>
-          <p>Card description 3</p>
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Card Title 1</h2>
+          <p>Card description 1</p>
         </div>
       </a>
-      <!-- Add more cards as needed -->
     </section>
   </main>
   <Footer />
