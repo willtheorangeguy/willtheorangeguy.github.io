@@ -30,10 +30,10 @@ export default defineConfig({
         ],
         rehypePlugins: [
             [
-              rehypeExternalLinks,
-              {
-                content: { type: 'text', value: '🔗' }
-              }
+                rehypeExternalLinks,
+                {
+                    content: { type: "text", value: "🔗" },
+                },
             ],
         ],
         shikiConfig: {
