@@ -91,6 +91,8 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 See the [`CHANGELOG`](CHANGELOG.md) file for details.
 
+![Visualization of the codebase](./diagram.svg)
+
 ## Credits
 
 This software uses the following open source packages, projects, services or websites:
