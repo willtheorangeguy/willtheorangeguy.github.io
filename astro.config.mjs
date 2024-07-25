@@ -19,7 +19,6 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [
             remarkToc,
-            remarkReadingTime,
             [
                 remarkCollapse,
                 {
