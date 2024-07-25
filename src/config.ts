@@ -2,9 +2,9 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
     website: "https://williamvdg.me/",
-    author: "William Vandergraaf",
+    author: "willtheorangeguy",
     desc: "A dev blog, with random personal thoughts, tech stuff, and travel musings.",
-    title: "William Vandergraaf",
+    title: "willtheorangeguy",
     ogImage: "hero.jpg",
     lightAndDarkMode: true,
     postPerPage: 3,
@@ -35,7 +35,7 @@ export const SOCIALS: SocialObjects = [
     {
         name: "LinkedIn",
         href: "https://www.linkedin.com/in/william-v-38981428b/",
-        linkTitle: `as William Vandergraaf on LinkedIn`,
+        linkTitle: `as William V on LinkedIn`,
         active: true,
     },
     {
