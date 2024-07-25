@@ -4,7 +4,8 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
-import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +26,14 @@ export default defineConfig({
                 {
                     test: "Table of contents",
                 },
+            ],
+        ],
+        rehypePlugins: [
+            [
+              rehypeExternalLinks,
+              {
+                content: { type: 'text', value: '🔗' }
+              }
             ],
         ],
         shikiConfig: {

@@ -31,6 +31,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await post.render();
 
 const posts = await getCollection("blog");
 
