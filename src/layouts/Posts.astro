@@ -61,6 +61,16 @@ const next = pageNum < totalPages ? "" : "disabled";
       </nav>
     )
   }
+    <script>
+      window.addEventListener('scroll', () => {
+        const progressBar = document.getElementById('progress-bar');
+        if (progressBar) {
+          const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const progress = (window.scrollY / totalHeight) * 100;
+          progressBar.style.width = progress + '%';
+        }
+      });
+    </script>
   <Footer noMarginTop={totalPages > 1} />
 </Layout>
 
