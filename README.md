@@ -9,7 +9,7 @@
 <!-- Badges -->
 <div align="center">
   <!-- Stability -->
-  <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-publish.yml/badge.svg">
+  <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-image.yml/badge.svg">
   <!-- Stability -->
   <img alt="Astro Build State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/astro.yml/badge.svg">
   <!-- Prettier Lint -->
