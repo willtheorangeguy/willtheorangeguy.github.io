@@ -7,8 +7,7 @@ featured: true
 draft: false
 tags:
     - intro
-description:
-    Short welcome post to learn more about the new @willtheorangeguy blog/portfolio website.
+description: Short welcome post to learn more about the new @willtheorangeguy blog/portfolio website.
 ---
 
 Welcome to the new @willtheorangeguy blog and portfolio website. Hoping that this can be the place to share dev tips, random personal thoughts, tech stuff, and travel musings.
