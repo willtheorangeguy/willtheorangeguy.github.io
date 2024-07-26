@@ -9,8 +9,7 @@ tags:
     - intro
     - social-media
     - living-document
-description:
-    An attempt to list every social media site I have an account on, including handles for most of them.
+description: An attempt to list every social media site I have an account on, including handles for most of them.
 ---
 
 ## Table of Contents
