@@ -1,0 +1,144 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "./Layout.astro";
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section id="about" class="prose max-w-6xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-6xl">{frontmatter.title}</h1>
+      <slot />
+    </section>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel Southeast Asia</h2>
+          <p>Backpack throughout Southeast Asia on a budget - definetly not in style.</p>
+          <progress value="2" max="100" class="w-full mt-2"></progress>
+          <p>#travel • #culture</p>
+        </div>
+      </a>
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel South America</h2>
+          <p>Travel throughout South America and learn more Spanish - would travel in <i>style</i>.</p>
+          <progress value="0" max="100" class="w-full mt-2"></progress>
+          <p>#travel • #culture</p>
+        </div>
+      </a>
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel the Whole World</h2>
+          <p>Travel all over every country in the world! Who wouldn't want to?</p>
+          <progress value="21" max="100" class="w-full mt-2"></progress>
+          <p>#travel • #culture • #endgame</p>
+        </div>
+      </a>
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn Spanish</h2>
+          <p>Practice through Duolingo, and travels, up until the C1 level at least.</p>
+          <progress value="33" max="100" class="w-full mt-2"></progress>
+          <p>#languages • #culture • #learning</p>
+        </div>
+      </a>
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn French</h2>
+          <p>Practice through Duolingo, and travels, up until the C1 level at least.</p>
+          <progress value="67" max="100" class="w-full mt-2"></progress>
+          <p>#languages • #culture • #learning</p>
+        </div>
+      </a>
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Run a Marathon</h2>
+          <p>Using Strava, starting with a half marathon and then to a full marathon.</p>
+          <progress value="19" max="100" class="w-full mt-2"></progress>
+          <p>#fitness • #running</p>
+        </div>
+      </a>
+    </section>
+    <!--COMPLETED-->
+    <br>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <a href="" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Climb a Volcano</h2>
+          <p>Completed - climbed up Mount Etna in Italy, luckily before it started exploding.</p>
+          <progress value="100" max="100" class="w-full mt-2"></progress>
+          <p>#travel • #culture • #endgame</p>
+        </div>
+      </a>
+    </section>
+    <section class="prose max-w-6xl prose-img:border-0">
+      <br>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .card {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .border-skin-line {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--color-border), var(--tw-border-opacity));
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .text-skin-accent {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-accent), var(--tw-text-opacity));
+  }
+
+  /* Style the progress bar container */
+  progress {
+    width: 100%;
+    height: 10px; /* Adjust the height as needed */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Ensure the rounded corners are visible */
+    background-color: #ffffff; /* Background color of the progress bar */
+  }
+
+  /* Style the progress value for WebKit browsers (Chrome, Safari) */
+  progress::-webkit-progress-value {
+    background-color: #ff6b01; /* Color of the progress value */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  /* Style the progress bar container for WebKit browsers (Chrome, Safari) */
+  progress::-webkit-progress-bar {
+    background-color: #ffffff; /* Background color of the progress bar */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  /* Style the progress value for Firefox */
+  progress::-moz-progress-bar {
+    background-color: #ff6b01; /* Color of the progress value */
+    border-radius: 5px; /* Rounded corners */
+  }
+</style>
