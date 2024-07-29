@@ -9,8 +9,7 @@ tags:
     - travel
     - photography
     - videography
-description:
-    Access the photos and videos I took during my trip to Europe, where I tried to sample at least one of each country's flag.
+description: Access the photos and videos I took during my trip to Europe, where I tried to sample at least one of each country's flag.
 ---
 
 On my recent-ish trip to Europe, I decided to start on a project where I attempted to take a photo and video of each country's flag. I have compiled all of them on a simple portfolio page.
