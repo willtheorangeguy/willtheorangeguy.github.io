@@ -100,18 +100,21 @@ This software uses the following open source packages, projects, services or web
 <!-- Credits Table -->
 <table>
   <tr>
+    <th align="center"><img src="https://raw.githubusercontent.com/github/explore/5cc0a03a302ec862c4aeac2a22a513ae31c35432/topics/astro/astro.png" width="150" height="150" alt="Astro"/></th>
     <th align="center"><img src="https://applets.imgix.net/https%3A%2F%2Fassets.ifttt.com%2Fimages%2Fchannels%2F2107379463%2Ficons%2Fmonochrome_large.png?w=240&h=240&s=8a19bbc158996d098e2fb18310ba7f33" width="150" height="150" alt="GitHub"/></th>
     <th align="center"><img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" width="150" height="150" alt="W3C"/></th>
     <th align="center"><img src="https://videos.w3schools.com/files/images/w3schools_logo_500_04AA6D.png" width="150" height="150" alt="W3Schools"/></th>
     <th align="center"><img src="https://assets.simpleanalytics.com/press/logo-ratio-1-1/square.svg" width="150" height="150" alt="Simple Analytics"/></th>
   </tr>
   <tr>
+    <td align="center">Astro</td>
     <td align="center">GitHub</td>
     <td align="center">W3C</td>
     <td align="center">W3Schools</td>
     <td align="center">Simple Analytics</td>
   </tr>
   <tr>
+    <td align="center"><a href="https://astro.build/">Web</a></td>
     <td align="center"><a href="https://github.com/">Web</a> - <a href="https://github.com/pricing">Plans</a></td>
     <td align="center"><a href="https://www.w3.org">Web</a> - <a href="https://www.w3.org/support/">Donate</a></td>
     <td align="center"><a href="https://www.w3schools.com">Web</a> - <a href="https://www.w3schools.com/pro/index.php">Pro</a></td>
