@@ -63,12 +63,6 @@ export const SOCIALS: SocialObjects = [
         active: true,
     },
     {
-        name: "Discord",
-        href: "discord.com/lcskid",
-        linkTitle: `@lcskid on Discord`,
-        active: true,
-    },
-    {
         name: "Steam",
         href: "https://steamcommunity.com/id/lcskid/",
         linkTitle: `@lcskid on Steam`,
