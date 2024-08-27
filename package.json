@@ -39,7 +39,7 @@
     "@tailwindcss/typography": "^0.5.14",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^18.3.3",
-    "@typescript-eslint/parser": "^8.0.1",
+    "@typescript-eslint/parser": "^8.3.0",
     "astro-eslint-parser": "^1.0.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
