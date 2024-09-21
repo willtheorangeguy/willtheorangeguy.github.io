@@ -18,8 +18,8 @@ Organized, reliable, and punctual. Strong written and verbal communication skill
 
 ## Work Experience
 
--   **Aquatic Lifeguard and Swim Instructor**, September 2023 – Present, University of Calgary, Calgary, AB
 -   **Aquatic Shift Lead**, September 2023 – Present, MNP Sport and Community Center, Calgary, AB
+-   **Aquatic Lifeguard and Swim Instructor**, September 2023 – Present, University of Calgary, Calgary, AB
 -   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
 -   **Supervisor**, July 2020 – September 2022, Willoughby Town Center Dairy Queen, Langley, BC
 
@@ -30,10 +30,11 @@ Organized, reliable, and punctual. Strong written and verbal communication skill
 
 ## Certifications and Achievements
 
+-   **Swim & Lifesaving Instructor**, October 17, 2024, Lifesaving Society of Alberta, Calgary, AB
+-   **Standard First Aid & CPR-A/CPR-C**, September 8, 2024, Lifesaving Society of Alberta, Calgary, AB
 -   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
--   **National Lifeguard Pool Option**, September 9, 2023, University of Calgary, Calgary, AB
--   **Standard First Aid & CPR-A/CPR-C**, September 3, 2023, Red Cross, Calgary, AB
+-   **National Lifeguard Pool Option**, September 9, 2023, Lifesaving Society of Alberta, Calgary, AB
 
 ## Volunteer Experience
 
