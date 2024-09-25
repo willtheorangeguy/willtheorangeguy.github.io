@@ -1,0 +1,59 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+const allPosts = await getCollection('blog');
+const technologyPosts = allPosts.filter(post => post.data.tags.includes('review'));
+---
+
+<Layout title={`Reviews | ${SITE.title}`}>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section id="about" class="prose mb-28 max-w-6xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-6xl">Reviews</h1>
+    </section>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 mt-10">
+        <a href="/bucket-list" target="_blank" class="card border-skin-line">
+          <div class="card-content text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M91.7 96C106.3 86.8 116 70.5 116 52C116 23.3 92.7 0 64 0S12 23.3 12 52c0 16.7 7.8 31.5 20 41l0 3 0 48 0 256 0 48 0 64 48 0 0-64 389.6 0c14.6 0 26.4-11.8 26.4-26.4c0-3.7-.8-7.3-2.3-10.7L432 272l61.7-138.9c1.5-3.4 2.3-7 2.3-10.7c0-14.6-11.8-26.4-26.4-26.4L91.7 96zM80 400l0-256 356.4 0L388.1 252.5c-5.5 12.4-5.5 26.6 0 39L436.4 400 80 400z"/></svg>
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Bucket List</h2>
+            <p>Much like the travel blog, here are all the things I want to see and the activities I want to do!</p>
+          </div>
+        </a>
+      </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+    .card {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .border-skin-line {
+      --tw-border-opacity: 1;
+      border-color: rgba(var(--color-border), var(--tw-border-opacity));
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .text-skin-accent {
+    --tw-text-opacity: 1;
+    color: rgba(var(--color-accent), var(--tw-text-opacity));
+    }
+
+    #about {
+        margin: auto auto auto auto;
+    }
+  </style>
