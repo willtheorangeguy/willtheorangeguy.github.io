@@ -12,7 +12,7 @@ const sortedPosts = await getSortedPosts(posts);
 
 const totalPages = getPageNumbers(sortedPosts.length);
 
-const paginatedPosts = sortedPosts.slice(0, SITE.postPerPage);
+const paginatedPosts = sortedPosts.slice(0, 10);
 ---
 
 <Posts posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />
