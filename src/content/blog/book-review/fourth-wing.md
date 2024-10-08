@@ -12,8 +12,8 @@ description: "A review of the Fourth Wing Book."
 
 # Fourth Wing
 
-- **Date:** 10-12-2023
-- **Rating:** ⭐⭐⭐⭐
+-   **Date:** 10-12-2023
+-   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 

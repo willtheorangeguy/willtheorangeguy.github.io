@@ -12,8 +12,8 @@ description: "A review of The Stolen Heir Book."
 
 # The Stolen Heir
 
-- **Date:** 28-09-2023
-- **Rating:** ⭐⭐⭐⭐
+-   **Date:** 28-09-2023
+-   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 

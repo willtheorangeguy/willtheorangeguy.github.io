@@ -12,8 +12,8 @@ description: "A review of The Prisoner's Throne Book."
 
 # The Prisoner's Throne
 
-- **Date:** 28-09-2023
-- **Rating:** ⭐⭐⭐⭐ (3.5 on Bookwyrm)
+-   **Date:** 28-09-2023
+-   **Rating:** ⭐⭐⭐⭐ (3.5 on Bookwyrm)
 
 **Pubic Links:**
 
