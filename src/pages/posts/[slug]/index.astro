@@ -42,8 +42,8 @@ const currentPage =
   slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
     ? Number(slug)
     : 0;
-const lastPost = currentPage * SITE.postPerPage;
-const startPost = lastPost - SITE.postPerPage;
+const lastPost = currentPage * 10;
+const startPost = lastPost - 10;
 
 const paginatedPosts = sortedPosts.slice(startPost, lastPost);
 ---
