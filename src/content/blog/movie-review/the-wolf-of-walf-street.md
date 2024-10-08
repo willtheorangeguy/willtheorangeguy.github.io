@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
     - movie-review
-description: "A review of Batman: The Dark Knight movie."
+description: "A review of The Wolf of Wall Street."
 ---
 
 # The Wolf of Wall Street
