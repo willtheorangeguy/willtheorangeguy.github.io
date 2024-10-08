@@ -20,4 +20,4 @@ description: A review on the Go Time Podcast.
 - htmx docs (which I will need for later): [</> htmx - high power tools for html](https://htmx.org/)
 - htmx examples (also for later): [</> htmx ~ Examples](https://htmx.org/examples/)
 
-![Go Time Logo](https://cdn.changelog.com/uploads/covers/go-time-original.png?v=63725770357)
+![Go Time Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/0d/25/86/0d258649-4cfe-2750-6316-dffd9dbe3b8d/mza_5183216603141582042.png/300x300bb.webp)
