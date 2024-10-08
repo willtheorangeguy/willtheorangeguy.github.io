@@ -12,8 +12,8 @@ description: "A review of Pirates of the Caribbean: The Curse of the Black Pearl
 
 # Pirates of the Caribbean: The Curse of the Black Pearl
 
-- **Date:** 27-12-2023
-- **Rating:** ⭐⭐⭐
+-   **Date:** 27-12-2023
+-   **Rating:** ⭐⭐⭐
 
 **Pubic Links:**
 

@@ -7,13 +7,13 @@ featured: false
 draft: false
 tags:
     - tv-review
-description: A review on the Lucifer TV show. 
+description: A review on the Lucifer TV show.
 ---
 
 # Lucifer
 
-- **Date:** 30-06-2023
-- **Rating:** ⭐⭐⭐
+-   **Date:** 30-06-2023
+-   **Rating:** ⭐⭐⭐
 
 **Pubic Links:**
 

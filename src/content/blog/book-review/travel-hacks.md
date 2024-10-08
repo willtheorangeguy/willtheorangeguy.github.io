@@ -12,8 +12,8 @@ description: "A review of the Travel Hacks Book."
 
 # Travel Hacks
 
-- **Date:** 05-12-2022
-- **Rating:** ⭐⭐⭐⭐
+-   **Date:** 05-12-2022
+-   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 

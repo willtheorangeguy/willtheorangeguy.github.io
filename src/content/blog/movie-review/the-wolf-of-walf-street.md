@@ -12,8 +12,8 @@ description: "A review of The Wolf of Wall Street."
 
 # The Wolf of Wall Street
 
-- **Date:** 30-07-2023
-- **Rating:** ⭐⭐⭐⭐
+-   **Date:** 30-07-2023
+-   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 

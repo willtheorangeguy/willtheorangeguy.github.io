@@ -12,8 +12,8 @@ description: "A review of Batman: The Dark Knight movie."
 
 # The Dark Knight
 
-- **Date:** 27-12-2023
-- **Rating:** ⭐⭐⭐⭐
+-   **Date:** 27-12-2023
+-   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 
