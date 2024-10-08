@@ -65,7 +65,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data }) => (
+              {featuredPosts.map(({ data }, index) => 
+                index < 5 && (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
@@ -87,7 +88,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .filter(({ data }) => !data.featured)
             .map(
               ({ data }, index) =>
-                index < 4 && (
+                index < 5 && (
                   <Card
                     href={`/posts/${slugify(data)}`}
                     frontmatter={data}
