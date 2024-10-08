@@ -19,4 +19,4 @@ description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podc
 -   The study they did in Seattle about helping people find good housing made sense and I am interested in looking more into that study.
 -   To be honest, I think a lot more time and effort should be being put into the inequality of housing, and reducing the old money that keeps the disadvantaged out of the housing market.
 
-![](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)
+![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)

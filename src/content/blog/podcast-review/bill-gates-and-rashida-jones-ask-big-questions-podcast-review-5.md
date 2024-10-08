@@ -17,4 +17,4 @@ description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podc
 -   These episodes have covered a lot of change, and so this is a fitting episode to end on.
 -   I think that as we work together more, we will come to understand the roles that every single person plays in making large scale changes in the world.
 
-![](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)
+![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)
