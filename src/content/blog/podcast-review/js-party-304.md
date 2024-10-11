@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
     - podcast-review
+    - js-party
 description: A review on the JS Party Podcast.
 ---
 

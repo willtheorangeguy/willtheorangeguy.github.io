@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
     - podcast-review
+    - go-time
 description: A review on the Go Time Podcast.
 ---
 
