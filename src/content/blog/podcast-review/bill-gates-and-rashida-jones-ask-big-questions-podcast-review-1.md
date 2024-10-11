@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
     - podcast-review
+    - bill-gates-and-rashida-jones-ask-big-questions
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 

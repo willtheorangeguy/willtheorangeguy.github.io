@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
     - podcast-review
+    - freeCodeCamp
 description: A review on the freeCodeCamp Podcast.
 ---
 
