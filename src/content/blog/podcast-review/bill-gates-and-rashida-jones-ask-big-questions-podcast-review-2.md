@@ -10,8 +10,6 @@ tags:
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 
-# Is inequality inevitable? - Bill Gates and Rashida Jones Ask Big Questions
-
 [EP 2: Is inequality inevitable - Bill Gates and Rashida Jones Ask Big Questions](https://podcasts.apple.com/us/podcast/ep-2-is-inequality-inevitable/id1538630420?i=1000499889070)
 
 -   The title is a tongue twister and kind of hard to type.

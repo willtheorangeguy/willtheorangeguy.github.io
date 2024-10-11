@@ -10,8 +10,6 @@ tags:
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 
-# Why do we believe lies? - Bill Gates and Rashida Jones Ask Big Questions
-
 [EP 3: Why do we believe lies? - Bill Gates and Rashida Jones Ask Big Questions](https://podcasts.apple.com/us/podcast/ep-3-why-do-we-believe-lies/id1538630420?i=1000500776225)
 
 -   I see this even in the lives of my own friends, especially recently - it is so easy to get wrapped up in something, especially when we are bombarded by it on all sides by social media and the people that we think are our "friends" online.

@@ -10,8 +10,6 @@ tags:
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 
-# Is it too late to stop climate change? - Bill Gates and Rashida Jones Ask Big Questions
-
 [EP 4: Is it too late to stop climate change? - Bill Gates and Rashida Jones Ask Big Questions](https://podcasts.apple.com/us/podcast/ep-4-is-it-too-late-to-stop-climate-change/id1538630420?i=1000501570134)
 
 -   This episode came at a good time for me as well since I was in a **very cold** area of Canada, and I could already tell that people were going to be using that as a tool to deny climate change.
