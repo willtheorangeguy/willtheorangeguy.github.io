@@ -10,8 +10,6 @@ tags:
 description: A review on the Go Time Podcast.
 ---
 
-# Is htmx the way to Go? featuring Carson Gross - Go Time
-
 [Is htmx the way to Go? featuring Carson Gross (Go Time #266) |> Changelog](https://changelog.com/gotime/266)
 
 -   This episode was a little over my head considering I do not usually listen to Go Time, but I enjoyed it and like learning more about Go

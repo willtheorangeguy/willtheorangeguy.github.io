@@ -10,8 +10,6 @@ tags:
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 
-# Can people really change? - Bill Gates and Rashida Jones Ask Big Questions
-
 [EP 5: Can people really change? - Bill Gates and Rashida Jones Ask Big Questions](https://podcasts.apple.com/us/podcast/ep-5-can-people-really-change/id1538630420?i=1000502308698)
 
 -   These episodes have covered a lot of change, and so this is a fitting episode to end on.

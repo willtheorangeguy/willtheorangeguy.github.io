@@ -10,8 +10,6 @@ tags:
 description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podcast.
 ---
 
-# What will the world look like after COVID-19? - Bill Gates and Rashida Jones Ask Big Questions
-
 [EP 1: What will the world look like after COVID-19? - Bill Gates and Rashida Jones Ask Big Questions](https://podcasts.apple.com/us/podcast/ep-1-what-will-the-world-look-like-after-covid-19/id1538630420?i=1000498767574)
 
 -   These episodes have covered a lot of change, and so this is a fitting episode to end on.
