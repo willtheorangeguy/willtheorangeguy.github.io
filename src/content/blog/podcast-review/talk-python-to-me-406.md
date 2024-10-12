@@ -15,4 +15,4 @@ description: A review on the Talk Python to Me Podcast.
 
 - Hatch: [hatch.pypa.io/latest/](https://hatch.pypa.io/latest/)
 
-![Stack Overflow Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/6d/32/15/6d32155b-12ec-8d15-2f76-256e8e7f8dcf/mza_16949506039235574720.jpg/270x270bb.webp)
+![Talk Python to Me Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6c/5d/00/6c5d001b-99f2-1312-ef93-d0791d6aca54/mza_17000424926567884148.jpg/300x300bb.webp)

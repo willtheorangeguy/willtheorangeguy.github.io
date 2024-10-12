@@ -17,4 +17,4 @@ description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podc
 - Near the end learning about the specific things that we can do to combat climate change was helpful as well.
 - I had no idea that eating organic food was actually worse for the environment because of the extra land that it uses, I need to do additional research on that to make changes to my shopping habits.
 
-![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)
+![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/300x300bb.webp)

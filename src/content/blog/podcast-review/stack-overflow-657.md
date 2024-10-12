@@ -18,4 +18,4 @@ description: A review on the Stack Overflow Podcast.
 - Only take I would take issue with (see what I did there) is the one on VR - maybe it is just because I have been more in touch with the gaming market this year, but I think that VR has actually gotten better and ~~Facebook~~ Meta has been doing a good job at pushing the industry forward.
 - Plus, as much as I am loathe to bring up Apple, they did release the Vision Pro this year, and once Apple does something, you know everyone else is going to have to start doing it too.
 
-![Stack Overflow Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/6d/32/15/6d32155b-12ec-8d15-2f76-256e8e7f8dcf/mza_16949506039235574720.jpg/270x270bb.webp)
+![Stack Overflow Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/6d/32/15/6d32155b-12ec-8d15-2f76-256e8e7f8dcf/mza_16949506039235574720.jpg/300x300bb.webp)
