@@ -15,9 +15,9 @@ description: A review on the Talk Python to Me Podcast.
 
 A list of those awesome libraries and extensions...
 
-- [https://github.com/markusschanta/awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
-- [https://jupyterbook.org/en/stable/intro.html](https://jupyterbook.org/en/stable/intro.html)
-- [https://github.com/fastai/nbdev](https://github.com/fastai/nbdev)
-- [https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics](https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics)
+-   [https://github.com/markusschanta/awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
+-   [https://jupyterbook.org/en/stable/intro.html](https://jupyterbook.org/en/stable/intro.html)
+-   [https://github.com/fastai/nbdev](https://github.com/fastai/nbdev)
+-   [https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics](https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics)
 
 ![Talk Python to Me Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6c/5d/00/6c5d001b-99f2-1312-ef93-d0791d6aca54/mza_17000424926567884148.jpg/300x300bb.webp)
