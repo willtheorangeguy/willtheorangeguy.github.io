@@ -7,10 +7,9 @@ featured: false
 draft: false
 tags:
     - podcast-review
+    - go-time
 description: A review on the Go Time Podcast.
 ---
-
-# Is htmx the way to Go? featuring Carson Gross - Go Time
 
 [Is htmx the way to Go? featuring Carson Gross (Go Time #266) |> Changelog](https://changelog.com/gotime/266)
 
