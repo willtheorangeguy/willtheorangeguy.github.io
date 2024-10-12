@@ -18,4 +18,4 @@ description: A review on the Bill Gates and Rashida Jones Ask Big Questions Podc
 - Yuval Harari's books are great and I am looking forward to reading them, I just really need to find the time to do so.
 - I like the way that Yuval talked about the differences between lies and fiction, and how we are likely to tell fiction just because we wrap ourselves up in it and also want to believe it - as I reflect, I know that even I do that some time.
 
-![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/270x270bb.webp)
+![Bill Gates and Rashida Jones Ask Big Questions Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/30/79/8c/30798cb1-611c-3cbe-e887-a872193b38c2/mza_10870438755350715135.jpg/300x300bb.webp)
