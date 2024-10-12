@@ -13,6 +13,6 @@ description: A review on the Talk Python to Me Podcast.
 
 [Episode #407 pytest tips and tricks for better testing - [Talk Python To Me Podcast]](https://talkpython.fm/episodes/show/407/pytest-tips-and-tricks-for-better-testing)
 
-- [pythontest.com](https://pythontest.com/)
+-   [pythontest.com](https://pythontest.com/)
 
 ![Talk Python to Me Logo](https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6c/5d/00/6c5d001b-99f2-1312-ef93-d0791d6aca54/mza_17000424926567884148.jpg/300x300bb.webp)
