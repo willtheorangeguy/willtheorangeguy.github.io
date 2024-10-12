@@ -2,7 +2,7 @@
 author: willtheorangeguy
 pubDatetime: 2024-10-12T15:22:00Z
 title: Let's talk FreeBSD (finally) Podcast Review
-postSlug: changelog-531
+postSlug: changelog-574
 featured: false
 draft: false
 tags:
