@@ -26,11 +26,10 @@ Organized, reliable, and punctual. Strong written and verbal communication skill
 ## Education
 
 -   **University of Calgary**, April 2027, Computer Science - Faculty of Science, Bachelor of Science
--   **Langley Christian High School**, June 2022, Dogwood Diploma, Graduated with Honors
 
 ## Certifications and Achievements
 
--   **Swim & Lifesaving Instructor**, October 17, 2024, Lifesaving Society of Alberta, Calgary, AB
+-   **Swim & Lifesaving Instructor**, October 26, 2024, Lifesaving Society of Alberta, Calgary, AB
 -   **Standard First Aid & CPR-A/CPR-C**, September 8, 2024, Lifesaving Society of Alberta, Calgary, AB
 -   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
