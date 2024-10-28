@@ -55,9 +55,17 @@ const { frontmatter } = Astro.props;
         </div>
       </a>
     </section>
-    <section class="prose max-w-6xl prose-img:border-0">
-      <br>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div class="card-content card border-skin-line">
+          <div id="unsplash-stats">
+            <h2 class="text-lg text-skin-accent font-medium">My Unsplash Stats</h2>
+            <p id="downloads">Downloads: </p>
+            <p id="views">Views: </p>
+            <p id="likes">Likes: </p>
+          </div>
+        </div>
     </section>
+    <br>
     <section >
       <div style="display: flex; justify-content: center; max-width: 100%;">
         <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=2021333611&amp;format=interactive"></iframe>
@@ -110,3 +118,31 @@ const { frontmatter } = Astro.props;
   color: rgba(var(--color-accent), var(--tw-text-opacity));
   }
 </style>
+
+<script>
+  const username = 'william_vdg';
+  require('dotenv').config();
+  const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+
+  fetch(`https://api.unsplash.com/users/${username}/statistics`, {
+    headers: {
+      'Authorization': `Client-ID ${accessKey}`
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    const downloads = data.downloads?.total || 0;
+    const views = data.views?.total || 0;
+    const likes = data.likes?.total || 0;
+
+    document.getElementById('downloads').textContent = `Downloads: ${downloads}`;
+    document.getElementById('views').textContent = `Views: ${views}`;
+    document.getElementById('likes').textContent = `Likes: ${likes}`;
+  })
+  .catch(error => console.error('Error fetching user stats:', error));
+
+</script>
+<script>
+  
+
+</script>
