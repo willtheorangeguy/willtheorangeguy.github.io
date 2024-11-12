@@ -38,7 +38,7 @@
     "@divriots/jampack": "^0.30.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/github-slugger": "^2.0.0",
-    "@types/react": "^18.3.11",
+    "@types/react": "^18.3.12",
     "@typescript-eslint/parser": "^8.13.0",
     "astro-eslint-parser": "^1.1.0",
     "commitizen": "^4.3.1",
