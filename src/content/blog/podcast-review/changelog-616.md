@@ -12,7 +12,7 @@ description: A review on the The Changelog Podcast.
 
 [>ANTHOLOGY — Packages, pledges & protocols (Changelog Interviews #616)](https://changelog.com/podcast/616)
 
-- This entire episode felt like an ad.
+-   This entire episode felt like an ad.
 
 1. Cool to hear about CentOS, but to be honest, it does not really apply to me, and therefore I did not find it overly useful.
 2. Another blockchain technology? Just sounds like another ad for VC BS.
