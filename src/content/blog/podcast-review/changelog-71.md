@@ -10,7 +10,7 @@ tags:
 description: A review on the The Changelog Podcast.
 ---
 
-[Local-first, y/n?  with Johannes Schickling & James Long (Changelog & Friends #71)](https://changelog.com/friends/71)
+[Local-first, y/n? with Johannes Schickling & James Long (Changelog & Friends #71)](https://changelog.com/friends/71)
 
 -   Local-first is a belief that I can subscribe to. I try to incorporate those beliefs in all the projects I create.
 
