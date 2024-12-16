@@ -1,8 +1,8 @@
 ---
 author: willtheorangeguy
-pubDatetime: 2024-12-06T15:22:00Z
-title: Local-first, y/n? Podcast Review
-postSlug: changelog-71
+pubDatetime: 2024-12-15T15:22:00Z
+title: ShopTalk & Friends Podcast Review
+postSlug: changelog-72
 draft: false
 tags:
     - podcast-review
@@ -10,7 +10,7 @@ tags:
 description: A review on the The Changelog Podcast.
 ---
 
-[Local-first, y/n? with Johannes Schickling & James Long (Changelog & Friends #71)](https://changelog.com/friends/71)
+[ShopTalk & Friends with Chris Coyier and Dave Rupert (Changelog & Friends #72)](https://changelog.com/friends/72)
 
 -   Local-first is a belief that I can subscribe to. I try to incorporate those beliefs in all the projects I create.
 
