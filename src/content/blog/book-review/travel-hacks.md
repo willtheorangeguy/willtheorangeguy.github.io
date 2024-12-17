@@ -12,9 +12,9 @@ description: "A review of the Travel Hacks Book."
 
 # Travel Hacks
 
--   **Date:** 05-12-2022
+-   **Date:** 2022-05-12
 -   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 
-1. https://bookwyrm.social/user/willtheorangeguy/reviewrating/558969
+1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/reviewrating/558969)

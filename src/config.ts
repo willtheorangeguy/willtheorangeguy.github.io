@@ -4,7 +4,7 @@ export const SITE: Site = {
     website: "https://williamvdg.me/",
     author: "willtheorangeguy",
     desc: "A dev blog, with random personal thoughts, tech stuff, and travel musings.",
-    title: "willtheorangeguy",
+    title: "To Be Continued",
     ogImage: "hero.jpg",
     lightAndDarkMode: true,
     postPerPage: 10,
