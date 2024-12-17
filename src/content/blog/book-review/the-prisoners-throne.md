@@ -12,11 +12,11 @@ description: "A review of The Prisoner's Throne Book."
 
 # The Prisoner's Throne
 
--   **Date:** 28-09-2023
+-   **Date:** 2023-09-28
 -   **Rating:** ⭐⭐⭐⭐ (3.5 on Bookwyrm)
 
 **Pubic Links:**
 
-1. https://bookwyrm.social/user/willtheorangeguy/review/5442750/s/gripping-finale
+1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/review/5442750/s/gripping-finale)
 
 > This finale to the short series had a lot of twists and turns that someone who enjoys these books for light reading would not have seen coming. Was a great series and can be read super quickly.
