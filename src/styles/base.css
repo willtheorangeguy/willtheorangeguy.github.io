@@ -98,11 +98,11 @@
     /* progress bar */
     #progress-bar {
         @apply bg-skin-accent;
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        height: 4px; 
-        width: 0%; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
         z-index: 1000;
     }
 
