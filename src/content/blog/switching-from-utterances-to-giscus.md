@@ -21,7 +21,7 @@ A while ago, I stumbled upon [utterances](https://utteranc.es/), which easily al
 
 Here is what it looks like on this blog:
 
-![Blog post with utterances comments](/assets/imgs/blog/utterances)
+![Blog post with utterances comments](/assets/imgs/blog/utterances.jpg)
 
 This was super easy and I was happy to (hopefully) drive more engagement thanks to the comments. The only annoying part was that I was going to have a ton of open issues acting as comments for the blog posts... Luckily, a few days ago, I came across another blog (which I unfortunately don't remember - otherwise I would have linked it here) and saw that they were using [giscus](https://giscus.app/).
 
@@ -29,6 +29,6 @@ giscus is clearly heavily inspired by utterances, and their website is pretty mu
 
 Here is what the comment section currently looks like with giscus:
 
-![Blog post with giscus comments](/assets/images/blog/giscus.jpg)
+![Blog post with giscus comments](/assets/imgs/blog/giscus.jpg)
 
 Oh - giscus also has support for reactions!
