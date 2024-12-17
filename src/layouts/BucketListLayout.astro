@@ -166,7 +166,7 @@ const { frontmatter } = Astro.props;
 
   /* Style the progress value for WebKit browsers (Chrome, Safari) */
   progress::-webkit-progress-value {
-    background-color: #ff6b01; /* Color of the progress value */
+    @apply bg-skin-accent; /* Color of the progress value */
     border-radius: 5px; /* Rounded corners */
   }
 
@@ -178,7 +178,7 @@ const { frontmatter } = Astro.props;
 
   /* Style the progress value for Firefox */
   progress::-moz-progress-bar {
-    background-color: #ff6b01; /* Color of the progress value */
+    @apply bg-skin-accent; /* Color of the progress value */
     border-radius: 5px; /* Rounded corners */
   }
 </style>

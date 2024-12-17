@@ -12,9 +12,9 @@ description: "A review of the Fourth Wing Book."
 
 # Fourth Wing
 
--   **Date:** 10-12-2023
+-   **Date:** 2023-10-08
 -   **Rating:** ⭐⭐⭐⭐
 
 **Pubic Links:**
 
-1. https://bookwyrm.social/user/willtheorangeguy/reviewrating/3251596
+1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/reviewrating/3251596)
