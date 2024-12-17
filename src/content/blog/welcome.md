@@ -3,7 +3,7 @@ title: Welcome to my blog!
 author: willtheorangeguy
 pubDatetime: 2024-07-26T12:00:00Z
 postSlug: welcome
-featured: true
+featured: false
 draft: false
 tags:
     - intro
