@@ -32,14 +32,14 @@
     "zod": "3.24.1"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.1.1",
+    "@astrojs/react": "^4.1.2",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.4",
     "@divriots/jampack": "^0.32.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^19.0.2",
-    "@typescript-eslint/parser": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.2",
     "astro-eslint-parser": "^1.1.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
