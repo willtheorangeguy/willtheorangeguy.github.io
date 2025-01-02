@@ -18,22 +18,47 @@
       "clearEmpty": true,
       "fields": [
         {
+          "title": "Author",
+          "name": "author",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDatetime",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
           "title": "Title",
           "name": "title",
           "type": "string",
           "single": true
         },
         {
+          "title": "Post Slug",
+          "name": "postSlug",
+          "type": "string",
+          "default": "{{slugify title}}",
+          "single": true
+        },
+        {
+          "title": "Featured",
+          "name": "featured",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "title": "Description",
           "name": "description",
           "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "pubDate",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
         },
         {
           "title": "Content preview",
