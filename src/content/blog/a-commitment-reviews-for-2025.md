@@ -17,16 +17,16 @@ I will also be ensuring that additional reviews are being created, on the regula
 
 ## Review Platforms
 
-- Books
-  - [Bookwyrm](https://bookwyrm.social/user/willtheorangeguy)
-  - [Goodreads](https://www.goodreads.com/user/show/172220342-william-v)
-- Games
-  - [HowLongToBeat](https://howlongtobeat.com/user/lcskid/games/playing/1)
-  - [ProtonDb](https://www.protondb.com/profile) - for Linux/Steam Deck games only
-- Movies
-  - [Letterboxd](https://letterboxd.com/lcskid/)
-  - [IMDb](https://www.imdb.com/user/ur108188439/?ref_=nv_usr_prof_2)
-- Podcasts
-  - [This Blog!](http://localhost:4321/tags/podcast-review)
-- TV
-  - [Serializd](https://www.serializd.com/user/lcskid/profile)
+-   Books
+    -   [Bookwyrm](https://bookwyrm.social/user/willtheorangeguy)
+    -   [Goodreads](https://www.goodreads.com/user/show/172220342-william-v)
+-   Games
+    -   [HowLongToBeat](https://howlongtobeat.com/user/lcskid/games/playing/1)
+    -   [ProtonDb](https://www.protondb.com/profile) - for Linux/Steam Deck games only
+-   Movies
+    -   [Letterboxd](https://letterboxd.com/lcskid/)
+    -   [IMDb](https://www.imdb.com/user/ur108188439/?ref_=nv_usr_prof_2)
+-   Podcasts
+    -   [This Blog!](http://localhost:4321/tags/podcast-review)
+-   TV
+    -   [Serializd](https://www.serializd.com/user/lcskid/profile)
