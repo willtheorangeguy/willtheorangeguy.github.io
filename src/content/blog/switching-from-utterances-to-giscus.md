@@ -3,7 +3,7 @@ author: willtheorangeguy
 pubDatetime: 2024-12-17T00:00:00.198Z
 title: Switching from Utterances to Giscus
 postSlug: switching-from-utterances-to-giscus
-featured: true
+featured: false
 draft: false
 tags:
     - github
