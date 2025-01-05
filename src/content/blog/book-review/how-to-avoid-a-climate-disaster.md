@@ -2,7 +2,7 @@
 author: willtheorangeguy
 pubDatetime: 2024-12-16T15:22:00Z
 title: "How to Avoid a Climate Disaster Book Review"
-postSlug: how-to-avoid-a-climate-disaster
+postSlug: how-to-avoid-a-climate-disaster-book-review
 featured: false
 draft: false
 tags:

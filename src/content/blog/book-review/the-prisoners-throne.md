@@ -2,7 +2,7 @@
 author: willtheorangeguy
 pubDatetime: 2024-10-08T15:22:00Z
 title: "The Prisoner's Throne Book Review"
-postSlug: the-prisoners-throne-book-review
+postSlug: the-prisoners-throne-book-review-book-review
 featured: false
 draft: false
 tags:
