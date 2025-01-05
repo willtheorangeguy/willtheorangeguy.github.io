@@ -3,7 +3,7 @@ author: willtheorangeguy
 pubDatetime: 2024-07-29T15:22:00Z
 title: Where I share my reading lists and reviews
 postSlug: Where-I-share-my-reading-lists-and-reviews
-featured: true
+featured: false
 draft: false
 tags:
     - intro
