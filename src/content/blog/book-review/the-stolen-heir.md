@@ -19,4 +19,4 @@ description: "A review of The Stolen Heir Book."
 
 1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/review/5442749/s/a-great-start)
 
-> A great start to this series, I really enjoyed getting to know more about the characters and their personal lives. Looking forward to more by this author.
+- A great start to this series, I really enjoyed getting to know more about the characters and their personal lives. Looking forward to more by this author.

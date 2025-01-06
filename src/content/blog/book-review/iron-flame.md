@@ -19,4 +19,4 @@ description: "A review of the Iron Flame Book."
 
 1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy#:~:text=Remove%20from%20Read-,fun%20read,-4%20stars)
 
-> The start of the book is slow, but it speeds up close to the second half. Good book, keeps up with the current social media book readers. Could be a little shorter.
+- The start of the book is slow, but it speeds up close to the second half. Good book, keeps up with the current social media book readers. Could be a little shorter.
