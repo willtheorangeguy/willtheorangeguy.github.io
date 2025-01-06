@@ -13,7 +13,7 @@ description: "A review of the Dave the Diver Video Game."
 # Dave the Diver
 
 -   **Date:** 2025-01-05
--   **Rating:** ⭐⭐⭐
+-   **Rating:** ⭐⭐⭐⭐⭐
 -   **Mainly played on [Steam Deck](https://store.steampowered.com/steamdeck)**
 
 **Pubic Links:**
