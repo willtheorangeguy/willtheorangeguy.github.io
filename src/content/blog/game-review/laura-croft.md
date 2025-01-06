@@ -21,5 +21,5 @@ description: "A review of the Laura Croft Go Video Game."
 1. [HowLongToBeat](https://howlongtobeat.com/game/29717/reviews/u-lcskid/1)
 2. [Steam](https://steamcommunity.com/id/lcskid/recommended/540840?snr=1_5_9__402)
 
-- Fun puzzle game, totally worth playing if you want something easy to enjoy in the Tomb Raider franchise, without hopping into a retro or AAA title.
-- Also, plays awesome on the Steam Deck for when you are on the go - kind of like a mobile game (which it also is).
+-   Fun puzzle game, totally worth playing if you want something easy to enjoy in the Tomb Raider franchise, without hopping into a retro or AAA title.
+-   Also, plays awesome on the Steam Deck for when you are on the go - kind of like a mobile game (which it also is).
