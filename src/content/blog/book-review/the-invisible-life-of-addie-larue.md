@@ -19,4 +19,4 @@ description: "A review of The Invisible Life of Addie LaRue Book."
 
 1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/review/4967999/s/great-book)
 
-> This was an awesome read, really loved how the reader gets to see the perspective of the modern world as well as going back in time. The ending was a surprising, but I enjoyed the emotion of it.
+- This was an awesome read, really loved how the reader gets to see the perspective of the modern world as well as going back in time. The ending was a surprising, but I enjoyed the emotion of it.
