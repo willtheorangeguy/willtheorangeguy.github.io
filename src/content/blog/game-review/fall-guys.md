@@ -19,6 +19,6 @@ description: "A review of the Fall Guys Video Game."
 
 1. [HowLongToBeat](https://howlongtobeat.com/game/68270/reviews/u-lcskid/1)
 
-- It is a lot like Wipeout, and really fun to play with friends. I prefer to play this over Fortnite (even though I know they are not the "same" game).
-- To get the most out of it, make sure you are playing with friends.
-- Also plays well on Steam Deck.
+-   It is a lot like Wipeout, and really fun to play with friends. I prefer to play this over Fortnite (even though I know they are not the "same" game).
+-   To get the most out of it, make sure you are playing with friends.
+-   Also plays well on Steam Deck.
