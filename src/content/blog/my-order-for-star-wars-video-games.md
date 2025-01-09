@@ -3,7 +3,7 @@ author: willtheorangeguy
 pubDatetime: 2025-01-01T18:00:17.332Z
 title: My order for Star Wars Video Games
 postSlug: my-order-for-star-wars-video-games
-featured: false
+featured: true
 draft: false
 tags:
     - star-wars
