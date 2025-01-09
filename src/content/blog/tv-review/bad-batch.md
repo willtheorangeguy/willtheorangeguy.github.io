@@ -20,4 +20,4 @@ description: "A review on the Star Wars: The Bad Batch TV show."
 1. [Serializd](https://www.serializd.com/review/24622097)
 
 -   Great show, one of the best - up there with Clone Wars. Omega is a little over the top, and the accent is slightly too thick.
--   Definitely worth the watch. 
+-   Definitely worth the watch.
