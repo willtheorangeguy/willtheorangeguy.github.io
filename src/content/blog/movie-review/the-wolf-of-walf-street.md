@@ -17,4 +17,4 @@ description: "A review of The Wolf of Wall Street."
 
 **Pubic Links:**
 
-1. https://www.imdb.com/title/tt0993846/reviews/
+1. [IMDb](https://www.imdb.com/title/tt0993846/reviews/)
