@@ -17,7 +17,7 @@ description: "A review of the Percy Jackson and the Titan's Curse Book."
 
 **Pubic Links:**
 
-1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/comment/6427163#anchor-6427163)
+1. [bookwrym.social](https://bookwyrm.social/user/willtheorangeguy/review/6559310#anchor-6559310)
 
 - Interesting character development in this book, it was nice to see more of the gods and how Olympus works.
 - However, I did find the beginning to be quite slow, and that makes this my least favourite book of the Percy Jackson and the Olympians series so far.
