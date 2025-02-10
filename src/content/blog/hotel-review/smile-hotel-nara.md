@@ -19,5 +19,5 @@ description: "A review of the Smile Hotel Nara."
 
 1. [Booking.com](https://www.booking.com/hotel/jp/sun-hotel-nara.en-gb.html?aid=304142&label=review_am&activeTab=htReviews&appvl_email=1&rurl=eb467cf17a32f222&type=total#tab-reviews)
 
-- Close to the park and extremely close to the station.
-- Staff were helpful.
+-   Close to the park and extremely close to the station.
+-   Staff were helpful.
