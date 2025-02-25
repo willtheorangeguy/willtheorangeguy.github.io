@@ -42,7 +42,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <p>
         Hi!/¡Hola!/Hoi! - I'm willtheorangeguy, and this is my corner of the internet! 
-        It's a dev blog, with random personal thoughts, tech stuff, and travel musings.
+        It's a dev blog, with random personal thoughts, tech stuff, and lots of reviews.
         I'm currently studying Computer Science at the University of Calgary, and build
         small, fun, and powerful programs in Python and reusable web templates in my <i>limited</i> spare time.
       </p>
@@ -85,7 +85,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <ul>
         {
           sortedPosts
-            .filter(({ data }) => !data.featured)
+            .filter(({ data }) => !data.featured && !data.tags.some(tag => /-review$/.test(tag)))
             .map(
               ({ data }, index) =>
                 index < 5 && (
