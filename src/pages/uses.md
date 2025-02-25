@@ -106,8 +106,12 @@ See it on [PCPartPicker](https://pcpartpicker.com/user/willtheornageguy/saved/zL
 
 ## Mobile Setup
 
--   iPhone 13 Pro Max
+- Dell XPS 13 9360
+    - Intel i5-7200U
+    - 8GB DDR4 RAM
+    - 1TB WD Blue NVMe SSD
 
+-   iPhone 13 Pro Max
     -   in a dbrand [Grip](https://dbrand.com/shop/devices/apple-iphone-cases) case
     -   with dbrand [Teardown](https://dbrand.com/shop/limited-edition/teardown) skin
 
@@ -132,3 +136,5 @@ Currently not running anything on the homelab, plans are as follows:
 
 -   GoPro Hero 10
 -   iPhone 13 Pro Max in RAW/ProRES
+-   Canon EOS R10
+-   _Looking to get a Blackmagic Pocket 6K if anyone has one for sale..._
