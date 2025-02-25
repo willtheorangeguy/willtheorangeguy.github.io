@@ -3,11 +3,9 @@ layout: ../layouts/ResumeLayout.astro
 title: "Resume"
 ---
 
-An honour roll graduate from Langley Christian High School, perusing a bachelor’s degree in computer science at the University of Calgary.
+An honour roll graduate currently perusing a bachelor’s degree in computer science at the University of Calgary.
 <br>
 Organized, reliable, and punctual. Strong written and verbal communication skills. Strives to put everything I have into the job to exceed professional and personal goals.
-
-**See a [printable resume](/assets/docs/resume.pdf).**
 
 ## Professional Skills
 
@@ -18,14 +16,16 @@ Organized, reliable, and punctual. Strong written and verbal communication skill
 
 ## Work Experience
 
--   **Aquatic Shift Lead**, September 2023 – Present, MNP Sport and Community Center, Calgary, AB
--   **Aquatic Lifeguard and Swim Instructor**, September 2023 – Present, University of Calgary, Calgary, AB
 -   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
+-   **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
+-   **Aquatic Lifeguard and Swim Instructor**, September 2023 – December 2024, University of Calgary, Calgary, AB
+-   **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
 -   **Supervisor**, July 2020 – September 2022, Willoughby Town Center Dairy Queen, Langley, BC
 
 ## Education
 
 -   **University of Calgary**, April 2027, Computer Science - Faculty of Science, Bachelor of Science
+-   **Langley Christian High School**, June 2022, Dogwood Diploma, Graduated with Honours
 
 ## Certifications and Achievements
 
@@ -34,8 +34,3 @@ Organized, reliable, and punctual. Strong written and verbal communication skill
 -   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **National Lifeguard Pool Option**, September 9, 2023, Lifesaving Society of Alberta, Calgary, AB
-
-## Volunteer Experience
-
--   **Langley Immanuel CRC Audio/Visual**, Langley, BC, November 2015 – August 2023
--   **Bibles for Missions (Mission Thrift Store)**, Langley, BC, June 2014 – September 2022
