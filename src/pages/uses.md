@@ -106,12 +106,14 @@ See it on [PCPartPicker](https://pcpartpicker.com/user/willtheornageguy/saved/zL
 
 ## Mobile Setup
 
-- Dell XPS 13 9360
-    - Intel i5-7200U
-    - 8GB DDR4 RAM
-    - 1TB WD Blue NVMe SSD
+-   Dell XPS 13 9360
+
+    -   Intel i5-7200U
+    -   8GB DDR4 RAM
+    -   1TB WD Blue NVMe SSD
 
 -   iPhone 13 Pro Max
+
     -   in a dbrand [Grip](https://dbrand.com/shop/devices/apple-iphone-cases) case
     -   with dbrand [Teardown](https://dbrand.com/shop/limited-edition/teardown) skin
 
