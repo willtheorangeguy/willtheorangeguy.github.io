@@ -19,5 +19,5 @@ description: "A review of the Piece Hostel Kyoto."
 
 1. [Booking.com](https://www.booking.com/hotel/jp/piece-hostel-kyoto.en-gb.html?aid=304142&label=review_am&activeTab=htReviews&appvl_email=1&rurl=e62a48adcb4f6f48&type=total#tab-reviews)
 
-- Great facilities, modern, close to station and amenities.
-- A little far from activities but if you are ok with walking around the city it is great.
+-   Great facilities, modern, close to station and amenities.
+-   A little far from activities but if you are ok with walking around the city it is great.
