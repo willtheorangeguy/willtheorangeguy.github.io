@@ -5,7 +5,7 @@ title: "Resume"
 
 Current student perusing a bachelor’s degree in computer science and economics at the University of Calgary.
 <br>
-Organized, reliable, and punctual. Strives to put everything I have into the job to exceed professional and personal goals. 
+Organized, reliable, and punctual. Strives to put everything I have into the job to exceed professional and personal goals.
 
 ## Professional Skills
 
@@ -25,8 +25,8 @@ Organized, reliable, and punctual. Strives to put everything I have into the job
 ## Education
 
 -   **University of Calgary**, April 2027
-    - Computer Science, Major - Faculty of Science, Bachelor of Science
-    - Economics, Minor - Faculty of Arts
+    -   Computer Science, Major - Faculty of Science, Bachelor of Science
+    -   Economics, Minor - Faculty of Arts
 -   **Langley Christian High School**, June 2022, Dogwood Diploma, Graduated with Honours
 
 ## Certifications and Achievements
