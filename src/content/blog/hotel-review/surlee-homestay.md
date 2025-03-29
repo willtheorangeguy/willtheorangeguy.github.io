@@ -19,8 +19,8 @@ description: "A review of the Surelee Homestay."
 
 1. [Booking.com](https://www.booking.com/hotel/vn/surelee-homestay.html?aid=304142&label=review_am&sid=c7f521e3328b99263d830acc16a4229b&activeTab=htReviews&dist=0&keep_landing=1&rurl=6326d806f1a1a91a&sb_price_type=total&type=total&#tab-reviews:~:text=A%20hotel%2C%20not%20a%20homestay)
 
-- Beautiful location
-- Rooms were private and comfortable
-- The food was delicious, and _[they]_ had decent options for breakfast
-- Not a very homestay feel, the staff were cold towards us
-- The family dinner should be labeled as just “dinner”, the family ignored us the entire time
+-   Beautiful location
+-   Rooms were private and comfortable
+-   The food was delicious, and _[they]_ had decent options for breakfast
+-   Not a very homestay feel, the staff were cold towards us
+-   The family dinner should be labeled as just “dinner”, the family ignored us the entire time
