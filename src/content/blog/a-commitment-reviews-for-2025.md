@@ -3,7 +3,7 @@ author: willtheorangeguy
 pubDatetime: 2025-01-01T20:00:00.332Z
 title: A Commitment to Reviews for 2025
 postSlug: a-commitment-reviews-for-2025
-featured: true
+featured: false
 draft: false
 tags:
     - blog
