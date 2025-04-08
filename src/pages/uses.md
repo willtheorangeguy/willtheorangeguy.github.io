@@ -3,13 +3,11 @@ layout: ../layouts/UsesLayout.astro
 title: "Uses"
 ---
 
-This is an informational page that details the hardware, software, and tools that I use in my daily work or hobbies. Inspired by [https://nicknisi.com/uses/](https://nicknisi.com/uses/).
+This is an informational page that details the hardware, software, and tools that I use in my daily work or hobbies. Inspired by [nicknisi.com/uses/](https://nicknisi.com/uses/).
 
 ![Uses Desktop](/assets/imgs/uses-desktop.png)
 
 ## Development Environment
-
-Unlike Nick, I don't work exclusively in the terminal, but use a combination of GUI and terminal-based tools.
 
 ### Editor
 
@@ -112,7 +110,7 @@ See it on [PCPartPicker](https://pcpartpicker.com/user/willtheornageguy/saved/zL
     - 1TB WD Blue NVMe SSD
 
 -   iPhone 13 Pro Max
-    -   in a dbrand [Grip](https://dbrand.com/shop/devices/apple-iphone-cases) case
+    -   in dbrand [Grip](https://dbrand.com/shop/devices/apple-iphone-cases) case
     -   with dbrand [Teardown](https://dbrand.com/shop/limited-edition/teardown) skin
 
 -   Steam Deck LCD
@@ -135,6 +133,7 @@ Currently not running anything on the homelab, plans are as follows:
 ## Photography/Videography
 
 -   GoPro Hero 10
+-   DJI Neo
 -   iPhone 13 Pro Max in RAW/ProRES
 -   Canon EOS R10
 -   _Looking to get a Blackmagic Pocket 6K if anyone has one for sale..._
