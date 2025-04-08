@@ -22,33 +22,33 @@ I received my bag on January 17, 2025 (the beauty of living in Langley, BC), and
 
 **Tech Area**
 
-- 13" Dell XPS
-- Small Wacom tablet
-- 2x Amazon Kindle Paperwhite (5th generation)
-- Elastic pockets: iPhone/Apple Watch chargers, USB-C dongle, tablet pen
-- Zippered pocket: nothing, but became a postcard holder as I traveled
+-   13" Dell XPS
+-   Small Wacom tablet
+-   2x Amazon Kindle Paperwhite (5th generation)
+-   Elastic pockets: iPhone/Apple Watch chargers, USB-C dongle, tablet pen
+-   Zippered pocket: nothing, but became a postcard holder as I traveled
 
 **Pocket of Holding**
 
-- Zippered pocket: 2x AirPods, cards, sunscreen, bug spray, tiny 7-Eleven yogurt spoons, camping utensils, assorted knickknacks
-- Magnet pocket: portable charger, two sets of charging cables
-- Elastic pocket: mini wipes
-- Screwdriver pocket: umbrella
-- AirTag pocket: AirTag
-- GoPro kit/case
-- DJI Neo
-- First aid kit
-- Toilet Paper roll
-- Laptop charger
-- Travel adapter
-- Scarf
-- Snacks
+-   Zippered pocket: 2x AirPods, cards, sunscreen, bug spray, tiny 7-Eleven yogurt spoons, camping utensils, assorted knickknacks
+-   Magnet pocket: portable charger, two sets of charging cables
+-   Elastic pocket: mini wipes
+-   Screwdriver pocket: umbrella
+-   AirTag pocket: AirTag
+-   GoPro kit/case
+-   DJI Neo
+-   First aid kit
+-   Toilet Paper roll
+-   Laptop charger
+-   Travel adapter
+-   Scarf
+-   Snacks
 
 **Side Pockets**
 
-- 1 40oz Hydroflask
-- 1 40oz Grayl
-- Sunglasses pocket: sunglasses, small Lidl tissue pack, gum, motion sickness pills, chapstick, assorted hair ties
+-   1 40oz Hydroflask
+-   1 40oz Grayl
+-   Sunglasses pocket: sunglasses, small Lidl tissue pack, gum, motion sickness pills, chapstick, assorted hair ties
 
 ## Storage
 
