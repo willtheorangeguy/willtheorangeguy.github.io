@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/ResumeLayout.astro
+layout: ../layouts/HeaderlessLayout.astro
 title: "Resume"
 ---
 
