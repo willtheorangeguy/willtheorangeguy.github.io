@@ -1,5 +1,12 @@
 # Changelog
 
+## [v3.0.0](https://github.com/willtheorangeguy/willtheorangeguy.github.io/releases/tag/v3.0.0)
+
+### Changed
+
+- Upgraded to Astro v5 and AstroPaper v4
+- Changed header links to use Quartz 4 for reviews
+
 ## [v2.0.0](https://github.com/willtheorangeguy/willtheorangeguy.github.io/releases/tag/v2.0.0)
 
 ### Added

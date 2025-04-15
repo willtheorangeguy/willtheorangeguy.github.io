@@ -64,8 +64,8 @@ $ git clone https://github.com/willtheorangeguy/willtheorangeguy.github.io.git
 # Go into the repository
 $ cd willtheorangeguy.github.io
 
-# Run the webpage
-$ index.html
+# Run Astro
+$ npm run dev
 ```
 
 You can also pull the [Docker](https://www.docker.com/) image from GitHub Packages. From your command line:
@@ -136,4 +136,4 @@ This software uses the following open source packages, projects, services or web
 
 ## License
 
-This project is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) - see the [`LICENSE`](LICENSE.md) file for details. See the [Privacy Policy](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/PRIVACY.md) and [Terms and Conditions](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/TERMS.md) for legal information.
+This project is licensed under the [MIT License](https://mit-license.org/) - see the [`LICENSE`](LICENSE.md) file for details. See the [Privacy Policy](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/PRIVACY.md) and [Terms and Conditions](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/TERMS.md) for legal information.

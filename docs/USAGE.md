@@ -6,8 +6,8 @@ To run the willtheorangeguy.github.io website, you can run the scripts from GitH
 
 1. To run the willtheorangeguy.github.io website, download the latest `.zip` file from [GitHub Releases](https://github.com/willtheorangeguy/willtheorangeguy.github.io/releases/latest) page.
 2. Extract the `.zip` file using a program like [7-Zip](https://www.7-zip.org/).
-3. Run the `index.html` file.
-4. You're all set!
+3. Start the Astro server: `npm run dev`.
+4. Point your browser to `https://localhost:4321/` to view a preview.
 
 ## Docker Container
 

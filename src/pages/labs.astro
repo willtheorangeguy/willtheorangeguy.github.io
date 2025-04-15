@@ -1,0 +1,108 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "@/layouts/Layout.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`Labs | ${SITE.title}`}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id="about" class="prose max-w-5xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">Labs</h1>
+    </section>
+    <br>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <a href="/purpose" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">/purpose</h2>
+          <p>This page exists because I think the web would be a better place if the people trying to shape it spoke openly and plainly about their vision for the future.</p>
+        </div>
+      </a>
+      <a href="/uses" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">/uses</h2>
+          <p>An informational page on the hardware, software, and tools I use in my daily work and hobbies.</p>
+          <p><i>Newly updated for 2025!</i></p>
+        </div>
+      </a>
+      <a href="/bucket-list" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Bucket List</h2>
+          <p>Much like the travel blog, here are all the things I want to see and the activities I want to do!</p>
+        </div>
+      </a>
+      <a href="https://daniela-and-will-travel.github.io/" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Travel Blog</h2>
+          <p>Follow along with our travel adventures!</p>
+        </div>
+      </a>
+      <a href="/redcross" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Red Cross</h2>
+          <p>An archive of Swimming Lesson instructor tools.</p>
+        </div>
+      </a>
+      <a href="/tags/bad-things-about" target="_blank" class="card border-skin-line">
+        <div class="card-content">
+          <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Bad Things About</h2>
+          <p>A continually updated letter of items that could be better about any number of products or services.</p>
+        </div>
+      </a>
+    </section>
+    <br>
+    <section >
+      <div style="display: flex; justify-content: center; max-width: 100%;">
+        <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=2021333611&amp;format=interactive"></iframe>
+      </div>
+      <br>
+      <div style="display: flex; justify-content: center; max-width: 100%;">
+        <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=1693297828&amp;format=interactive"></iframe>
+      </div>
+      <br>
+      <div style="display: flex; justify-content: center; max-width: 100%;">
+        <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=1923967447&amp;format=interactive"></iframe>
+      </div>
+      <br>
+      <div style="display: flex; justify-content: center; max-width: 100%;">
+        <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=1687108451&amp;format=interactive"></iframe>
+      </div>
+      <br>
+      <div style="display: flex; justify-content: center; max-width: 100%;">
+        <iframe width="100%" height="337" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu8BIkLoeldqgLyVgPxmw-9fmOMu76TNv04y2OsG708ABJIJ7HLaZc234kmHDLz_g3zhjMNY3TKVqa/pubchart?oid=1571930743&amp;format=interactive"></iframe>
+      </div>
+    </section>
+    
+    <section class="prose max-w-6xl prose-img:border-0">
+      <br>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+    .card {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .border-skin-line {
+      --tw-border-opacity: 1;
+      border-color: var(--accent);
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .text-skin-accent {
+    --tw-text-opacity: 1;
+    color: var(--accent);
+    }
+  </style>
