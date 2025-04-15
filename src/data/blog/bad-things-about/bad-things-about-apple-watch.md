@@ -1,6 +1,6 @@
 ---
 author: willtheorangeguy
-pubDatetime: 2025-07-29T15:22:00Z
+pubDatetime: 2025-04-15T15:22:00Z
 title: Bad Things About the Apple Watch
 postSlug: bad-things-about-apple-watch
 featured: false
