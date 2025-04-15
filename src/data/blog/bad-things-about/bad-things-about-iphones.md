@@ -4,7 +4,7 @@ pubDatetime: 2025-07-29T15:22:00Z
 title: Bad Things About iPhones
 postSlug: bad-things-about-iphones
 featured: false
-draft: true
+draft: false
 tags:
     - living-document
     - bad-things-about
