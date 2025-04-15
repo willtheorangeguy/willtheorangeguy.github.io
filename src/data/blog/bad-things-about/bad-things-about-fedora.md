@@ -1,6 +1,6 @@
 ---
 author: willtheorangeguy
-pubDatetime: 2025-04-15T15:22:00Z
+pubDatetime: 2025-04-14T15:22:00Z
 title: Bad Things About Fedora
 postSlug: bad-things-about-fedora
 featured: false
