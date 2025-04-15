@@ -1,0 +1,159 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "@/layouts/Layout.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`Bucket List | ${SITE.title}`}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id="about" class="prose max-w-5xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">Bucket List</h1>
+      <p>Here are the countries that I've visited so far, compliments of the <a href="https://been.app">Been app</a>:</p>
+      <img src="/assets/imgs/been-map.jpg" alt="Been App Screenshot">
+    </section>
+    <br>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel Southeast Asia</h2>
+            <p>Backpack throughout Southeast Asia on a budget - definetly not in style.</p>
+            <progress value="12" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel South America</h2>
+            <p>Travel throughout South America and learn more Spanish - would travel in <i>style</i>.</p>
+            <progress value="0" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel the Whole World</h2>
+            <p>Travel all over every country in the world! Who wouldn't want to?</p>
+            <progress value="24" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture • #endgame</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Visit a Trifecta of Tech Malls</h2>
+            <p>Try to hit a trifecta (or maybe more) of tech malls throughout Asia.</p>
+            <progress value="66" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture • #computers • #nerd</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn Spanish</h2>
+            <p>Practice through Duolingo, and travels, up until the C1 level at least.</p>
+            <progress value="33" max="100" class="w-full mt-2"></progress>
+            <p>#languages • #culture • #learning</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn French</h2>
+            <p>Practice through Duolingo, and travels, up until the C1 level at least.</p>
+            <progress value="67" max="100" class="w-full mt-2"></progress>
+            <p>#languages • #culture • #learning</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Run a Marathon</h2>
+            <p>Using Strava, starting with a half marathon and then to a full marathon.</p>
+            <progress value="19" max="100" class="w-full mt-2"></progress>
+            <p>#fitness • #running</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn to Play Guitar</h2>
+            <p>Using YouTube and a couple of in person classes, learn how to play the acoustic guitar.</p>
+            <progress value="10" max="100" class="w-full mt-2"></progress>
+            <p>#learning • #music</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Learn to Play Piano</h2>
+            <p>Using YouTube, my girlfriend, and maybe in person classes, learn how to play the piano.</p>
+            <progress value="5" max="100" class="w-full mt-2"></progress>
+            <p>#learning • #music</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Become a Pilot</h2>
+            <p>Learn how to fly a small plane and get my personal pilots license.</p>
+            <progress value="0" max="100" class="w-full mt-2"></progress>
+            <p>#learning • #flying• #nerd</p>
+          </div>
+        </a>
+      </section>
+      <!--COMPLETED-->
+      <br>
+      <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Climb a Volcano</h2>
+            <p>Completed - climbed up Mount Etna in Italy, luckily before it started exploding.</p>
+            <progress value="100" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture • #endgame</p>
+          </div>
+        </a>
+        <a href="" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed">Travel Europe</h2>
+            <p>Completed - backpack through Europe after graduation, on a budget.</p>
+            <progress value="100" max="100" class="w-full mt-2"></progress>
+            <p>#travel • #culture</p>
+          </div>
+        </a>
+      </section>
+      <section class="prose max-w-6xl prose-img:border-0">
+        <br>
+      </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+    .card {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .border-skin-line {
+      --tw-border-opacity: 1;
+      border-color: var(--accent);
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .text-skin-accent {
+    --tw-text-opacity: 1;
+    color: var(--accent);
+    }
+  
+    /* Style the progress bar container */
+    progress {
+      width: 100%;
+      height: 10px; /* Adjust the height as needed */
+      border-radius: 5px; /* Rounded corners */
+      overflow: hidden; /* Ensure the rounded corners are visible */
+      background-color: #ffffff; /* Background color of the progress bar */
+    }
+  </style>

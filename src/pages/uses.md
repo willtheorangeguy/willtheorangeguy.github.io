@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/UsesLayout.astro
+layout: ../layouts/HeaderlessLayout.astro
 title: "Uses"
 ---
 

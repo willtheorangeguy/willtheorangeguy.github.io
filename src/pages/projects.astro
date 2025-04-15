@@ -1,0 +1,103 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "@/layouts/Layout.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`Projects | ${SITE.title}`}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id="about" class="prose max-w-5xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">Projects</h1>
+    </section>
+    <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <a href="https://github.com/Dog-Face-Development/ProgramVer" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://raw.githubusercontent.com/Dog-Face-Development/ProgramVer/master/docs/images/logo.png" alt="ProgramVer" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">ProgramVer</h2>
+            <p>A Python version of Microsoft's 'winver', built to be customizable, and to show copyright info and licenses.</p>
+          </div>
+        </a>
+        <a href="https://github.com/Dog-Face-Development/PyWorkout" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/Dog-Face-Development/PyWorkout/raw/main/docs/images/logo.png" alt="PyWorkout" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">PyWorkout</h2>
+            <p>A minimal CLI to keep you inspired during your workout! Easily used and customized, with support for multiple workout plans, different muscle groups and video workouts.</p>
+          </div>
+        </a>
+        <a href="https://willtheorangeguy.github.io/Maximum-PC-Builds-Archive/" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/willtheorangeguy/Maximum-PC-Builds-Archive/blob/main/docs/images/welcome.gif?raw=true" alt="Maximum PC Build Archive" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Maximum PC Builds Archive</h2>
+            <p>An archive of the builds featured on the last pages of the Maximum PC magazine.</p>
+          </div>
+        </a>
+        <a href="https://willtheorangeguy.github.io/PyTricks-Archive/" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/willtheorangeguy/PyTricks-Archive/blob/main/docs/images/welcome.gif?raw=true" alt="PyTricks Archive" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">PyTricks Archive</h2>
+            <p>An archive of the 🐍PyTricks featured in Dan Badder's Real Python email newsletter.</p>
+          </div>
+        </a>
+        <a href="https://dog-face-development.github.io/Pasta-Tracker/" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/Dog-Face-Development/Pasta-Tracker/blob/main/docs/images/welcome.jpg?raw=true" alt="PastaTracker" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">PastaTracker</h2>
+            <p>Track and save all of the types of pasta you have tried and want to try.</p>
+          </div>
+        </a>
+        <a href="https://github.com/willtheorangeguy/Running-Calculator" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/willtheorangeguy/Running-Calculator/blob/main/docs/images/usage.png?raw=true" alt="Running Calculator" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Running Calculator</h2>
+            <p>A running distance and speed command line interface. Measures in metric and imperial units, as well as marathons and half-marathons.</p>
+          </div>
+        </a>
+        <a href="https://daniela-and-will-travel.github.io/" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="/assets/imgs/travel-blog.png" alt="Daniela and Will Travel Blog" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Daniela and Will Travel</h2>
+            <p>Mine and my partner's open source travel blog!</p>
+          </div>
+        </a>
+        <a href="https://willtheorangeguy.github.io/" target="_blank" class="card border-skin-line">
+          <div class="card-content">
+            <img src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/welcome.jpg?raw=true" alt="willtheorangeguy.github.io" class="w-full h-72 object-cover rounded-lg" />
+            <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">williamvdg.me</h2>
+            <p>This website!</p>
+          </div>
+        </a>
+      </section> 
+    <section class="prose max-w-6xl prose-img:border-0">
+      <br>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+    .card {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .border-skin-line {
+    --tw-border-opacity: 1;
+    border-color: var(--accent);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .text-skin-accent {
+  --tw-text-opacity: 1;
+  color: var(--accent);
+  }
+  </style>
