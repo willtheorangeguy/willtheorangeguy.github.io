@@ -29,7 +29,7 @@ const latestDatetime =
   modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime;
 const datetime = dayjs(latestDatetime).tz(postTimezone || SITE.timezone);
 
-const date = datetime.format("D MMM, YYYY"); // e.g., '22 Mar, 2025'
+const date = datetime.format("MMM DD, YYYY"); // e.g., '22 Mar, 2025'
 const time = datetime.format("hh:mm A"); // e.g., '08:30 PM'
 ---
 
