@@ -9,7 +9,7 @@ tags:
     - star-wars
     - video-games
     - games
-description: There are a lot of conflicting guides for Star Wars video games - so here's mine
+description: There are a lot of conflicting guides for Star Wars video games - so here's mine.
 ---
 
 I recently started re-watching all of the Star Wars cannon and non-cannon, following the official [Star Wars Eras](https://www.starwars.com/eras) guide - with a couple of my own additions of course - but I realized that they included a bunch of the video games on there. However, the Eras guide doesn't include all of the video games Star Wars has released, so I started scouring the web for a guide that had at least the majority of them in order.
