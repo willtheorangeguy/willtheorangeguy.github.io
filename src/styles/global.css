@@ -57,3 +57,7 @@ html[data-theme="dark"] {
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
+
+.social-icon{
+  fill: var(--foreground) !important;
+}
