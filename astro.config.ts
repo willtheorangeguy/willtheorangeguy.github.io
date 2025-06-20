@@ -33,7 +33,6 @@ export default defineConfig({
     experimentalLayout: "constrained",
   },
   experimental: {
-    responsiveImages: true,
     preserveScriptOrder: true,
   },
 });
