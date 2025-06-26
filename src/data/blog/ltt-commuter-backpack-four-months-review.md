@@ -1,6 +1,6 @@
 ---
 author: willtheorangeguy
-pubDatetime: 2025-06-26T20:00:00.332Z
+pubDatetime: 2025-06-25T20:00:00.332Z
 title: Four Months Traveling with the LTT Commuter Backpack
 postSlug: ltt-commuter-backpack-four-months-review
 featured: true

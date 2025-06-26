@@ -3,7 +3,7 @@ author: willtheorangeguy
 pubDatetime: 2025-04-01T20:00:00.332Z
 title: One Month Traveling with the LTT Commuter Backpack
 postSlug: ltt-commuter-backpack-review
-featured: true
+featured: false
 draft: false
 tags:
     - reviews
