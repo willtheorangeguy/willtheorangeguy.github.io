@@ -3,6 +3,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Layout from "@/layouts/Layout.astro";
+import { UnsplashStatsCard } from "@/components/UnsplashStats.tsx";
 import { SITE } from "@/config";
 ---
 
@@ -51,6 +52,11 @@ import { SITE } from "@/config";
           <p>A continually updated letter of items that could be better about any number of products or services.</p>
         </div>
       </a>
+      <UnsplashStatsCard 
+        username="william_vdg" 
+        accessKey={import.meta.env.PUBLIC_UNSPLASH_ACCESS_KEY}
+        client:load
+      />
     </section>
     <br>
     <section >
