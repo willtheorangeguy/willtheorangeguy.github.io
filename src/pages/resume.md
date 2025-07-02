@@ -5,7 +5,7 @@ title: "Resume"
 
 Current student perusing a bachelor’s degree in computer science and economics at the University of Calgary.
 <br>
-Organized, reliable, and punctual. Strives to put everything I have into the job to exceed professional and personal goals. 
+Organized, reliable, and punctual. Strives to put everything I have into the job to exceed professional and personal goals.
 
 ## Professional Skills
 
@@ -16,11 +16,10 @@ Organized, reliable, and punctual. Strives to put everything I have into the job
 
 ## Work Experience
 
+-   **Data Annotator**, June 2025 – Present, TransPerfect, Vancouver, BC
 -   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
 -   **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
--   **Aquatic Lifeguard and Swim Instructor**, September 2023 – December 2024, University of Calgary, Calgary, AB
 -   **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
--   **Supervisor**, July 2020 – September 2022, Willoughby Town Center Dairy Queen, Langley, BC
 
 ## Education
 
@@ -31,7 +30,7 @@ Organized, reliable, and punctual. Strives to put everything I have into the job
 
 ## Certifications and Achievements
 
--   **Swim & Lifesaving Instructor**, October 26, 2024, Lifesaving Society of Alberta, Calgary, AB
+-   **Swim & Lifesaving Instructor**, August 22, 2025, Lifesaving Society of Alberta, Calgary, AB
 -   **Standard First Aid & CPR-A/CPR-C**, September 8, 2024, Lifesaving Society of Alberta, Calgary, AB
 -   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
