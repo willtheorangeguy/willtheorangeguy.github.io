@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.1.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "astro": "^5.11.0",
+    "astro": "^5.12.2",
     "dayjs": "^1.11.13",
     "lodash.kebabcase": "^4.1.1",
     "react": "^19.1.0",
