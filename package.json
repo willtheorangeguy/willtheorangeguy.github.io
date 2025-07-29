@@ -24,7 +24,7 @@
     "astro": "^5.12.2",
     "dayjs": "^1.11.13",
     "lodash.kebabcase": "^4.1.1",
-    "react": "^19.1.0",
+    "react": "^19.1.1",
     "react-dom": "^19.1.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
