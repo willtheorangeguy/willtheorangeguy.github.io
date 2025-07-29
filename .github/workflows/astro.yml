@@ -55,7 +55,7 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
       - name: Create .env file
-        run: echo "UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}" > .env
+        run: echo "PUBLIC_UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}" > .env
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

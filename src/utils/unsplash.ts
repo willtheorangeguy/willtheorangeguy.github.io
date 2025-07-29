@@ -38,8 +38,17 @@ export async function fetchUnsplashStats(
       fetch(`https://api.unsplash.com/users/${username}/statistics?client_id=${accessKey}`),
       fetch(`https://api.unsplash.com/users/${username}?client_id=${accessKey}`)
     ]);
+
+    const [statisticsResponseD, profileResponseD] = await Promise.all([
+      fetch(`https://api.unsplash.com/users/danielaasada/statistics?client_id=${accessKey}`),
+      fetch(`https://api.unsplash.com/users/danielaasada?client_id=${accessKey}`)
+    ]);
     
     if (!statisticsResponse.ok || !profileResponse.ok) {
+      throw new Error(`Failed to fetch Unsplash data`);
+    }
+
+    if (!statisticsResponseD.ok || !profileResponseD.ok) {
       throw new Error(`Failed to fetch Unsplash data`);
     }
     
@@ -47,15 +56,20 @@ export async function fetchUnsplashStats(
       statisticsResponse.json(),
       profileResponse.json()
     ]);
-    
+
+    const [statisticsDataD, profileDataD] = await Promise.all([
+      statisticsResponseD.json(),
+      profileResponseD.json()
+    ]);
+
     return {
       username: profileData.username,
-      totalPhotos: profileData.total_photos || 0,
-      totalViews: statisticsData.views?.total || 0,
-      totalDownloads: statisticsData.downloads?.total || 0,
-      totalLikes: profileData.total_likes || 0,
-      followers: profileData.followers_count || 0,
-      following: profileData.following_count || 0,
+      totalPhotos: profileData.total_photos + profileDataD.total_photos || 0,
+      totalViews: statisticsData.views?.total + statisticsDataD.views?.total || 0,
+      totalDownloads: statisticsData.downloads?.total + statisticsDataD.downloads?.total || 0,
+      totalLikes: profileData.total_likes + profileDataD.total_likes || 0,
+      followers: profileData.followers_count + profileDataD.followers_count || 0,
+      following: profileData.following_count + profileDataD.following_count || 0,
       profileImage: profileData.profile_image?.large || '',
       bio: profileData.bio || '',
       location: profileData.location || '',
