@@ -12,8 +12,6 @@
   <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-image.yml/badge.svg">
   <!-- Stability -->
   <img alt="Astro Build State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/astro.yml/badge.svg">
-  <!-- Prettier Lint -->
-  <img alt="Prettier Lint State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/prettier.yml/badge.svg">
   <!-- CodeQL -->
   <img alt="CodeQL State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/codeql.yml/badge.svg">
   <!-- Gitleaks -->
