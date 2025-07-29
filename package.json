@@ -4,13 +4,14 @@
   "version": "5.2.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "npm run fetch-maps-stats && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "fetch-maps-stats": "node scripts/update-maps-cache.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",

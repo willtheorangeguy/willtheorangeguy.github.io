@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUnsplashStats, formatNumber, type UnsplashStats } from '@/utils/unsplash';
+import { fetchGoogleMapsStats, formatNumber, extractUserIdFromUrl, type GoogleMapsStats } from '@/utils/googleMaps';
 
-interface UnsplashStatsCardProps {
-  username: string;
-  accessKey?: string;
+interface GoogleMapsStatsCardProps {
+  profileUrl: string;
 }
 
-export const UnsplashStatsCard: React.FC<UnsplashStatsCardProps> = ({ 
-  username, 
-  accessKey 
+export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({ 
+  profileUrl 
 }) => {
-  const [stats, setStats] = useState<UnsplashStats | null>(null);
+  const [stats, setStats] = useState<GoogleMapsStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const userId = extractUserIdFromUrl(profileUrl);
 
   useEffect(() => {
     const loadStats = async () => {
       try {
         setLoading(true);
         setError(null);
-        const unsplashStats = await fetchUnsplashStats(username, accessKey);
-        setStats(unsplashStats);
+        const mapsStats = await fetchGoogleMapsStats(userId);
+        setStats(mapsStats);
       } catch {
-        setError('Failed to load Unsplash stats');
+        setError('Failed to load Google Maps stats');
       } finally {
         setLoading(false);
       }
     };
 
-    loadStats();
-  }, [username, accessKey]);
+    if (userId) {
+      loadStats();
+    } else {
+      setError('Invalid Google Maps profile URL');
+      setLoading(false);
+    }
+  }, [userId]);
 
   if (loading) {
     return (
@@ -45,7 +50,7 @@ export const UnsplashStatsCard: React.FC<UnsplashStatsCardProps> = ({
         }}
       >
         <div className="card-content">
-          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Unsplash Stats</h2>
+          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Google Maps Stats</h2>
           <p>Loading stats...</p>
         </div>
       </div>
@@ -66,16 +71,16 @@ export const UnsplashStatsCard: React.FC<UnsplashStatsCardProps> = ({
         }}
       >
         <div className="card-content">
-          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Unsplash Stats</h2>
+          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Google Maps Stats</h2>
           <p>{error || 'Unable to load stats'}</p>
           <p>
             <a 
-              href={`https://unsplash.com/@${username}`} 
+              href={profileUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-skin-accent hover:underline"
             >
-              View on Unsplash →
+              View on Google Maps →
             </a>
           </p>
         </div>
@@ -85,7 +90,7 @@ export const UnsplashStatsCard: React.FC<UnsplashStatsCardProps> = ({
 
   return (
     <a 
-      href="https://unsplash.com/@william_vdg"
+      href={profileUrl}
       target="_blank" 
       rel="noopener noreferrer"
       className="card border-skin-line"
@@ -109,14 +114,13 @@ export const UnsplashStatsCard: React.FC<UnsplashStatsCardProps> = ({
     >
       <div className="card-content">
         <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>
-          Unsplash Stats
+          Google Maps Stats
         </h2>
         <p>
-          <strong>{stats.totalPhotos}</strong> photos with <strong>{formatNumber(stats.totalViews)}</strong> views 
-          and <strong>{formatNumber(stats.totalDownloads)}</strong> downloads.
+          <strong>{formatNumber(stats.totalPoints)}</strong> points • <strong>{formatNumber(stats.totalViews)}</strong> views
         </p>
         <p>
-          <strong>{stats.totalLikes}</strong> likes • <strong>{stats.followers}</strong> followers
+          <strong>{stats.totalPhotos}</strong> photos • <strong>{stats.totalReviews}</strong> reviews
         </p>
       </div>
     </a>

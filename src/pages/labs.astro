@@ -4,6 +4,7 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Layout from "@/layouts/Layout.astro";
 import { UnsplashStatsCard } from "@/components/UnsplashStats.tsx";
+import { GoogleMapsStatsCard } from "@/components/GoogleMapsStats.tsx";
 import { SITE } from "@/config";
 ---
 
@@ -57,6 +58,12 @@ import { SITE } from "@/config";
         accessKey={import.meta.env.PUBLIC_UNSPLASH_ACCESS_KEY}
         client:load
       />
+
+      <GoogleMapsStatsCard 
+        profileUrl="https://www.google.com/maps/contrib/100234331600740025841/photos/"
+        client:load
+      />
+
       <a href="https://folding.extremeoverclocking.com/user_summary.php?s=&u=1326935" target="_blank">
         <div class="card-content">
           <h2 class="text-lg text-skin-accent font-medium decoration-dashed hover:underline">Folding@Home Stats</h2>
