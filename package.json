@@ -14,7 +14,7 @@
     "fetch-maps-stats": "node scripts/update-maps-cache.mjs"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^4.3.1",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.0",
     "@giscus/react": "^3.1.0",
