@@ -16,8 +16,9 @@ Organized, reliable, and punctual. Strives to put everything I have into the job
 
 ## Work Experience
 
--   **Data Annotator**, June 2025 – Present, TransPerfect, Vancouver, BC
+-   **Aquatic Lifeguard and Swim Instructor**, September 2023 – December 2024, September 2025 – Present, University of Calgary, Calgary, AB
 -   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
+-   **Data Annotator**, June 2025 – September 2025, TransPerfect, Vancouver, BC
 -   **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
 -   **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
 
