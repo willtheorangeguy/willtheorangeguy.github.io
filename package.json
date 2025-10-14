@@ -21,7 +21,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.12",
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.1",
+    "@types/react-dom": "^19.2.2",
     "astro": "^5.14.1",
     "dayjs": "^1.11.13",
     "lodash.kebabcase": "^4.1.1",
