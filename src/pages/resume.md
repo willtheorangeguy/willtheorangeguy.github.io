@@ -3,36 +3,59 @@ layout: ../layouts/HeaderlessLayout.astro
 title: "Resume"
 ---
 
-Current student perusing a bachelor’s degree in computer science and economics at the University of Calgary.
-<br>
-Organized, reliable, and punctual. Strives to put everything I have into the job to exceed professional and personal goals.
+Motivated Computer Science undergraduate at the University of Calgary pursuing a Bachelor of Science in Computer Science with a minor in Economics. Strong hands-on experience with software development, systems administration, networking, and virtualization through extensive projects and labs. Comfortable working across the full stack from low-level programming and operating systems to web development, containerization, and network infrastructure.
 
-## Professional Skills
+## Education
 
--   **Employment:** My self-motivation, hard work and dedication all contribute to the continuing success of my employer. I bring my best to every task I am faced with. A natural leader and a team player.
--   **Personal:** Strong work ethic with a positive approach. Continuously striving to achieve goals and exceed expectations. Organized and focused, while friendly and caring, with strong written and spoken communication skills.
--   **Language Skills:** English ([CEFR C2](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale)), French ([CEFR B2](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale)), Dutch ([CEFR A2](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale)), Spanish ([CEFR A2](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale)).
--   **Technology Skills:** Proficient in computer software and hardware, including Microsoft 365, Adobe CC, and Zoho, IT troubleshooting and infrastructure, and in software and website development in languages such as Python, Java, HTML, CSS, and JS.
+**University of Calgary**, April 2027
+
+- Computer Science, Major - Faculty of Science, Bachelor of Science
+- Economics, Minor
+
+## Technical Skills
+
+- **Programming Languages:** Python, Java, C, Assembly, JavaScript, TypeScript, HTML, CSS
+- **Software Development:** OOP, Data Structures, Databases, Algorithms, Scripting & Automation, Debugging, Git
+- **Systems & Infrastructure:** Linux, Windows, Docker, Proxmox, Server Administration, Backups, Storage Management, ZFS
+- **Networking:** pfSense, Ubiquiti, VLANs, Routing & Switching, Network Troubleshooting, Firewall Configuration
+- **Hardware:** Server assembly & maintenance, network cabling, switches, APs, RAID, troubleshooting
+- **Web Tech:** Front-End Web Development, Basic Backend Services, Databases, Self-Hosted Applications
+- **Natural Languages:** English ([CEFR](https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions) C2), French (CEFR B2), Dutch (CEFR A2), Spanish (CEFR A2)
+
+## Projects & Practical Experience
+
+**Homelab & Systems Infrastructure**
+
+- Determined requirements for, purchased, and built high availability AMD and Intel servers
+- Designed and maintain a virtualized Homelab environment across multiple Proxmox nodes
+- Deployed and manage containerized services using Docker on Linux servers and VMs
+- Configured pfSense firewall rules, VLANs, and network protection services
+- Designed and installed Ubiquiti networking equipment for wired and wireless networks
+- Implemented backups, monitoring, and remote access across internal and external networks
+
+**Software Development [Projects](/projects)**
+
+- Developed many Python scripts for automation and file processing
+- Built and deployed AI pipelines in Python, with tools such as TensorFlow and PyTorch
+- Maintain projects to organize and extract data using Machine Learning
+- Created Java applications using object-oriented design principles
+- Implemented programs in C and Assembly to understand low-level system behaviour
+- Designed and update this portfolio blog using Astro, TypeScript, and Tailwind
+- Contribute to an maintain web applications using HTML, CSS, and JavaScript
 
 ## Work Experience
 
--   **Aquatic Lifeguard and Swim Instructor**, September 2023 – December 2024, September 2025 – Present, University of Calgary, Calgary, AB
+- **Aquatic Lifeguard Instructor**, December 2025 - Present, City of Airdrie, Airdire, AB
 -   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
+-   **Aquatic Lifeguard and Swim Instructor**, September 2023 – Present, September 2025 – Present, University of Calgary, Calgary, AB
 -   **Data Annotator**, June 2025 – September 2025, TransPerfect, Vancouver, BC
 -   **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
 -   **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
 
-## Education
-
--   **University of Calgary**, April 2027
-    - Computer Science, Major - Faculty of Science, Bachelor of Science
-    - Economics, Minor - Faculty of Arts
--   **Langley Christian High School**, June 2022, Dogwood Diploma, Graduated with Honours
-
 ## Certifications and Achievements
 
+-   **Standard First Aid & CPR-A/CPR-C**, November 8, 2025, Canadian Red Cross, Calgary, AB
+-   **National Lifeguard Pool Option**, September 9, 2025, Lifesaving Society of Alberta, Calgary, AB
 -   **Swim & Lifesaving Instructor**, August 22, 2025, Lifesaving Society of Alberta, Calgary, AB
--   **Standard First Aid & CPR-A/CPR-C**, September 8, 2024, Lifesaving Society of Alberta, Calgary, AB
 -   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
 -   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
--   **National Lifeguard Pool Option**, September 9, 2023, Lifesaving Society of Alberta, Calgary, AB
