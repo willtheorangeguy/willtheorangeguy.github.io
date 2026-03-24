@@ -30,7 +30,4 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
-  experimental: {
-    preserveScriptOrder: true,
-  },
 });
