@@ -33,6 +33,9 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "@pagefind/default-ui": "^1.5.0",
