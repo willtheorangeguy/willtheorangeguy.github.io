@@ -1,18 +1,7 @@
-import { createMarkdownProcessor } from "@astrojs/markdown-remark";
 import { getCollection } from "astro:content";
-import remarkCollapse from "remark-collapse";
-import remarkToc from "remark-toc";
 import { SITE } from "@/config";
 import { getPath } from "@/utils/getPath";
 import getSortedPosts from "@/utils/getSortedPosts";
-
-const markdownProcessor = await createMarkdownProcessor({
-  remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of Contents" }]],
-  shikiConfig: {
-    themes: { light: "min-light", dark: "night-owl" },
-    wrap: true,
-  },
-});
 
 const escapeXml = (value: string) =>
   value.replaceAll("&", "&amp;")
@@ -28,12 +17,12 @@ export async function GET() {
   const sortedPosts = getSortedPosts(posts);
 
   const entries = await Promise.all(
-    sortedPosts.map(async ({ data, id, filePath, body }) => {
+    sortedPosts.map(async ({ data, id, filePath, body, rendered }) => {
       const postPath = getPath(id, filePath);
       const postUrl = new URL(postPath, SITE.website).href;
-      const content = await markdownProcessor.render(body ?? "");
       const publishedDate = new Date(data.pubDatetime).toISOString();
       const updatedDate = new Date(data.modDatetime ?? data.pubDatetime).toISOString();
+      const contentHtml = rendered?.html ?? `<pre>${escapeXml(body ?? "")}</pre>`;
 
       return `<entry>
   <id>${escapeXml(postUrl)}</id>
@@ -46,7 +35,7 @@ export async function GET() {
     <name>${escapeXml(data.author)}</name>
   </author>
   ${data.tags.map(tag => `<category term="${escapeXml(tag)}" />`).join("\n  ")}
-  <content type="html"><![CDATA[${escapeCdata(content.code)}]]></content>
+  <content type="html"><![CDATA[${escapeCdata(contentHtml)}]]></content>
 </entry>`;
     })
   );
