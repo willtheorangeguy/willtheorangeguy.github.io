@@ -1,4 +1,4 @@
-# Redirect Directory
+﻿# Redirect Directory
 
 | Description | [williamvdg.me](https://williamvdg.me/) URL | Destination URL |
 | ----------- | ------------------------------------------- | --------------- |
@@ -9,3 +9,4 @@
 | Europe Google Map             | https://williamvdg.me/r/1                   | https://www.google.com/maps/d/edit?mid=1OmGlmMx1KYtq3aLJvNeSuMFlK5Yyes4&usp=sharing                                                  |
 | Travel Instagram              | https://williamvdg.me/r/2                   | https://www.instagram.com/danielaandwill/                                                                                            |
 | Travel YouTube Channel        | https://williamvdg.me/r/3                   | https://www.youtube.com/channel/UC9z3FOWM2s2dVfbwsJfo9lg                                                                             |
+| GitHub Profile | https://williamvdg.me/r/gh | https://github.com/willtheorangeguy |
