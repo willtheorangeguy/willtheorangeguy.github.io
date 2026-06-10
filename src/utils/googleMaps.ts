@@ -19,7 +19,7 @@ export interface GoogleMapsStats {
 export function extractUserIdFromUrl(url: string): string {
   // Extract user ID from URL like: https://www.google.com/maps/contrib/100234331600740025841/photos/
   const match = url.match(/\/contrib\/(\d+)/);
-  return match ? match[1] : '';
+  return match ? match[1] : "";
 }
 
 /**
@@ -29,13 +29,13 @@ export function extractUserIdFromUrl(url: string): string {
  */
 export function formatNumber(num: number): string {
   if (num >= 1000000000) {
-    return (num / 1000000000).toFixed(1) + 'B';
+    return (num / 1000000000).toFixed(1) + "B";
   }
   if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + 'M';
+    return (num / 1000000).toFixed(1) + "M";
   }
   if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'K';
+    return (num / 1000).toFixed(1) + "K";
   }
   return num.toString();
 }
@@ -47,27 +47,27 @@ export function formatNumber(num: number): string {
  * @param userId - Google Maps user ID
  * @returns GoogleMapsStats
  */
-function getMockGoogleMapsStats(userId: string): GoogleMapsStats {  
+function getMockGoogleMapsStats(userId: string): GoogleMapsStats {
   // Placeholder stats - replace with your actual Google Maps contribution data
   const statsData: Record<string, Partial<GoogleMapsStats>> = {
-    '100234331600740025841': {
-      totalPoints: 1250, // Update this with your actual points
-      totalViews: 25000,  // Update this with your actual photo views
-      totalPhotos: 85,    // Update this with your actual photo count
-      totalReviews: 42,   // Update this with your actual review count
-      lastUpdated: new Date('2025-01-29') // Update this when you update stats
-    }
+    "100234331600740025841": {
+      totalPoints: 49083,
+      totalViews: 143046275,
+      totalPhotos: 8601,
+      totalReviews: 166,
+      lastUpdated: new Date("2026-06-10"),
+    },
   };
 
   const userStats = statsData[userId] || {};
-  
+
   return {
     userId,
     totalPoints: userStats.totalPoints || 0,
     totalViews: userStats.totalViews || 0,
     totalPhotos: userStats.totalPhotos || 0,
     totalReviews: userStats.totalReviews || 0,
-    lastUpdated: userStats.lastUpdated || new Date()
+    lastUpdated: userStats.lastUpdated || new Date(),
   };
 }
 
@@ -77,11 +77,13 @@ function getMockGoogleMapsStats(userId: string): GoogleMapsStats {
  * @param userId - Google Maps user ID
  * @returns Promise<GoogleMapsStats>
  */
-export async function fetchGoogleMapsStats(userId: string): Promise<GoogleMapsStats> {
+export async function fetchGoogleMapsStats(
+  userId: string
+): Promise<GoogleMapsStats> {
   try {
     // Try to load cached stats first
     try {
-      const { getCachedStats } = await import('src/utils/googleMapsCache.js');
+      const { getCachedStats } = await import("src/utils/googleMapsCache.js");
       const cachedStats = getCachedStats(userId);
       if (cachedStats) {
         return cachedStats;
@@ -91,9 +93,10 @@ export async function fetchGoogleMapsStats(userId: string): Promise<GoogleMapsSt
     }
 
     // Try to use the scraper (only works server-side)
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       // Server-side: use scraper
-      const { fetchGoogleMapsStatsWithScraping } = await import('./googleMapsScraper.js');
+      const { fetchGoogleMapsStatsWithScraping } =
+        await import("./googleMapsScraper.js");
       return await fetchGoogleMapsStatsWithScraping(userId);
     } else {
       // Client-side: use mock data as last resort

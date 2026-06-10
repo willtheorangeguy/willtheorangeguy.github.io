@@ -1,4 +1,4 @@
-import { writeFileSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -6,131 +6,152 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const USER_ID = '100234331600740025841';
+const DATA_DIR = join(__dirname, '../src/data');
+const JSON_PATH = join(DATA_DIR, 'google-maps-stats.json');
+const TS_PATH = join(__dirname, '../src/utils/googleMapsCache.ts');
 
-/**
- * Simple scraper that tries to extract stats from Google Maps profile page
- */
-async function scrapeGoogleMapsProfile(userId) {
-  const profileUrl = `https://www.google.com/maps/contrib/${userId}/photos/`;
-  
+// The Google Maps contributor page is a JavaScript app — the stats are not
+// present in the server-rendered HTML, so a headless browser is required.
+// Playwright is an optional devDependency here: when it (or its browser) is
+// unavailable, e.g. during a normal site build, we keep the existing cache.
+async function scrapeWithPlaywright(userId) {
+  const { chromium } = await import('playwright');
+
+  const browser = await chromium.launch({ headless: true });
   try {
-    const response = await fetch(profileUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      }
+    const page = await browser.newPage({
+      userAgent:
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      locale: 'en-US',
     });
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
+    const collectText = async (tab) => {
+      await page.goto(`https://www.google.com/maps/contrib/${userId}/${tab}?hl=en`, {
+        waitUntil: 'domcontentloaded',
+        timeout: 60000,
+      });
+      // The stats may render in hidden layout variants, so wait on text
+      // content rather than element visibility.
+      await page.waitForFunction(
+        () => /[\d,]+\s*points/i.test(document.body.textContent || ''),
+        { timeout: 30000 }
+      );
+      // Give the tab's own content (counts, aria-labels) a moment to render
+      await page.waitForTimeout(2000);
+      return page.evaluate(() => {
+        const ariaLabels = Array.from(document.querySelectorAll('[aria-label]'))
+          .map((el) => el.getAttribute('aria-label'))
+          .join('\n');
+        const leafText = Array.from(document.querySelectorAll('span, div, h1, h2, a, button'))
+          .filter((el) => el.children.length === 0)
+          .map((el) => el.textContent)
+          .join('\n');
+        return document.body.innerText + '\n' + ariaLabels + '\n' + leafText;
+      });
+    };
 
-    const html = await response.text();
-    
-    // Basic regex patterns to extract stats
-    const stats = {
-      totalPoints: 0,
-      totalViews: 0,
-      totalPhotos: 0,
-      totalReviews: 0,
+    // Reviews tab: "49,083 / 50,000 points" and "166 reviews · 45 ratings"
+    // Photos tab: aria-labels "8,601 photos" and "143,046,275 views"
+    const reviewsText = await collectText('reviews');
+    const photosText = await collectText('photos');
+
+    const num = (text, pattern) => {
+      const match = text.match(pattern);
+      return match ? parseInt(match[1].replace(/,/g, ''), 10) : 0;
     };
-    
-    // Look for points
-    const pointsMatch = html.match(/(\d{1,3}(?:,\d{3})*)\s*points/i);
-    if (pointsMatch) {
-      stats.totalPoints = parseInt(pointsMatch[1].replace(/,/g, ''));
-    }
-    
-    // Look for photos
-    const photosMatch = html.match(/(\d{1,3}(?:,\d{3})*)\s*photos/i);
-    if (photosMatch) {
-      stats.totalPhotos = parseInt(photosMatch[1].replace(/,/g, ''));
-    }
-    
-    // Look for views (may have K, M suffixes)
-    const viewsMatch = html.match(/(\d{1,3}(?:,\d{3})*(?:\.\d+)?[KMB]?)\s*views/i);
-    if (viewsMatch) {
-      const viewStr = viewsMatch[1];
-      if (viewStr.includes('K')) {
-        stats.totalViews = Math.round(parseFloat(viewStr) * 1000);
-      } else if (viewStr.includes('M')) {
-        stats.totalViews = Math.round(parseFloat(viewStr) * 1000000);
-      } else if (viewStr.includes('B')) {
-        stats.totalViews = Math.round(parseFloat(viewStr) * 1000000000);
-      } else {
-        stats.totalViews = parseInt(viewStr.replace(/,/g, ''));
-      }
-    }
-    
-    // Look for reviews
-    const reviewsMatch = html.match(/(\d{1,3}(?:,\d{3})*)\s*reviews/i);
-    if (reviewsMatch) {
-      stats.totalReviews = parseInt(reviewsMatch[1].replace(/,/g, ''));
-    }
-    
+
     return {
-      userId,
-      ...stats,
-      lastUpdated: new Date()
+      totalPoints:
+        num(reviewsText, /([\d,]+)\s*\/\s*[\d,]+\s*points/i) ||
+        num(reviewsText, /([\d,]+)\s*points/i),
+      totalReviews: num(reviewsText, /([\d,]+)\s*reviews?\b/i),
+      totalPhotos: num(photosText, /([\d,]+)\s*photos?\b/i),
+      totalViews: num(photosText, /([\d,]+)\s*views?\b/i),
     };
-    
-  } catch {
-    // Return fallback data if scraping fails
-    return {
-      userId,
-      totalPoints: 1250,
-      totalViews: 25000,
-      totalPhotos: 85,
-      totalReviews: 42,
-      lastUpdated: new Date()
-    };
+  } finally {
+    await browser.close();
   }
 }
 
-async function updateCache() {
+function readExistingStats() {
   try {
-    const stats = await scrapeGoogleMapsProfile(USER_ID);
-    
-    // Ensure the data directory exists
-    const dataDir = join(__dirname, '../src/data');
-    mkdirSync(dataDir, { recursive: true });
-    
-    // Write JSON cache
-    const jsonPath = join(dataDir, 'google-maps-stats.json');
-    writeFileSync(jsonPath, JSON.stringify(stats, null, 2));
-    
-    // Update TypeScript cache
-    const tsContent = `/**
+    return JSON.parse(readFileSync(JSON_PATH, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(stats) {
+  mkdirSync(DATA_DIR, { recursive: true });
+  writeFileSync(JSON_PATH, JSON.stringify(stats, null, 2) + '\n');
+
+  const tsContent = `/**
  * Cached Google Maps statistics
- * Generated by scripts/fetch-google-maps-stats.js
- * Last updated: ${new Date().toISOString()}
+ * Generated by scripts/update-maps-cache.mjs
+ * Last updated: ${stats.lastUpdated}
  */
 
-import type { GoogleMapsStats } from './googleMaps.js';
+import type { GoogleMapsStats } from "./googleMaps.js";
 
 export const cachedGoogleMapsStats: Record<string, GoogleMapsStats> = {
-  '${USER_ID}': {
-    userId: '${stats.userId}',
+  "${USER_ID}": {
+    userId: "${stats.userId}",
     totalPoints: ${stats.totalPoints},
     totalViews: ${stats.totalViews},
     totalPhotos: ${stats.totalPhotos},
     totalReviews: ${stats.totalReviews},
-    lastUpdated: new Date('${stats.lastUpdated.toISOString()}')
-  }
+    lastUpdated: new Date("${stats.lastUpdated}"),
+  },
 };
 
 export function getCachedStats(userId: string): GoogleMapsStats | null {
   return cachedGoogleMapsStats[userId] || null;
 }
 `;
-    
-    const tsPath = join(__dirname, '../src/utils/googleMapsCache.ts');
-    writeFileSync(tsPath, tsContent);
-    
-    process.exit(0);
-  } catch {
-    process.exit(1);
-  }
+  writeFileSync(TS_PATH, tsContent);
 }
 
-updateCache();
+async function updateCache() {
+  const existing = readExistingStats() ?? {
+    userId: USER_ID,
+    totalPoints: 0,
+    totalViews: 0,
+    totalPhotos: 0,
+    totalReviews: 0,
+  };
+
+  let scraped;
+  try {
+    scraped = await scrapeWithPlaywright(USER_ID);
+  } catch (error) {
+    console.warn(`Scraping unavailable (${error.message}); keeping existing stats.`);
+    // The stats update workflow sets REQUIRE_STATS=1 so a failed scrape is
+    // visible there; site builds run without it and must not break.
+    process.exit(process.env.REQUIRE_STATS === '1' ? 1 : 0);
+  }
+
+  // Never let a partial scrape zero out known-good data: a value of 0 means
+  // "not found on the page", not "the count dropped to zero".
+  const merged = { userId: USER_ID, ...existing };
+  let changed = false;
+  for (const key of ['totalPoints', 'totalViews', 'totalPhotos', 'totalReviews']) {
+    if (scraped[key] > 0 && scraped[key] !== merged[key]) {
+      merged[key] = scraped[key];
+      changed = true;
+    }
+  }
+
+  if (!changed) {
+    console.log('No stat changes; cache left untouched.');
+    return;
+  }
+
+  merged.lastUpdated = new Date().toISOString();
+  writeCache(merged);
+  console.log(
+    `Updated stats: ${merged.totalPoints} points, ${merged.totalViews} views, ` +
+      `${merged.totalPhotos} photos, ${merged.totalReviews} reviews`
+  );
+}
+
+await updateCache();
