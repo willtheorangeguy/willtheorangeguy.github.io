@@ -14,7 +14,7 @@
     "fetch-maps-stats": "node scripts/update-maps-cache.mjs"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.0",
+    "@astrojs/react": "^6.0.0",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.0",
     "@giscus/react": "^3.1.0",
@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.4.6",
+    "astro": "^7.0.3",
     "dayjs": "^1.11.19",
     "lodash.kebabcase": "^4.1.1",
     "react": "^19.2.4",
