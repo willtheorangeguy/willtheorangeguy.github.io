@@ -2,6 +2,7 @@ import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/github-brands.svg";
 import IconInstagram from "@/assets/icons/instagram-brands.svg";
 import IconLinkedin from "@/assets/icons/linkedin-brands.svg";
+import IconTwitter from "@/assets/icons/x-twitter-brands.svg";
 import IconMastodon from "@/assets/icons/mastodon-brands.svg";
 import IconBluesky from "@/assets/icons/bluesky-brands.svg";
 import IconStackOverflow from "@/assets/icons/stack-overflow-brands.svg";
@@ -30,16 +31,16 @@ export const SOCIALS = [
     icon: IconLinkedin,
 },
 {
+    name: "X",
+    href: "https://x.com/williamvdg1",
+    linkTitle: `@willtheorangeguy on X`,
+    icon: IconTwitter,
+},
+{
     name: "Mastodon",
     href: "https://techhub.social/@willtheorangeguy",
     linkTitle: `@willtheorangeguy on Mastodon`,
     icon: IconMastodon,
-},
-{
-    name: "BlueSky",
-    href: "https://bsky.app/profile/willtheorangeguy.bsky.social",
-    linkTitle: `@willtheorangeguy on BlueSky`,
-    icon: IconBluesky,
 },
 {
     name: "StackOverflow",
