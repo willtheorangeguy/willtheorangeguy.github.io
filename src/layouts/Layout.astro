@@ -132,7 +132,13 @@ const structuredData = {
   <body>
     <slot />
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    <script
+        async
+        data-collect="outbound,emails,downloads"
+        data-extensions="pdf,csv,docx,xlsx,zip,doc,xls"
+        data-use-title="true"
+        data-full-urls="false"
+        src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
   </body>
 </html>
 
