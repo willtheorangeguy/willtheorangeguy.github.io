@@ -10,7 +10,7 @@ Motivated Computer Science undergraduate at the University of Calgary pursuing a
 **University of Calgary**, April 2027
 
 - Computer Science, Major - Faculty of Science, Bachelor of Science
-- Economics, Minor
+- Economics, Major - Faculty of Arts, Bachelor of Arts
 
 ## Technical Skills
 
@@ -45,17 +45,17 @@ Motivated Computer Science undergraduate at the University of Calgary pursuing a
 
 ## Work Experience
 
-- **Aquatic Lifeguard Instructor**, December 2025 - Present, City of Airdrie, Airdire, AB
--   **Aquatic Lifeguard Instructor**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
--   **Aquatic Lifeguard and Swim Instructor**, September 2023 – Present, September 2025 – Present, University of Calgary, Calgary, AB
--   **Data Annotator**, June 2025 – September 2025, TransPerfect, Vancouver, BC
--   **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
--   **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
+- **Head Lifeguard**, September 2023 – Present, University of Calgary, Calgary, AB
+- **Aquatic Leader**, January 2022 – Present, City of Maple Ridge, Maple Ridge, BC
+- **Aquatic Shift Lead**, December 2025 - Present, City of Airdrie, Airdrie, AB
+- **Data Annotator**, June 2025 – September 2025, TransPerfect, Vancouver, BC
+- **Aquatic Shift Lead**, September 2023 – December 2024, MNP Sport and Community Center, Calgary, AB
+- **Lifeguard and Pool Supervisor**, June 2024 - September 2024, Silver Springs Outdoor Pool, Calgary, AB
 
 ## Certifications and Achievements
 
--   **Standard First Aid & CPR-A/CPR-C**, November 8, 2025, Canadian Red Cross, Calgary, AB
--   **National Lifeguard Pool Option**, September 9, 2025, Lifesaving Society of Alberta, Calgary, AB
--   **Swim & Lifesaving Instructor**, August 22, 2025, Lifesaving Society of Alberta, Calgary, AB
--   **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
--   **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
+- **Standard First Aid & CPR-A/CPR-C**, November 27, 2025, Canadian Red Cross, Calgary, AB
+- **National Lifeguard Pool Option**, September 14, 2025, Lifesaving Society of Alberta, Calgary, AB
+- **Swim & Lifesaving Instructor**, August 22, 2025, Lifesaving Society of Alberta, Calgary, AB
+- **Pool Operator 1**, May 23, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
+- **Pool Operator 2**, June 6, 2024, Alberta Association of Recreation Facility Personnel, Calgary, AB
