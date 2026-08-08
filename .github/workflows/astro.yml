@@ -75,6 +75,9 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Build Storybook style guide
+        run: ${{ steps.detect-package-manager.outputs.runner }} storybook build --output-dir public/styleguide
+        working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \

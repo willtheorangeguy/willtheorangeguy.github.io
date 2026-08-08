@@ -1,0 +1,44 @@
+{/* Introduction.mdx */}
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Design System/Introduction" />
+
+# Style Guide & Design System
+
+This is the design environment for **willtheorangeguy.github.io** — a personal blog and portfolio built on Astro 7 + AstroPaper theme.
+
+## What's in here
+
+| Section | Description |
+|---------|-------------|
+| **Design System / Design Tokens** | Color palette, typography, spacing scale, border radius, and focus styles |
+| **Components / Astro** | Server-rendered Astro template components (layout, navigation, blog cards) |
+| **Components / React** | Interactive React island components (stats cards, comments) |
+
+## Tech stack
+
+- **Astro 7** — static site generator with server-rendered `.astro` components
+- **React 19** — used for interactive islands (`GoogleMapsStats`, `UnsplashStats`, `Comments`)
+- **Tailwind CSS v4** — utility-first styling with CSS variable design tokens
+- **Monospace font** — the whole site uses a monospace font stack for a terminal-inspired aesthetic
+
+## Theming
+
+Use the **Theme** toolbar button (top right) to switch between **Light** and **Dark** mode. Each theme is driven by the `data-theme` attribute on the root element and swaps all CSS variables:
+
+- **Light**: `--accent: #006cac` (blue)
+- **Dark**: `--accent: #ff6b01` (orange)
+
+## File locations
+
+```
+src/
+  components/       # Astro + React components
+    *.astro         # Server-rendered layout/UI components
+    *.tsx           # React interactive islands
+  styles/
+    global.css      # CSS variables, Tailwind base layer
+    typography.css  # Prose / typography styles
+  stories/          # MDX documentation pages
+    *.stories.ts    # Component stories
+```

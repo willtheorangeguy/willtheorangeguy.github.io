@@ -4,14 +4,16 @@
   "version": "5.2.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run fetch-maps-stats && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "npm run fetch-maps-stats && npm run storybook:build && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "fetch-maps-stats": "node scripts/update-maps-cache.mjs"
+    "fetch-maps-stats": "node scripts/update-maps-cache.mjs",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build --output-dir public/styleguide"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.1",
@@ -37,6 +39,11 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@pagefind/default-ui": "^1.5.0",
+    "@storybook-astro/framework": "^1.10.0",
+    "@storybook/addon-docs": "^10.5.7",
+    "@storybook/addon-themes": "^10.5.7",
+    "@storybook/builder-vite": "^10.5.7",
+    "@storybook/react": "^10.5.7",
     "@tailwindcss/typography": "^0.5.19",
     "@types/lodash.kebabcase": "^4.1.9",
     "@typescript-eslint/parser": "^8.63.0",
@@ -48,6 +55,7 @@
     "prettier": "^3.9.4",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "storybook": "^10.5.7",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.65.0"
   }
