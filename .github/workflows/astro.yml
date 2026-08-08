@@ -76,7 +76,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build Storybook style guide
-        run: ${{ steps.detect-package-manager.outputs.runner }} storybook build --output-dir public/styleguide
+        run: ${{ steps.detect-package-manager.outputs.runner }} storybook:build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
