@@ -37,11 +37,15 @@ export const Large = {
   },
 };
 
-export const MultipleTags = {
-  render: () => ({
-    Component: Tag,
-    props: { tag: "astro", tagName: "Astro", size: "sm" },
-  }),
+export const InListContext = {
+  args: {
+    tag: "astro",
+    tagName: "Astro",
+    size: "sm",
+  },
+  // `Tag` renders a bare `<li>`, so a decorator supplies the `<ul>` it lives in
+  // on the real pages.
+  decorators: [(Story: () => unknown) => `<ul>${Story()}</ul>`],
   parameters: {
     docs: {
       description: {

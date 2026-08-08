@@ -5,6 +5,8 @@ const meta = {
   title: "Components/React/Comments",
   component: Comments,
   parameters: {
+    // Stories default to the `astro` renderer; React islands have to opt in.
+    renderer: "react",
     layout: "padded",
     docs: {
       description: {
@@ -16,11 +18,22 @@ const meta = {
   argTypes: {
     lightTheme: {
       control: "select",
-      options: ["light", "light_high_contrast", "light_protanopia", "light_tritanopia"],
+      options: [
+        "light",
+        "light_high_contrast",
+        "light_protanopia",
+        "light_tritanopia",
+      ],
     },
     darkTheme: {
       control: "select",
-      options: ["dark", "dark_high_contrast", "dark_protanopia", "dark_tritanopia", "dark_dimmed"],
+      options: [
+        "dark",
+        "dark_high_contrast",
+        "dark_protanopia",
+        "dark_tritanopia",
+        "dark_dimmed",
+      ],
     },
   },
 } satisfies Meta<typeof Comments>;

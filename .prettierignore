@@ -12,3 +12,7 @@
 !.prettierrc
 !eslint.config.js
 !README.md
+
+# Generated build output that lands inside /public
+/public/pagefind
+/public/styleguide

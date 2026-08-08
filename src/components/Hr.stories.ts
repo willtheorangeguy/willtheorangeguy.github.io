@@ -1,4 +1,3 @@
-import type { Meta, StoryObj } from "storybook/internal/types";
 import Hr from "./Hr.astro";
 
 const meta = {
@@ -13,9 +12,8 @@ const meta = {
       },
     },
   },
-} satisfies Meta;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default = {};

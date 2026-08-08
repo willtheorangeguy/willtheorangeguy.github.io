@@ -5,6 +5,8 @@ const meta = {
   title: "Components/React/GoogleMapsStats",
   component: GoogleMapsStatsCard,
   parameters: {
+    // Stories default to the `astro` renderer; React islands have to opt in.
+    renderer: "react",
     layout: "centered",
     docs: {
       description: {

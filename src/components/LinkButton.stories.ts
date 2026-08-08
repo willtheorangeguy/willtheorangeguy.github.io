@@ -22,16 +22,14 @@ const meta = {
 
 export default meta;
 
+// Slot content is passed through the reserved `slots` arg — the Astro renderer
+// splits it back out of the args before handing them to the component.
 export const Default = {
   args: {
     href: "#",
     title: "Example link",
-  },
-  render: (args: Record<string, unknown>) => ({
-    Component: LinkButton,
-    props: args,
     slots: { default: "Click me" },
-  }),
+  },
 };
 
 export const Disabled = {
@@ -39,12 +37,8 @@ export const Disabled = {
     href: "#",
     disabled: true,
     title: "Disabled link",
-  },
-  render: (args: Record<string, unknown>) => ({
-    Component: LinkButton,
-    props: args,
     slots: { default: "Disabled" },
-  }),
+  },
 };
 
 export const WithAriaLabel = {
@@ -52,10 +46,6 @@ export const WithAriaLabel = {
     href: "#",
     ariaLabel: "Search the site",
     title: "Search",
-  },
-  render: (args: Record<string, unknown>) => ({
-    Component: LinkButton,
-    props: args,
     slots: { default: "Search" },
-  }),
+  },
 };

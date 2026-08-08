@@ -5,6 +5,8 @@ const meta = {
   title: "Components/React/UnsplashStats",
   component: UnsplashStatsCard,
   parameters: {
+    // Stories default to the `astro` renderer; React islands have to opt in.
+    renderer: "react",
     layout: "centered",
     docs: {
       description: {
