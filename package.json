@@ -55,6 +55,7 @@
     "prettier": "^3.9.4",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "remark-gfm": "^4.0.1",
     "storybook": "^10.5.7",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.65.0"
