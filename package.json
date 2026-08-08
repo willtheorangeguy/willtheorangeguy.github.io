@@ -46,7 +46,7 @@
     "@storybook/react": "^10.5.7",
     "@tailwindcss/typography": "^0.5.19",
     "@types/lodash.kebabcase": "^4.1.9",
-    "@typescript-eslint/parser": "^8.63.0",
+    "@typescript-eslint/parser": "^8.66.0",
     "eslint": "^10.8.0",
     "eslint-plugin-astro": "^3.0.0",
     "globals": "^17.8.0",
