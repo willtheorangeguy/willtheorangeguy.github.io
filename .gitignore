@@ -29,4 +29,5 @@ public/pagefind
 
 # storybook
 
-public/styleguide
+public/styleguide.bandit/
+.recall/
