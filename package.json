@@ -58,6 +58,6 @@
     "remark-gfm": "^4.0.1",
     "storybook": "^10.5.7",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.67.0"
   }
 }
