@@ -1,17 +1,17 @@
 <!-- Logo -->
 <h1 align="center">
-  <img src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/logo.png" height="250px" width="400px" alt="willtheorangeguy.github.io">
+  <img src="https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/willtheorangeguy.github.io/logo.png" height="250px" width="400px" alt="willtheorangeguy.github.io">
 </h1>
 
 <!-- Copy -->
-<h4 align="center">My personal Astro + Astro Paper + Tailwind + Github Pages site.</h4>
+<h4 align="center">My personal site: an Astro + AstroPaper + Tailwind blog and portfolio, deployed to GitHub Pages.</h4>
 
 <!-- Badges -->
 <div align="center">
-  <!-- Stability -->
-  <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-image.yml/badge.svg">
-  <!-- Stability -->
+  <!-- Astro -->
   <img alt="Astro Build State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/astro.yml/badge.svg">
+  <!-- Docker -->
+  <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-image.yml/badge.svg">
   <!-- CodeQL -->
   <img alt="CodeQL State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/codeql.yml/badge.svg">
   <!-- Gitleaks -->
@@ -22,75 +22,83 @@
   <img alt="GitHub Issues" src="https://img.shields.io/github/issues/willtheorangeguy/willtheorangeguy.github.io">
   <!-- Pull Requests -->
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/willtheorangeguy/willtheorangeguy.github.io">
-  <!-- Discord -->
-  <img alt="Discord Server ID" src="https://img.shields.io/discord/956764342618030081">
-  <!-- Language Count -->
-  <img alt="GitHub Languages" src="https://img.shields.io/github/languages/count/willtheorangeguy/willtheorangeguy.github.io">
+  <!-- License -->
+  <img alt="License" src="https://img.shields.io/github/license/willtheorangeguy/willtheorangeguy.github.io">
 </div>
 
 <!-- Navigation -->
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#documentation">Documentation</a> •
+  <a href="#support">Support</a> •
   <a href="#contributing">Contributing</a> •
-  <a href="#changelog">Changelog</a> •
-  <a href="#credits">Credits & Contributors</a>
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
 </p>
 
-<!-- Screenshot(s) -->
+<!-- Screenshot -->
 
-![screenshot](./docs/images/welcome.jpg)
+![screenshot](https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/willtheorangeguy.github.io/welcome.jpg)
+
+**The live site is at [williamvdg.me](https://williamvdg.me).**
 
 ## Key Features
 
--   Uses the Astro build system to create a static blog.
--   Stylized with Tailwind CSS and the Astro Paper theme.
--   Projects, Labs, and Uses pages.
--   Displays links to all of my personal projects.
--   Cross platform, web browser based.
+-   A static Astro 7 blog on the AstroPaper theme, styled with Tailwind 4.
+-   Posts are Markdown with a Zod-validated schema, so a typo in frontmatter fails the build rather than publishing quietly.
+-   Per-post social preview images generated at build time with Satori.
+-   Client-side search over the whole site via Pagefind — no search backend.
+-   Projects, Labs, and Uses pages, plus a published Storybook style guide at `/styleguide`.
+-   Short-link redirects under `/r/`, and Google Maps contribution stats refreshed on a schedule.
+-   Deployed to GitHub Pages and mirrored as a Docker image on every push to `main`.
 
-## How To Use
-
-**To access the latest version of the website visit it at [williamvdg.me](https://willtheorangeguy.github.io/).**
-
-**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub [above](https://github.com/willtheorangeguy/willtheorangeguy.github.io/archive/refs/heads/main.zip). From your command line:
+## Installation
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/willtheorangeguy/willtheorangeguy.github.io.git
-
-# Go into the repository
-$ cd willtheorangeguy.github.io
-
-# Run Astro
-$ npm run dev
+git clone https://github.com/willtheorangeguy/willtheorangeguy.github.io.git
+cd willtheorangeguy.github.io
+npm install
+npm run dev
 ```
 
-You can also pull the [Docker](https://www.docker.com/) image from GitHub Packages. From your command line:
+Then open `http://localhost:4321` — http, not https. Either npm or pnpm works locally; CI uses pnpm. Docker and production builds are covered in [`docs/installation.md`](docs/installation.md).
 
-```bash
-# Pull image
-$ docker pull ghcr.io/willtheorangeguy/willtheorangeguy.github.io:main
+## Usage
 
-# Run container
-$ docker run -d -p 8000:80 ghcr.io/willtheorangeguy/willtheorangeguy.github.io:main
+Posts are Markdown files in `src/data/blog/`:
 
-# Now, navigate to localhost in your browser to see the webpage
+```markdown
+---
+title: A title
+pubDatetime: 2026-08-19T10:00:00Z
+description: One sentence, used for previews and the generated OG image.
+---
+
+Body copy.
 ```
 
-If support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/willtheorangeguy.github.io/discussions/new)** or join our **[Discord](https://discord.gg/axMJXSRvTJ)**.
+`title`, `pubDatetime`, and `description` are required; `tags`, `draft`, `featured`, and the rest are optional and documented in [`docs/usage.md`](docs/usage.md).
+
+Search is powered by Pagefind, which indexes built output — it works after `npm run build && npm run preview`, not under `npm run dev`.
+
+## Documentation
+
+Full documentation lives in [`docs/`](docs/README.md):
+[Installation](docs/installation.md) · [Quickstart](docs/quickstart.md) · [Usage](docs/usage.md) · [Configuration](docs/configuration.md) · [Architecture](docs/architecture.md) · [Development](docs/development.md) · [Deployment](docs/deployment.md) · [Google Maps automation](docs/google-maps-automation.md) · [FAQ](docs/faq.md) · [Troubleshooting](docs/troubleshooting.md) · [Roadmap](docs/roadmap.md)
+
+Legal text served by the site lives in [`docs/legal/`](docs/legal/): [Privacy Policy](docs/legal/privacy.md) and [Terms and Conditions](docs/legal/terms.md).
+
+![Visualization of the codebase](./diagram.svg)
+
+## Support
+
+Open a [GitHub Discussion](https://github.com/willtheorangeguy/willtheorangeguy.github.io/discussions/new) or file an [issue](https://github.com/willtheorangeguy/willtheorangeguy.github.io/issues/new/choose).
 
 ## Contributing
 
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/willtheorangeguy/willtheorangeguy.github.io/compare).
-
-Please read [`CONTRIBUTING`](https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
-
-## Changelog
-
-See the [`CHANGELOG`](CHANGELOG.md) file for details.
-
-![Visualization of the codebase](./diagram.svg)
+Contributions welcome. See the org-wide [Contributing Guide](https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ## Credits
 
@@ -126,12 +134,6 @@ This software uses the following open source packages, projects, services or web
 -   [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
 -   [@JASKIRAT11011](https://github.com/JASKIRAT11011)
 
-## You may also like...
-
--   [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
--   [Python Logo Widgets](https://github.com/willtheorangeguy/Python-Logo-Widgets) - Python Powered Logo widgets that can be added to any GUI project.
--   [Random Lotto Number Chooser](https://github.com/willtheorangeguy/Random-Lotto-Number-Chooser) - Randomly pick lucky lotto numbers.
-
 ## License
 
-This project is licensed under the [MIT License](https://mit-license.org/) - see the [`LICENSE`](LICENSE.md) file for details. See the [Privacy Policy](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/PRIVACY.md) and [Terms and Conditions](https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/legal/TERMS.md) for legal information.
+This project is licensed under the [MIT License](https://mit-license.org/) - see the [`LICENSE`](LICENSE.md) file for details. See the [Privacy Policy](docs/legal/privacy.md) and [Terms and Conditions](docs/legal/terms.md) for legal information.
