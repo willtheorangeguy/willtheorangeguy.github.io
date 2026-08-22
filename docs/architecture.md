@@ -6,7 +6,7 @@ Tailwind 4, React 19 for a few interactive islands, TypeScript throughout. Outpu
 
 ## Layout
 
-```
+```text
 src/
 ├── config.ts           site metadata, pagination, feature flags, timezone
 ├── constants.ts        SOCIALS, SHARE_LINKS, GISCUS
@@ -67,7 +67,7 @@ before hydration and the page does not flash.
 
 ## The build pipeline
 
-```
+```text
 npm run build
   = fetch-maps-stats      # scrape/refresh Google Maps contribution stats
   && storybook:build      # Storybook -> public/styleguide

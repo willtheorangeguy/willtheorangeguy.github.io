@@ -5,20 +5,24 @@ This system automatically scrapes and updates your Google Maps contribution stat
 ## How It Works
 
 ### 1. **Scraping Script** (`scripts/update-maps-cache.mjs`)
+
 - Fetches your Google Maps contributor profile page
 - Uses regex patterns to extract statistics (points, photos, views, reviews)
 - Falls back to cached data if scraping fails
 - Updates both JSON and TypeScript cache files
 
 ### 2. **Cache System**
+
 - **JSON Cache**: `src/data/google-maps-stats.json` - Raw data storage
 - **TypeScript Cache**: `src/utils/googleMapsCache.ts` - Type-safe access for the app
 
 ### 3. **Build Integration**
+
 - The `npm run build` command automatically fetches fresh stats before building
 - Stats are cached for 1 hour to avoid rate limiting during development
 
 ### 4. **GitHub Actions Automation**
+
 - **Schedule**: Runs daily at 6 AM UTC
 - **Manual**: Can be triggered manually from GitHub Actions tab
 - **Auto-commit**: Commits updated stats back to the repository
@@ -27,16 +31,19 @@ This system automatically scrapes and updates your Google Maps contribution stat
 ## Manual Usage
 
 ### Fetch Stats Manually
+
 ```bash
 npm run fetch-maps-stats
 ```
 
 ### Build with Fresh Stats
+
 ```bash
 npm run build
 ```
 
 ### Development Mode
+
 In development, the system uses cached data to avoid repeated scraping.
 
 ## Fallback Strategy
@@ -52,13 +59,17 @@ This ensures your site always displays some statistics, even if scraping fails.
 ## Monitoring
 
 ### Check Last Update
+
 The `lastUpdated` field in the cache shows when stats were last fetched successfully.
 
 ### GitHub Actions Logs
+
 Check the "Update Google Maps Stats" workflow in your GitHub repository's Actions tab to see scraping results.
 
 ### Local Testing
+
 Run the scraper locally to test:
+
 ```bash
 node scripts/update-maps-cache.mjs
 ```
@@ -66,19 +77,24 @@ node scripts/update-maps-cache.mjs
 ## Troubleshooting
 
 ### Stats Not Updating
+
 1. Check GitHub Actions logs for errors
 2. Verify your Google Maps profile is public
 3. Test the scraper locally
 4. Check if Google changed their HTML structure
 
 ### Rate Limiting
+
 If you encounter rate limiting:
+
 1. The system includes a 1-hour cache to prevent excessive requests
 2. GitHub Actions runs only once daily
 3. Manual builds use cached data when possible
 
 ### Scraping Failures
+
 The regex patterns may need updates if Google changes their page structure. Common patterns to look for:
+
 - Points: `(\d{1,3}(?:,\d{3})*)\s*points`
 - Photos: `(\d{1,3}(?:,\d{3})*)\s*photos`
 - Views: `(\d{1,3}(?:,\d{3})*(?:\.\d+)?[KMB]?)\s*views`
@@ -94,10 +110,13 @@ The regex patterns may need updates if Google changes their page structure. Comm
 ## Configuration
 
 ### Change User ID
+
 Update the `USER_ID` constant in `scripts/update-maps-cache.mjs`
 
 ### Change Schedule
+
 Modify the cron expression in `.github/workflows/update-google-maps-stats.yml`
 
 ### Disable Automation
+
 Remove or comment out the GitHub Actions workflow file to disable automatic updates.

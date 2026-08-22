@@ -4,8 +4,8 @@ Two targets, same source.
 
 ## GitHub Pages
 
-`.github/workflows/astro.yml` runs on push to `main`: it detects the package manager from the
-lockfile, installs, builds, and uploads `dist/` as the Pages artifact.
+`.github/workflows/docs.yml` runs on push to `main`: it installs from the pnpm lockfile, builds
+Storybook, Astro, and the Material documentation, then uploads `dist/` as the Pages artifact.
 
 The site is served at **[williamvdg.me](https://williamvdg.me)** rather than at
 `willtheorangeguy.github.io`, because `CNAME` at the repository root contains `williamvdg.me`
@@ -39,7 +39,7 @@ and the container looks broken. Recorded in
 
 | Workflow | Trigger | Purpose |
 |---|---|---|
-| `astro.yml` | push to `main` | Build and deploy to Pages |
+| `docs.yml` | push to `main` | Build and deploy the site and documentation to Pages |
 | `docker-image.yml` | push to `main` | Build and publish the container |
 | `update-google-maps-stats.yml` | daily, plus manual | Refresh contribution stats and commit them |
 | `codeql.yml` | push, PR, schedule | Security analysis |

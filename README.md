@@ -9,7 +9,7 @@
 <!-- Badges -->
 <div align="center">
   <!-- Astro -->
-  <img alt="Astro Build State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/astro.yml/badge.svg">
+  <img alt="Astro Build State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docs.yml/badge.svg">
   <!-- Docker -->
   <img alt="Docker State" src="https://github.com/willtheorangeguy/willtheorangeguy.github.io/actions/workflows/docker-image.yml/badge.svg">
   <!-- CodeQL -->
@@ -85,7 +85,7 @@ Search is powered by Pagefind, which indexes built output — it works after `np
 
 ## Documentation
 
-Full documentation lives in [`docs/`](docs/README.md):
+Full documentation lives in [`docs/`](docs/index.md):
 [Installation](docs/installation.md) · [Quickstart](docs/quickstart.md) · [Usage](docs/usage.md) · [Configuration](docs/configuration.md) · [Architecture](docs/architecture.md) · [Development](docs/development.md) · [Deployment](docs/deployment.md) · [Google Maps automation](docs/google-maps-automation.md) · [FAQ](docs/faq.md) · [Troubleshooting](docs/troubleshooting.md) · [Roadmap](docs/roadmap.md)
 
 Legal text served by the site lives in [`docs/legal/`](docs/legal/): [Privacy Policy](docs/legal/privacy.md) and [Terms and Conditions](docs/legal/terms.md).

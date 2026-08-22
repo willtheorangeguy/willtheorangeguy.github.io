@@ -74,5 +74,5 @@ is present for the stats scraper, not for tests.
 
 ## What licence?
 
-MIT for the code — [`LICENSE.md`](../LICENSE.md). The posts and images are mine. The theme is
+MIT for the code — [`LICENSE.md`](license.md). The posts and images are mine. The theme is
 AstroPaper, MIT, credited in the README.

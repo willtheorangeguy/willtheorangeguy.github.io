@@ -7,12 +7,11 @@ licensing decision rather than a documentation one.
 Ordered by severity. See [`docs/roadmap.md`](../roadmap.md) for the narrative version,
 which also covers deliberate non-goals.
 
-
 **8 open:** 1 high, 3 medium, 4 low.
 
 ## 1. The Projects page points at other repositories' docs/images/, which the docs sweep is deleting
 
-**Severity:** High  
+**Severity:** High
 **Where:** `src/pages/projects.astro`
 
 **What:** The page hardcodes 16 image URLs into other repositories under this account, all of the form `.../{Repo}/{branch}/docs/images/{file}`. The account-wide documentation standardisation moves images to `willtheorangeguy/.github/icons/{Repo}/` and deletes each repository's `docs/images/`. Checked each URL against both the current default branch and the pending `docs/content` branch:
@@ -34,7 +33,7 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 2. The documented docker run command maps a port nothing listens on
 
-**Severity:** Medium  
+**Severity:** Medium
 **Where:** `README.md` and `docs/USAGE.md` (both corrected in this pass); `nginx/nginx.conf`; `Dockerfile`
 
 **What:** Both documents gave `docker run -d -p 8000:80 ghcr.io/willtheorangeguy/willtheorangeguy.github.io:main`. `nginx/nginx.conf` line 9 is `listen 8080`, and the Dockerfile declares `EXPOSE 8080`. Port 80 inside the container is closed, so the published mapping reaches nothing. The correct command is `-p 8000:8080`. The README additionally said 'navigate to localhost', which is port 80 on the host and wrong even for a correct mapping.
@@ -45,7 +44,7 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 3. The README logo used a github.com/blob URL, which serves HTML
 
-**Severity:** Medium  
+**Severity:** Medium
 **Where:** `README.md` (corrected in this pass)
 
 **What:** The logo was `https://github.com/willtheorangeguy/willtheorangeguy.github.io/blob/main/docs/images/logo.png`. A `/blob/` URL returns the GitHub file-viewer page, not the image bytes, so the `<img>` renders as a broken-image glyph. The screenshot below it used a relative path, `./docs/images/welcome.jpg`, which works on GitHub but not when the README is rendered anywhere else.
@@ -56,10 +55,10 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 4. Two lockfiles are committed and only one governs CI
 
-**Severity:** Medium  
+**Severity:** Medium
 **Where:** `package-lock.json`, `pnpm-lock.yaml`, `.github/workflows/update-google-maps-stats.yml`
 
-**What:** Both lockfiles are tracked. The workflows install with `pnpm install --frozen-lockfile`, so `pnpm-lock.yaml` decides what is actually built and deployed. `package.json` scripts, the `Dockerfile` (`RUN npm install`), and `CLAUDE.md` all use npm. `astro.yml` detects the package manager from whichever lockfile it finds.
+**What:** Both lockfiles are tracked. The Pages workflow installs with pnpm, so `pnpm-lock.yaml` decides what is actually built and deployed. `package.json` scripts, the `Dockerfile` (`RUN npm install`), and `CLAUDE.md` all use npm.
 
 **Why it matters:** The two files can resolve the same ranges to different versions and nothing reports it. A developer working locally with npm can test against one dependency tree while Pages deploys another, which is the kind of difference that surfaces as a bug reproducible only in production. The Dockerfile compounds it by running `npm install` rather than a locked install, so the container image is built from a third resolution that matches neither lockfile.
 
@@ -67,7 +66,7 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 5. docs/google-maps-stats.md was a tracked empty file
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `docs/google-maps-stats.md` (deleted in this pass)
 
 **What:** Zero bytes, committed in `8af25c4` ('fix: fix Docker build step'), and never written to since. Nothing generates it: the stats workflow commits `src/utils/googleMapsCache.ts` and `src/data/google-maps-stats.json`, neither of which is this file. Nothing links to it.
@@ -78,7 +77,7 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 6. CLAUDE.md describes a build pipeline and an Astro version that have both moved on
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `CLAUDE.md`; `package.json`
 
 **What:** `CLAUDE.md` gives the build as `fetch-maps-stats && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/`. The actual script inserts `npm run storybook:build` after `fetch-maps-stats`. It also calls the site 'Astro 6'; `package.json` pins `astro: ^7.1.4`.
@@ -89,10 +88,10 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 7. The privacy policy and terms linked their contact address without a scheme
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `docs/legal/privacy.md` and `docs/legal/terms.md` (both corrected and renamed in this pass)
 
-**What:** Both documents ended with 'By visiting this page on our website: [github.com/willtheorangeguy/willtheorangeguy.github.io](github.com/willtheorangeguy/willtheorangeguy.github.io).' The target has no scheme, so Markdown treats it as a relative path and it resolves to `docs/legal/github.com/...`, which does not exist. Both files were also uppercase, `PRIVACY.md` and `TERMS.md`, against the lowercase convention this sweep applies.
+**What:** Both documents ended with 'By visiting this page on our website: [github.com/willtheorangeguy/willtheorangeguy.github.io](https://github.com/willtheorangeguy/willtheorangeguy.github.io).' The original target had no scheme, so Markdown treated it as a relative path and resolved it to `docs/legal/github.com/...`, which does not exist. Both files were also uppercase, `PRIVACY.md` and `TERMS.md`, against the lowercase convention this sweep applies.
 
 **Why it matters:** It is the Contact Us section of a privacy policy -- the single link a reader follows to ask what data is held about them or to have it removed -- and it 404s. A legal document that cannot be acted on is worse than a short one, and this is the part regulators and readers both care about. The same schemeless form appears in the terms, so it was copied rather than mistyped once.
 
@@ -100,7 +99,7 @@ It is also the clearest argument for the central icon directory existing at all.
 
 ## 8. PLANNING.md is a three-line stub
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `PLANNING.md`
 
 **What:** A heading and one sentence pointing at the Issues page and at `.../projects?type=classic`. Classic Projects were retired by GitHub, so that link no longer reaches a working board. The identical file exists in `Snoopy-Landing-Page`.
@@ -108,7 +107,6 @@ It is also the clearest argument for the central icon directory existing at all.
 **Why it matters:** A root-level file implies content and has none, and half of what it does contain is a dead link. Its practical effect is one more row in the repository listing that a reader opens once and learns nothing from. That the same stub appears in more than one repository suggests it was templated rather than written.
 
 **Suggested fix:** Delete it, here and in `Snoopy-Landing-Page`. GitHub Issues already serves the purpose and is where the file points anyway.
-
 
 ---
 

@@ -53,7 +53,7 @@ Comments left on the blog contain your name and the comment text. This is used t
 
 We use [Simple Analytics](https://simpleanalytics.com/?referral=willtheorangeguy) to see who uses our website. Simple Analytics is privacy-focused, and they only "collect information that is necessary to show ... simple analytics, but unlike other analytics tools, [do not] collect more than absolutely necessary." They do not collect cookies, and are GDPR friendly.
 
-Their privacy policy is available [here](https://simpleanalytics.com/privacy-policy).
+Their [privacy policy](https://simpleanalytics.com/privacy-policy) is also available.
 
 ## Use of Your Personal Data
 

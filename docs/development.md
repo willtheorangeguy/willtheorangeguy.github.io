@@ -19,7 +19,7 @@ npm run storybook:build  # Storybook -> public/styleguide
 
 ## The build is not just `astro build`
 
-```
+```text
 fetch-maps-stats && storybook:build && astro check && astro build
   && pagefind --site dist && cp -r dist/pagefind public/
 ```
@@ -59,7 +59,7 @@ automated correctness gate, and it is a type check.
 
 ## CI
 
-`astro.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, `diagram.yml` regenerates
+`docs.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, `diagram.yml` regenerates
 `diagram.svg`, and `update-google-maps-stats.yml` refreshes the stats cache on a schedule.
 [Deployment](./deployment.md) has the full table.
 

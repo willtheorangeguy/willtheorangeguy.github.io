@@ -3,7 +3,7 @@
 The source of my personal site at [williamvdg.me](https://williamvdg.me): an Astro static site
 built on the AstroPaper theme, deployed to GitHub Pages and mirrored as a Docker image.
 
-```
+```text
 docs/
 ├── README.md                    this index
 ├── quickstart.md                clone to a running dev server

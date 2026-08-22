@@ -1,0 +1,39 @@
+# Documentation configuration for willtheorangeguy.github.io.
+
+INHERIT: .mkdocs-shared/shared/mkdocs.base.yml
+
+site_name: 'willtheorangeguy.github.io'
+site_description: 'My personal Github Pages site.'
+site_author: willtheorangeguy
+site_url: https://williamvdg.me/docs/
+
+repo_url: https://github.com/willtheorangeguy/willtheorangeguy.github.io
+repo_name: willtheorangeguy/willtheorangeguy.github.io
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; willtheorangeguy
+
+nav:
+  - Home: index.md
+  - 'Quickstart': 'quickstart.md'
+  - 'Installation': 'installation.md'
+  - 'Usage': 'usage.md'
+  - 'Configuration': 'configuration.md'
+  - 'Architecture': 'architecture.md'
+  - 'Deployment': 'deployment.md'
+  - 'Development': 'development.md'
+  - 'FAQ': 'faq.md'
+  - 'Troubleshooting': 'troubleshooting.md'
+  - 'Roadmap': 'roadmap.md'
+  - 'Google Maps Stats Automation': 'google-maps-automation.md'
+  - 'willtheorangeguy.github.io': 'internal/known-issues.md'
+  - 'Privacy Policy': 'legal/privacy.md'
+  - 'Terms and Conditions': 'legal/terms.md'
+  - Changelog: changelog.md
+  - License: license.md
+  - Contributing: https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md
+  - Code of Conduct: https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md
+  - Security: https://github.com/willtheorangeguy/.github/blob/main/SECURITY.md
+
+exclude_docs: |
+  docs.instructions.md
