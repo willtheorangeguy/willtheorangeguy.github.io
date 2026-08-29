@@ -6,7 +6,6 @@ import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
-import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import Comments from "@/components/Comments";
 import { getPath } from "@/utils/getPath";
@@ -112,7 +111,7 @@ const nextPost =
     </ul>
 
     <div class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4">
-      <EditPost {post} />
+      <EditPost {post} {hideEditPost} />
       <button
         id="back-to-top"
         class="focus-outline py-1 whitespace-nowrap hover:opacity-75"
