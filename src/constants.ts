@@ -4,11 +4,9 @@ import IconInstagram from "@/assets/icons/instagram-brands.svg";
 import IconLinkedin from "@/assets/icons/linkedin-brands.svg";
 import IconTwitter from "@/assets/icons/x-twitter-brands.svg";
 import IconMastodon from "@/assets/icons/mastodon-brands.svg";
-import IconBluesky from "@/assets/icons/bluesky-brands.svg";
 import IconStackOverflow from "@/assets/icons/stack-overflow-brands.svg";
 import IconYouTube from "@/assets/icons/youtube-brands.svg";
 import IconSteam from "@/assets/icons/steam-brands.svg";
-import { SITE } from "@/config";
 import type { GiscusProps } from "@giscus/react";
 
 export const SOCIALS = [
