@@ -4,13 +4,15 @@ import { getPath } from "@/utils/getPath";
 import getSortedPosts from "@/utils/getSortedPosts";
 
 const escapeXml = (value: string) =>
-  value.replaceAll("&", "&amp;")
+  value
+    .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
 
-const escapeCdata = (value: string) => value.replaceAll("]]>", "]]]]><![CDATA[>");
+const escapeCdata = (value: string) =>
+  value.replaceAll("]]>", "]]]]><![CDATA[>");
 
 export async function GET() {
   const posts = await getCollection("blog");
@@ -21,8 +23,11 @@ export async function GET() {
       const postPath = getPath(id, filePath);
       const postUrl = new URL(postPath, SITE.website).href;
       const publishedDate = new Date(data.pubDatetime).toISOString();
-      const updatedDate = new Date(data.modDatetime ?? data.pubDatetime).toISOString();
-      const contentHtml = rendered?.html ?? `<pre>${escapeXml(body ?? "")}</pre>`;
+      const updatedDate = new Date(
+        data.modDatetime ?? data.pubDatetime
+      ).toISOString();
+      const contentHtml =
+        rendered?.html ?? `<pre>${escapeXml(body ?? "")}</pre>`;
 
       return `<entry>
   <id>${escapeXml(postUrl)}</id>

@@ -46,13 +46,13 @@
 
 ## Key Features
 
--   A static Astro 7 blog on the AstroPaper theme, styled with Tailwind 4.
--   Posts are Markdown with a Zod-validated schema, so a typo in frontmatter fails the build rather than publishing quietly.
--   Per-post social preview images generated at build time with Satori.
--   Client-side search over the whole site via Pagefind — no search backend.
--   Projects, Labs, and Uses pages, plus a published Storybook style guide at `/styleguide`.
--   Short-link redirects under `/r/`, and Google Maps contribution stats refreshed on a schedule.
--   Deployed to GitHub Pages and mirrored as a Docker image on every push to `main`.
+- A static Astro 7 blog on the AstroPaper theme, styled with Tailwind 4.
+- Posts are Markdown with a Zod-validated schema, so a typo in frontmatter fails the build rather than publishing quietly.
+- Per-post social preview images generated at build time with Satori.
+- Client-side search over the whole site via Pagefind — no search backend.
+- Projects, Labs, and Uses pages, plus a published Storybook style guide at `/styleguide`.
+- Short-link redirects under `/r/`, and Google Maps contribution stats refreshed on a schedule.
+- Deployed to GitHub Pages and mirrored as a Docker image on every push to `main`.
 
 ## Installation
 
@@ -131,8 +131,8 @@ This software uses the following open source packages, projects, services or web
 
 ## Contributors
 
--   [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
--   [@JASKIRAT11011](https://github.com/JASKIRAT11011)
+- [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
+- [@JASKIRAT11011](https://github.com/JASKIRAT11011)
 
 ## License
 

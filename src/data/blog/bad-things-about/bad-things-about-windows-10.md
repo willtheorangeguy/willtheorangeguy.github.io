@@ -6,8 +6,8 @@ postSlug: bad-things-about-windows-10
 featured: false
 draft: false
 tags:
-    - living-document
-    - bad-things-about
+  - living-document
+  - bad-things-about
 description: A list of things that I really don't like about Windows 10.
 ---
 

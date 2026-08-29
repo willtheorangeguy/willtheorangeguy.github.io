@@ -6,8 +6,8 @@ postSlug: Where-I-share-my-reading-lists-and-reviews
 featured: false
 draft: false
 tags:
-    - intro
-    - books
+  - intro
+  - books
 description: Learn more about the awesome Bookwyrm social reading and reviewing platform.
 ---
 

@@ -6,10 +6,10 @@ postSlug: switching-from-utterances-to-giscus
 featured: false
 draft: false
 tags:
-    - github
-    - blog
-    - web-development
-    - comments
+  - github
+  - blog
+  - web-development
+  - comments
 description: Details on how I switched from utterances to giscus on this blog!
 ---
 

@@ -6,9 +6,9 @@ postSlug: social-media
 featured: true
 draft: false
 tags:
-    - intro
-    - social-media
-    - living-document
+  - intro
+  - social-media
+  - living-document
 description: An attempt to list every social media site I have an account on, including handles for most of them.
 ---
 

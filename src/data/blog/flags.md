@@ -6,9 +6,9 @@ postSlug: european-flags-photography-project
 featured: false
 draft: false
 tags:
-    - travel
-    - photography
-    - videography
+  - travel
+  - photography
+  - videography
 description: Access the photos and videos I took during my trip to Europe, where I tried to sample at least one of each country's flag.
 ---
 

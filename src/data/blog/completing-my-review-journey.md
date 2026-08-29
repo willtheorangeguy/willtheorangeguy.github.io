@@ -6,8 +6,8 @@ postSlug: completing-my-review-journey
 featured: false
 draft: false
 tags:
-    - blog
-    - reviews
+  - blog
+  - reviews
 description: After returning from my trip, I buckled down and finished publishing my backlog of reviews
 ---
 

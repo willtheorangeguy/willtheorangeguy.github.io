@@ -6,8 +6,8 @@ postSlug: bad-things-about-kubuntu
 featured: false
 draft: true
 tags:
-    - living-document
-    - bad-things-about
+  - living-document
+  - bad-things-about
 description: A list of things that I really don't like about Kubuntu.
 ---
 

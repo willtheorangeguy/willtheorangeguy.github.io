@@ -110,7 +110,9 @@ const nextPost =
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
     </ul>
 
-    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4">
+    <div
+      class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4"
+    >
       <EditPost {post} {hideEditPost} />
       <button
         id="back-to-top"
@@ -154,7 +156,7 @@ const nextPost =
         )
       }
     </div>
-    <br>
+    <br />
     <Comments client:only="react" />
   </main>
   <Footer />

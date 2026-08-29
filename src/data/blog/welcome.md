@@ -6,7 +6,7 @@ postSlug: welcome
 featured: false
 draft: false
 tags:
-    - intro
+  - intro
 description: Short welcome post to learn more about the new @willtheorangeguy blog/portfolio website.
 ---
 

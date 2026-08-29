@@ -6,7 +6,7 @@ postSlug: ltt-commuter-backpack-four-months-review
 featured: true
 draft: false
 tags:
-    - reviews
+  - reviews
 description: Reviewing my experience with the LTT Commuter Backpack after completing a trip in Southeast Asia for four months.
 ---
 

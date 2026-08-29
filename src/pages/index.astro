@@ -24,16 +24,19 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <p>
-        Hi!/¡Hola!/Hoi! - I'm willtheorangeguy, and this is my corner of the internet! 
-        It's a dev blog, with random personal thoughts, tech stuff, and lots of reviews.
-        I'm currently studying Computer Science and Economics at the University of Calgary, while building
-        small, fun, and powerful programs in Python and web dev in my <i>limited</i> spare time.
+        Hi!/¡Hola!/Hoi! - I'm willtheorangeguy, and this is my corner of the
+        internet! It's a dev blog, with random personal thoughts, tech stuff,
+        and lots of reviews. I'm currently studying Computer Science and
+        Economics at the University of Calgary, while building small, fun, and
+        powerful programs in Python and web dev in my <i>limited</i> spare time.
       </p>
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Connect online:</div>
+            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">
+              Connect online:
+            </div>
             <Socials />
           </div>
         )

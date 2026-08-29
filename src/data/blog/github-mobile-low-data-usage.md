@@ -6,8 +6,8 @@ postSlug: github-mobile-low-data-usage
 featured: false
 draft: false
 tags:
-    - today-i-learned
-    - development
+  - today-i-learned
+  - development
 description: Today I learned that GitHub Mobile uses very little data.
 ---
 

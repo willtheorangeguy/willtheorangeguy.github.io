@@ -1,14 +1,10 @@
-import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{t}from"./jsx-runtime-cM__dR4X.js";import{a as n,c as r,i}from"./iframe-2yX4CU8D.js";import{t as a}from"./mdx-react-shim-q9qzSOlg.js";function o(e){let t={code:`code`,h1:`h1`,h2:`h2`,li:`li`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...r(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[`
+import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{t}from"./jsx-runtime-cM__dR4X.js";import{a as n,c as r,i}from"./iframe-Bb9r93aZ.js";import{t as a}from"./mdx-react-shim-BIyVW-Qh.js";function o(e){let t={code:`code`,h1:`h1`,h2:`h2`,li:`li`,p:`p`,pre:`pre`,strong:`strong`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...r(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[`
 `,`
 `,(0,c.jsx)(i,{title:`Design System/Introduction`}),`
 `,(0,c.jsx)(t.h1,{id:`style-guide--design-system`,children:`Style Guide & Design System`}),`
 `,(0,c.jsxs)(t.p,{children:[`This is the design environment for `,(0,c.jsx)(t.strong,{children:`willtheorangeguy.github.io`}),` — a personal blog and portfolio built on Astro 7 + AstroPaper theme.`]}),`
 `,(0,c.jsx)(t.h2,{id:`whats-in-here`,children:`What's in here`}),`
-`,(0,c.jsxs)(t.p,{children:[`| Section | Description |\r
-|---------|-------------|\r
-| `,(0,c.jsx)(t.strong,{children:`Design System / Design Tokens`}),` | Color palette, typography, spacing scale, border radius, and focus styles |\r
-| `,(0,c.jsx)(t.strong,{children:`Components / Astro`}),` | Server-rendered Astro template components (layout, navigation, blog cards) |\r
-| `,(0,c.jsx)(t.strong,{children:`Components / React`}),` | Interactive React island components (stats cards, comments) |`]}),`
+`,(0,c.jsxs)(t.table,{children:[(0,c.jsx)(t.thead,{children:(0,c.jsxs)(t.tr,{children:[(0,c.jsx)(t.th,{children:`Section`}),(0,c.jsx)(t.th,{children:`Description`})]})}),(0,c.jsxs)(t.tbody,{children:[(0,c.jsxs)(t.tr,{children:[(0,c.jsx)(t.td,{children:(0,c.jsx)(t.strong,{children:`Design System / Design Tokens`})}),(0,c.jsx)(t.td,{children:`Color palette, typography, spacing scale, border radius, and focus styles`})]}),(0,c.jsxs)(t.tr,{children:[(0,c.jsx)(t.td,{children:(0,c.jsx)(t.strong,{children:`Components / Astro`})}),(0,c.jsx)(t.td,{children:`Server-rendered Astro template components (layout, navigation, blog cards)`})]}),(0,c.jsxs)(t.tr,{children:[(0,c.jsx)(t.td,{children:(0,c.jsx)(t.strong,{children:`Components / React`})}),(0,c.jsx)(t.td,{children:`Interactive React island components (stats cards, comments)`})]})]})]}),`
 `,(0,c.jsx)(t.h2,{id:`tech-stack`,children:`Tech stack`}),`
 `,(0,c.jsxs)(t.ul,{children:[`
 `,(0,c.jsxs)(t.li,{children:[(0,c.jsx)(t.strong,{children:`Astro 7`}),` — static site generator with server-rendered `,(0,c.jsx)(t.code,{children:`.astro`}),` components`]}),`
@@ -23,13 +19,13 @@ import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{t}from"./jsx-runtime-c
 `,(0,c.jsxs)(t.li,{children:[(0,c.jsx)(t.strong,{children:`Dark`}),`: `,(0,c.jsx)(t.code,{children:`--accent: #ff6b01`}),` (orange)`]}),`
 `]}),`
 `,(0,c.jsx)(t.h2,{id:`file-locations`,children:`File locations`}),`
-`,(0,c.jsx)(t.pre,{children:(0,c.jsx)(t.code,{children:`src/\r
-  components/       # Astro + React components\r
-    *.astro         # Server-rendered layout/UI components\r
-    *.tsx           # React interactive islands\r
-  styles/\r
-    global.css      # CSS variables, Tailwind base layer\r
-    typography.css  # Prose / typography styles\r
-  stories/          # MDX documentation pages\r
+`,(0,c.jsx)(t.pre,{children:(0,c.jsx)(t.code,{children:`src/
+  components/       # Astro + React components
+    *.astro         # Server-rendered layout/UI components
+    *.tsx           # React interactive islands
+  styles/
+    global.css      # CSS variables, Tailwind base layer
+    typography.css  # Prose / typography styles
+  stories/          # MDX documentation pages
     *.stories.ts    # Component stories
 `})})]})}function s(e={}){let{wrapper:t}={...r(),...e.components};return t?(0,c.jsx)(t,{...e,children:(0,c.jsx)(o,{...e})}):o(e)}var c;e((()=>{c=t(),a(),n()}))();export{s as default};
