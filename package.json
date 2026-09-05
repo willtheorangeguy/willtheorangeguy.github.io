@@ -39,7 +39,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@pagefind/default-ui": "^1.5.0",
-    "@storybook-astro/framework": "^1.10.0",
+    "@storybook-astro/framework": "^1.11.0",
     "@storybook/addon-docs": "^10.5.7",
     "@storybook/addon-themes": "^10.5.7",
     "@storybook/builder-vite": "^10.5.7",
