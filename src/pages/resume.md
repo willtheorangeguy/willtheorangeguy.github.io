@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/HeaderlessLayout.astro
 title: "Resume"
+pageType: "profile"
 ---
 
 Motivated Computer Science undergraduate at the University of Calgary pursuing a Bachelor of Science in Computer Science with a minor in Economics. Strong hands-on experience with software development, systems administration, networking, and virtualization through extensive projects and labs. Comfortable working across the full stack from low-level programming and operating systems to web development, containerization, and network infrastructure.

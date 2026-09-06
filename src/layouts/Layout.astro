@@ -1,6 +1,13 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
+import {
+  blogPosting,
+  collectionPage,
+  profilePage,
+  webPage,
+  webSite,
+} from "@/utils/structuredData";
 import "@/styles/global.css";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -8,54 +15,55 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 export interface Props {
   title?: string;
   author?: string;
-  profile?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  /**
+   * What this route actually is, which decides its JSON-LD type. Defaults to
+   * an article when the page has a publication date and a plain page
+   * otherwise -- every route used to claim to be a blog post.
+   */
+  pageType?: "website" | "profile" | "collection" | "page" | "article";
 }
 
 const {
   title = SITE.title,
   author = SITE.author,
-  profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage ? `/${SITE.ogImage}` : "/og.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.url),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  pageType,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
-// Only pages that actually carry a publication date are blog posts. Everything
-// else (projects, resume, tag listings, utility routes) is a plain WebPage --
-// emitting BlogPosting for those declared the wrong type and shipped a
-// `datePublished: "undefined"` string on every non-post page.
-const isBlogPosting = Boolean(pubDatetime);
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": isBlogPosting ? "BlogPosting" : "WebPage",
-  headline: title,
-  name: title,
+const pageInput = {
+  title,
   description,
   url: canonicalURL.toString(),
   image: socialImageURL.toString(),
-  inLanguage: SITE.lang ?? "en",
-  ...(pubDatetime && { datePublished: pubDatetime.toISOString() }),
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: author,
-      ...(profile && { url: profile }),
-    },
-  ],
 };
+
+// Only pages that carry a publication date are articles. Everything else opts
+// into its own type via `pageType`, falling back to a plain WebPage.
+const resolvedPageType = pageType ?? (pubDatetime ? "article" : "page");
+
+const structuredData =
+  resolvedPageType === "website"
+    ? webSite(pageInput)
+    : resolvedPageType === "profile"
+      ? profilePage(pageInput)
+      : resolvedPageType === "collection"
+        ? collectionPage(pageInput)
+        : resolvedPageType === "article" && pubDatetime
+          ? blogPosting({ ...pageInput, pubDatetime, modDatetime })
+          : webPage(pageInput);
 ---
 
 <!doctype html>

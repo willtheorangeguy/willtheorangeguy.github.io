@@ -16,7 +16,7 @@ Obviously, the main point of a commuter backpack is not to travel to SEA for fou
 
 I received my bag on January 17, 2025 (the beauty of living in Langley, BC), and left for Japan on January 20.
 
-![The LTT Commuter Bag in Japan](/assets/imgs/blog/lttbagmain.JPG)
+![The LTT Commuter Bag in Japan](../../assets/imgs/blog/lttbagmain.JPG)
 
 ## Loadout
 
@@ -64,7 +64,7 @@ I have not used the screwdriver storage pocket for its intended purpose yet, but
 
 The AirTag pocket was a little hard to find (and that seems to be the consensus on Reddit), but hopefully, that works the way it was intended to! Additionally, the zippered hold-everything pocket is very nice, and I found it serves its purpose best as a catch-all pocket.
 
-![The LTT Commuter Bag in Singapore's Central Public Library](/assets/imgs/blog/lttbagdesign.jpg)
+![The LTT Commuter Bag in Singapore's Central Public Library](../../assets/imgs/blog/lttbagdesign.jpg)
 
 ## Design
 

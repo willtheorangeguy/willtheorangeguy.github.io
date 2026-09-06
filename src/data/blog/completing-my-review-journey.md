@@ -17,7 +17,7 @@ _I did have a little bit of help, using locally running AI models through Ollama
 
 I also made a breaking change to the way the reviews are distributed on my blog! In an attempt to create a kind of digital garden for my public “notes on reading, watching, coding, and more”, I started organizing all my reviews, public task lists, kanban boards, and notes in [Obsidian](https://obsidian.md/), and have them published to [williamvdg.me/notes](williamvdg.me/notes) using [Quartz](https://quartz.jzhao.xyz/). While I am still getting the hang of using a lot of the features, it really has been a more useful way to organize and share my reviews.
 
-![The index page of williamvdg.me/notes](/assets/imgs/blog/notes.jpg)
+![The index page of williamvdg.me/notes](../../assets/imgs/blog/notes.jpg)
 
 Check out the review categories here!
 

@@ -9,13 +9,18 @@ export interface Props {
   frontmatter: {
     title: string;
     description?: string;
+    /** Passed through to Layout so a resume is not marked up as an article. */
+    pageType?: "website" | "profile" | "collection" | "page" | "article";
   };
 }
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout
+  title={`${frontmatter.title} | ${SITE.title}`}
+  pageType={frontmatter.pageType}
+>
   <Header />
   <Breadcrumb />
   <main id="main-content">
