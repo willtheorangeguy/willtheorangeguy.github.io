@@ -35,7 +35,7 @@ Motivated Computer Science undergraduate at the University of Calgary pursuing a
 - Designed and installed Ubiquiti networking equipment for wired and wireless networks
 - Implemented backups, monitoring, and remote access across internal and external networks
 
-**Software Development [Projects](/projects)**
+**Software Development [Projects](/projects/)**
 
 - Developed many Python scripts for automation and file processing
 - Built and deployed AI pipelines in Python, with tools such as TensorFlow and PyTorch

@@ -15,7 +15,7 @@ review:
   rating: 4.5
 ---
 
-I came back to Canada a little under a month ago from a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). While traveling, I wrote a blog post on my experiences with the bag [after one month](/posts/ltt-commuter-backpack-review), and decided it was worth a follow-up, after completing the entire four-month trip. I will keep to the same categories, and build upon what I learned previously, and how I grew with the bag.
+I came back to Canada a little under a month ago from a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). While traveling, I wrote a blog post on my experiences with the bag [after one month](/posts/ltt-commuter-backpack-review/), and decided it was worth a follow-up, after completing the entire four-month trip. I will keep to the same categories, and build upon what I learned previously, and how I grew with the bag.
 
 It remained clear that this was _not_ a backpacking bag, and was more suited to being used for your daily commute - so I will not be taking any marks off for features that are missing or problems I had that were clearly outside the scope of this bag. That being said, the bag worked amazingly well for such heavy, constant use, and I did not find myself unsatisfied at any point in the journey.
 

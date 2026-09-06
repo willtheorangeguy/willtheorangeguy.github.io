@@ -20,7 +20,7 @@ export async function GET() {
 
   const entries = await Promise.all(
     sortedPosts.map(async ({ data, id, filePath, body, rendered }) => {
-      const postPath = getPath(id, filePath);
+      const postPath = `${getPath(id, filePath)}/`;
       const postUrl = new URL(postPath, SITE.website).href;
       const publishedDate = new Date(data.pubDatetime).toISOString();
       const updatedDate = new Date(

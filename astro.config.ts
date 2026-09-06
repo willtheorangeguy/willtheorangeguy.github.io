@@ -112,9 +112,16 @@ function sitemapPostProcess(): AstroIntegration {
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  // Canonicals and sitemap entries all carry a trailing slash, so links must
+  // too -- otherwise every internal navigation burns a 301 on GitHub Pages.
+  // "always" makes a missing slash fail loudly in dev instead of silently
+  // redirecting in production.
+  trailingSlash: "always",
   integrations: [
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
+      // Emitted URLs end in a slash, so match on "/archives/" -- the old
+      // "/archives" check never fired.
+      filter: page => SITE.showArchives || !page.endsWith("/archives/"),
     }),
     react(),
     sitemapPostProcess(),

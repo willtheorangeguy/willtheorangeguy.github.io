@@ -69,7 +69,7 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a
-              href="/resume"
+              href="/resume/"
               class:list={{ "active-nav": isActive("/resume") }}
             >
               Resume
@@ -77,35 +77,35 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-2">
             <a
-              href="/projects"
+              href="/projects/"
               class:list={{ "active-nav": isActive("/projects") }}
             >
               Projects
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/notes" class:list={{ "active-nav": isActive("/notes") }}>
+            <a href="/notes/" class:list={{ "active-nav": isActive("/notes") }}>
               Notes
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/labs" class:list={{ "active-nav": isActive("/labs") }}>
+            <a href="/labs/" class:list={{ "active-nav": isActive("/labs") }}>
               Labs
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
+            <a href="/posts/" class:list={{ "active-nav": isActive("/posts") }}>
               Posts
             </a>
           </li>
           <li class="col-span-2">
-            <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
+            <a href="/tags/" class:list={{ "active-nav": isActive("/tags") }}>
               Tags
             </a>
           </li>
           <li class="col-span-1 flex items-center justify-center">
             <LinkButton
-              href="/search"
+              href="/search/"
               class:list={[
                 "focus-outline flex p-3 sm:p-1",
                 { "[&>svg]:stroke-accent": isActive("/search") },

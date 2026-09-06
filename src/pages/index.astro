@@ -19,10 +19,13 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 ---
 
-<Layout pageType="website">
+<Layout pageType="website" title={`${SITE.title} — dev blog by ${SITE.author}`}>
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
+      <h1 class="mb-4 text-2xl tracking-wider sm:text-3xl">
+        {SITE.title} — a dev blog by {SITE.author}
+      </h1>
       <p>
         Hi!/¡Hola!/Hoi! - I'm willtheorangeguy, and this is my corner of the
         internet! It's a dev blog, with random personal thoughts, tech stuff,
