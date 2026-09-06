@@ -31,17 +31,27 @@ const {
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
+// Only pages that actually carry a publication date are blog posts. Everything
+// else (projects, resume, tag listings, utility routes) is a plain WebPage --
+// emitting BlogPosting for those declared the wrong type and shipped a
+// `datePublished: "undefined"` string on every non-post page.
+const isBlogPosting = Boolean(pubDatetime);
+
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
+  "@type": isBlogPosting ? "BlogPosting" : "WebPage",
+  headline: title,
+  name: title,
+  description,
+  url: canonicalURL.toString(),
+  image: socialImageURL.toString(),
+  inLanguage: SITE.lang ?? "en",
+  ...(pubDatetime && { datePublished: pubDatetime.toISOString() }),
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
   author: [
     {
       "@type": "Person",
-      name: `${author}`,
+      name: author,
       ...(profile && { url: profile }),
     },
   ],
