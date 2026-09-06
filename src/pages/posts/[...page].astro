@@ -16,12 +16,26 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
+
+// Every page of the listing used to serve one title and one description, so
+// /posts/2/ was a byte-for-byte duplicate of /posts/ in the SERP.
+const isFirstPage = page.currentPage === 1;
+
+const title = isFirstPage
+  ? `Posts | ${SITE.title}`
+  : `Posts (page ${page.currentPage} of ${page.lastPage}) | ${SITE.title}`;
+
+const description = isFirstPage
+  ? "Posts on software development, self-hosting, hardware reviews and long-term travel."
+  : `Page ${page.currentPage} of ${page.lastPage} of posts on software development, self-hosting, hardware reviews and long-term travel.`;
 ---
 
 <Layout
-  title={`Posts | ${SITE.title}`}
-  description="Posts on software development, self-hosting, hardware reviews and long-term travel."
+  {title}
+  {description}
   pageType="collection"
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
 >
   <Header />
   <Main pageTitle="Posts" pageDesc="All the articles I've posted.">

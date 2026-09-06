@@ -165,3 +165,22 @@ export function blogPosting(
     mainEntityOfPage: { "@type": "WebPage", "@id": page.url },
   };
 }
+
+/**
+ * Ancestor trail for the routes that render the visual `<Breadcrumb />` nav.
+ * The nav was already on the page; only the machine-readable half was missing.
+ */
+export function breadcrumbList(
+  items: { name: string; url?: string }[]
+): Schema {
+  return {
+    "@context": CONTEXT,
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      ...(item.url && { item: item.url }),
+    })),
+  };
+}

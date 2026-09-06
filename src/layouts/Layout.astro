@@ -42,6 +42,13 @@ export interface Props {
   noindex?: boolean;
   /** Turns an article into a Review of a named thing. */
   review?: ReviewInput;
+  /**
+   * Adjacent pages of a paginated listing. Google dropped rel=prev/next as an
+   * indexing signal in 2019, but Bing still uses it and it is a real
+   * accessibility affordance, so paginated routes pass their neighbours here.
+   */
+  prevUrl?: string;
+  nextUrl?: string;
 }
 
 const {
@@ -56,6 +63,8 @@ const {
   pageType,
   noindex = false,
   review: reviewData,
+  prevUrl,
+  nextUrl,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
@@ -103,9 +112,11 @@ const structuredData = buildStructuredData();
 <html lang={SITE.lang ?? "en"} class:list={[{ "scroll-smooth": scrollSmooth }]}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {prevUrl && <link rel="prev" href={new URL(prevUrl, Astro.url)} />}
+    {nextUrl && <link rel="next" href={new URL(nextUrl, Astro.url)} />}
     {noindex && <meta name="robots" content="noindex,follow" />}
     <meta name="generator" content={Astro.generator} />
 
@@ -163,7 +174,12 @@ const structuredData = buildStructuredData();
       href={new URL("rss.xml", Astro.site)}
     />
 
-    <meta name="theme-color" content="" />
+    {
+      /* Light-mode background. toggle-theme.js overwrites this with the real
+        computed background once it runs, but an empty value in the served HTML
+        left the browser chrome uncoloured until then. */
+    }
+    <meta name="theme-color" content="#fdfdfd" />
 
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,

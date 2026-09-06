@@ -9,7 +9,8 @@ import { SITE } from "@/config";
 const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 ---
 
-<Layout title={`Search | ${SITE.title}`}
+<Layout
+  title={`Search | ${SITE.title}`}
   description="Search every post on this blog."
   noindex
 >

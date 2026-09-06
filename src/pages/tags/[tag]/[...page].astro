@@ -37,25 +37,38 @@ const { page, tagName, postCount } = Astro.props;
  */
 const MIN_POSTS_TO_INDEX = 3;
 
-const description =
+const baseDescription =
   postCount === 1
     ? `The one post on this blog tagged "${tagName}".`
     : `All ${postCount} posts on this blog tagged "${tagName}".`;
+
+// Same duplicate-listing problem as /posts/: without the page number every
+// page of a paginated tag serves identical metadata.
+const isFirstPage = page.currentPage === 1;
+
+const title = isFirstPage
+  ? `Tag: ${tagName} | ${SITE.title}`
+  : `Tag: ${tagName} (page ${page.currentPage} of ${page.lastPage}) | ${SITE.title}`;
+
+const description = isFirstPage
+  ? baseDescription
+  : `${baseDescription} Page ${page.currentPage} of ${page.lastPage}.`;
 ---
 
 <Layout
-  title={`Tag: ${tagName} | ${SITE.title}`}
-  description={description}
+  {title}
+  {description}
   pageType="collection"
   noindex={postCount < MIN_POSTS_TO_INDEX}
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
 >
   <Header />
   <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
+    pageTitle={[`Tag: `, `${tagName}`]}
     titleTransition={tag}
     pageDesc={`All the articles with the tag "${tagName}".`}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>

@@ -100,3 +100,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Tells Bing/Yandex/Naver/Seznam what just shipped instead of leaving them to
+  # rediscover it on their own schedule. Google ignores IndexNow. Runs after the
+  # deploy so every submitted URL is already serving, and never fails the
+  # workflow -- the site is live either way.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    name: Ping IndexNow
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Submit sitemap URLs
+        run: node scripts/indexnow.mjs

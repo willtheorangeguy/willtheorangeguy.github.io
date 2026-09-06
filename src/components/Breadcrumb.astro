@@ -1,27 +1,51 @@
 ---
+import { absoluteUrl, breadcrumbList } from "@/utils/structuredData";
+
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
+// Captured before the display-label collapsing below, which rewrites entries in
+// place and so can no longer be mapped back to real ancestor URLs.
+const rawSegments = currentUrlPath.split("/").filter(Boolean);
+
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split("/").slice(1);
+const crumbs = currentUrlPath.split("/").slice(1);
 
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
-if (breadcrumbList[0] === "posts") {
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+if (crumbs[0] === "posts") {
+  crumbs.splice(0, 2, `Posts (page ${crumbs[1] || 1})`);
 }
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
 // replace [tag] > [page] with [tag] (page number)
-if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
-  breadcrumbList.splice(
+if (crumbs[0] === "tags" && !isNaN(Number(crumbs[2]))) {
+  crumbs.splice(
     1,
     3,
-    `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
+    `${crumbs[1]} ${Number(crumbs[2]) === 1 ? "" : "(page " + crumbs[2] + ")"}`
   );
 }
+
+// The visual trail collapses pagination into one label; the schema mirrors the
+// real URL hierarchy instead. The current page carries no `item` URL.
+const jsonLd = breadcrumbList([
+  { name: "Home", url: absoluteUrl("/") },
+  ...rawSegments.map((segment, index) => ({
+    name: decodeURIComponent(segment),
+    ...(index < rawSegments.length - 1 && {
+      url: absoluteUrl(`/${rawSegments.slice(0, index + 1).join("/")}/`),
+    }),
+  })),
+]);
 ---
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(jsonLd)}
+/>
 
 <nav class="mx-auto mt-8 mb-1 w-full max-w-5xl px-4" aria-label="breadcrumb">
   <ul
@@ -32,8 +56,8 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
       <span aria-hidden="true" class="opacity-80">&raquo;</span>
     </li>
     {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
+      crumbs.map((breadcrumb, index) =>
+        index + 1 === crumbs.length ? (
           <li>
             <span
               class:list={["capitalize opacity-75", { lowercase: index > 0 }]}
