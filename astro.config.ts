@@ -65,14 +65,33 @@ function sitemapPostProcess(): AstroIntegration {
               dropped++;
               continue;
             }
-            kept.push(entry[0]);
+
+            // @astrojs/sitemap emits bare <loc> entries, throwing away a
+            // recrawl signal that matters on a blog that publishes follow-ups.
+            // The dates come from frontmatter via the page's own JSON-LD, so
+            // they reflect the content rather than the time of the build.
+            const lastmod =
+              html.match(/"dateModified":"([^"]+)"/)?.[1] ??
+              html.match(/"datePublished":"([^"]+)"/)?.[1];
+
+            kept.push(
+              lastmod && !entry[0].includes("<lastmod>")
+                ? entry[0].replace(
+                    "</url>",
+                    `<lastmod>${lastmod}</lastmod></url>`
+                  )
+                : entry[0]
+            );
           }
 
-          if (dropped > 0) {
-            const head = xml.slice(0, xml.indexOf("<url>"));
-            await writeFile(url, `${head}${kept.join("")}</urlset>`);
+          const head = xml.slice(0, xml.indexOf("<url>"));
+          const rebuilt = `${head}${kept.join("")}</urlset>`;
+          if (rebuilt !== xml) {
+            await writeFile(url, rebuilt);
+            const dated = kept.filter(e => e.includes("<lastmod>")).length;
             logger.info(
-              `dropped ${dropped} noindex page(s) from ${file[1].split("/").pop()}`
+              `${file[1].split("/").pop()}: dropped ${dropped} noindex page(s), ` +
+                `set lastmod on ${dated}`
             );
           }
         }
