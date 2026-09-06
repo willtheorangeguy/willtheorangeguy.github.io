@@ -19,6 +19,7 @@ const { frontmatter } = Astro.props;
 
 <Layout
   title={`${frontmatter.title} | ${SITE.title}`}
+  description={frontmatter.description}
   pageType={frontmatter.pageType}
 >
   <Header />

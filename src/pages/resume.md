@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/HeaderlessLayout.astro
 title: "Resume"
+description: "Computer Science undergraduate at the University of Calgary. Experience across software development, systems administration, networking and virtualization."
 pageType: "profile"
 ---
 

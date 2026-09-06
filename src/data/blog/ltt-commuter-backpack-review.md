@@ -10,6 +10,8 @@ tags:
 description: Reviewing my experience with the LTT Commuter Backpack after traveling in Southeast Asia for one month.
 ---
 
+> **This is the one-month review.** I carried the bag for another three months after writing this and published a full verdict in [Four Months Traveling with the LTT Commuter Backpack](/posts/ltt-commuter-backpack-four-months-review) — start there for the complete picture.
+
 I recently (as in two months ago) started a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). I kept notes for the first month on my experiences with it, and thought they deserved a write up!
 
 Obviously, the main point of a commuter backpack is not to travel to SEA for four months, but I thought it was a pretty great way to check to see what this backpack can handle just a few days after getting it.

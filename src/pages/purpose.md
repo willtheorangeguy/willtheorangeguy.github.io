@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/HeaderlessLayout.astro
 title: "/Purpose"
+description: "Why this site exists and what I intend to do with it, in the spirit of the /purpose movement."
 ---
 
 I was inspired to write this `/purpose` page by the folks over at [Fictive Kin](https://slashpurpose.org/).

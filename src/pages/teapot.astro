@@ -6,7 +6,10 @@ import LinkButton from "@/components/LinkButton.astro";
 import { SITE } from "@/config";
 ---
 
-<Layout title={`418 I'm a Teapot | ${SITE.title}`}>
+<Layout title={`418 I'm a Teapot | ${SITE.title}`}
+  description="HTTP 418. I'm a teapot."
+  noindex
+>
   <Header />
 
   <main

@@ -1,11 +1,12 @@
 ---
 layout: ../layouts/HeaderlessLayout.astro
 title: "Uses"
+description: "The hardware, software and tools I actually use day to day, from my desk setup to my editor and self-hosted services."
 ---
 
 This is an informal list of the hardware, software, and tools that I use in my daily work or hobbies. Inspired by [nicknisi.com/uses/](https://nicknisi.com/uses/).
 
-![Uses Desktop](/assets/imgs/uses-desktop.png)
+![Uses Desktop](../assets/imgs/uses-desktop.png)
 
 ## Development Environment
 

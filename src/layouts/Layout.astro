@@ -5,8 +5,10 @@ import {
   blogPosting,
   collectionPage,
   profilePage,
+  review,
   webPage,
   webSite,
+  type ReviewInput,
 } from "@/utils/structuredData";
 import "@/styles/global.css";
 
@@ -27,6 +29,14 @@ export interface Props {
    * otherwise -- every route used to claim to be a blog post.
    */
   pageType?: "website" | "profile" | "collection" | "page" | "article";
+  /**
+   * Keeps thin or utility routes out of the index while still letting link
+   * equity flow. Pages marked this way are also dropped from the sitemap --
+   * see the `sitemapPostProcess` integration in astro.config.ts.
+   */
+  noindex?: boolean;
+  /** Turns an article into a Review of a named thing. */
+  review?: ReviewInput;
 }
 
 const {
@@ -39,6 +49,8 @@ const {
   modDatetime,
   scrollSmooth = false,
   pageType,
+  noindex = false,
+  review: reviewData,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
@@ -54,16 +66,32 @@ const pageInput = {
 // into its own type via `pageType`, falling back to a plain WebPage.
 const resolvedPageType = pageType ?? (pubDatetime ? "article" : "page");
 
-const structuredData =
-  resolvedPageType === "website"
-    ? webSite(pageInput)
-    : resolvedPageType === "profile"
-      ? profilePage(pageInput)
-      : resolvedPageType === "collection"
-        ? collectionPage(pageInput)
-        : resolvedPageType === "article" && pubDatetime
-          ? blogPosting({ ...pageInput, pubDatetime, modDatetime })
-          : webPage(pageInput);
+function buildStructuredData() {
+  if (reviewData && pubDatetime) {
+    return review({
+      ...pageInput,
+      pubDatetime,
+      modDatetime,
+      review: reviewData,
+    });
+  }
+  switch (resolvedPageType) {
+    case "website":
+      return webSite(pageInput);
+    case "profile":
+      return profilePage(pageInput);
+    case "collection":
+      return collectionPage(pageInput);
+    case "article":
+      return pubDatetime
+        ? blogPosting({ ...pageInput, pubDatetime, modDatetime })
+        : webPage(pageInput);
+    default:
+      return webPage(pageInput);
+  }
+}
+
+const structuredData = buildStructuredData();
 ---
 
 <!doctype html>
@@ -73,6 +101,7 @@ const structuredData =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->

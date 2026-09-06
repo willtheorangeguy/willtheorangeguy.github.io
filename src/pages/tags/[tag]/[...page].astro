@@ -20,7 +20,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
     return paginate(tagPosts, {
       params: { tag },
-      props: { tagName },
+      props: { tagName, postCount: tagPosts.length },
       pageSize: SITE.postPerPage,
     });
   });
@@ -28,10 +28,27 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
 const params = Astro.params;
 const { tag } = params;
-const { page, tagName } = Astro.props;
+const { page, tagName, postCount } = Astro.props;
+
+/**
+ * Below this many posts a tag page is a shell around a single link rather than
+ * a topic hub, so it is kept out of the index (and, via the sitemap
+ * post-process in astro.config.ts, out of the sitemap too).
+ */
+const MIN_POSTS_TO_INDEX = 3;
+
+const description =
+  postCount === 1
+    ? `The one post on this blog tagged "${tagName}".`
+    : `All ${postCount} posts on this blog tagged "${tagName}".`;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`} pageType="collection">
+<Layout
+  title={`Tag: ${tagName} | ${SITE.title}`}
+  description={description}
+  pageType="collection"
+  noindex={postCount < MIN_POSTS_TO_INDEX}
+>
   <Header />
   <Main
     pageTitle={[`Tag:`, `${tagName}`]}

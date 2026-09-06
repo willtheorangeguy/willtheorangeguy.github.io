@@ -6,7 +6,11 @@ import Layout from "@/layouts/Layout.astro";
 import { SITE } from "@/config";
 ---
 
-<Layout title={`Reviews | ${SITE.title}`} pageType="collection">
+<Layout
+  title={`Reviews | ${SITE.title}`}
+  description="Every book, film, TV series, game, app, podcast, hotel and place I have rated and reviewed."
+  pageType="collection"
+>
   <Header />
   <Breadcrumb />
   <main id="main-content">

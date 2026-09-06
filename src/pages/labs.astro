@@ -8,7 +8,11 @@ import { GoogleMapsStatsCard } from "@/components/GoogleMapsStats.tsx";
 import { SITE } from "@/config";
 ---
 
-<Layout title={`Labs | ${SITE.title}`} pageType="collection">
+<Layout
+  title={`Labs | ${SITE.title}`}
+  description="Live stats from my homelab, distributed computing contributions and other running experiments."
+  pageType="collection"
+>
   <Header />
   <Breadcrumb />
   <main id="main-content">
@@ -126,6 +130,8 @@ import { SITE } from "@/config";
             style="padding-top: 10px;"
             src="https://folding.extremeoverclocking.com/sigs/sigimage.php?u=1326935"
             alt="Folding@Home Stats"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </a>
@@ -144,6 +150,8 @@ import { SITE } from "@/config";
             style="padding-top: 10px;"
             src="https://stats.free-dc.org/cpidtagb.php?cpid=acc9dcd69a53aab43ea36f2b0686f3f6&theme=13&cols=2"
             alt="BOINC Stats"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </a>

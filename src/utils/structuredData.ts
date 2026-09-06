@@ -110,6 +110,50 @@ export function webPage(page: PageInput): Schema {
   return base("WebPage", page);
 }
 
+export type ReviewInput = {
+  itemName: string;
+  itemType: string;
+  itemUrl?: string;
+  rating?: number;
+};
+
+/**
+ * A post that reviews a named thing. Emitted instead of BlogPosting so the
+ * rating and the reviewed product are both machine readable; the article
+ * itself stays described by `mainEntityOfPage`.
+ */
+export function review(
+  page: PageInput & {
+    pubDatetime: Date;
+    modDatetime?: Date | null;
+    review: ReviewInput;
+  }
+): Schema {
+  const { itemName, itemType, itemUrl, rating } = page.review;
+
+  return {
+    ...base("Review", page),
+    name: `Review of ${itemName}`,
+    headline: page.title,
+    itemReviewed: {
+      "@type": itemType,
+      name: itemName,
+      ...(itemUrl && { url: itemUrl, sameAs: [itemUrl] }),
+    },
+    ...(rating !== undefined && {
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    }),
+    datePublished: page.pubDatetime.toISOString(),
+    ...(page.modDatetime && { dateModified: page.modDatetime.toISOString() }),
+    mainEntityOfPage: { "@type": "WebPage", "@id": page.url },
+  };
+}
+
 /** Scoped to real posts -- the only routes that carry a publication date. */
 export function blogPosting(
   page: PageInput & { pubDatetime: Date; modDatetime?: Date | null }
