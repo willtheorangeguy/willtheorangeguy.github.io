@@ -59,7 +59,7 @@ automated correctness gate, and it is a type check.
 
 ## CI
 
-`docs.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, `diagram.yml` regenerates
+`astro.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, `diagram.yml` regenerates
 `diagram.svg`, and `update-google-maps-stats.yml` refreshes the stats cache on a schedule.
 [Deployment](./deployment.md) has the full table.
 

@@ -58,7 +58,7 @@ It is also the clearest argument for the central icon directory existing at all.
 **Severity:** Medium
 **Where:** `package-lock.json`, `pnpm-lock.yaml`, `.github/workflows/update-google-maps-stats.yml`
 
-**What:** Both lockfiles are tracked. The Pages workflow installs with pnpm, so `pnpm-lock.yaml` decides what is actually built and deployed. `package.json` scripts, the `Dockerfile` (`RUN npm install`), and `CLAUDE.md` all use npm.
+**What:** Both lockfiles are tracked. The workflows install with `pnpm install --frozen-lockfile`, so `pnpm-lock.yaml` decides what is actually built and deployed. `package.json` scripts, the `Dockerfile` (`RUN npm install`), and `CLAUDE.md` all use npm. `astro.yml` detects the package manager from whichever lockfile it finds.
 
 **Why it matters:** The two files can resolve the same ranges to different versions and nothing reports it. A developer working locally with npm can test against one dependency tree while Pages deploys another, which is the kind of difference that surfaces as a bug reproducible only in production. The Dockerfile compounds it by running `npm install` rather than a locked install, so the container image is built from a third resolution that matches neither lockfile.
 
