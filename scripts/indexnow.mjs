@@ -15,8 +15,31 @@
  * limit. Revisit if this sitemap ever grows into the thousands.
  */
 
-const KEY = "3939f3643ebd47925a746e2e0c1ca433";
+import { readdir } from "node:fs/promises";
+
 const ENDPOINT = "https://api.indexnow.org/indexnow";
+const KEY_DIR = "public";
+
+/**
+ * The key is the name of the file that proves ownership of the host, so the
+ * filename is the single source of truth -- hardcoding it here as well would
+ * let the two drift, and a literal high-entropy string in source also trips
+ * secret scanners. It is not a credential: IndexNow requires it to be served
+ * publicly at https://<host>/<key>.txt, and it only authorises submitting URLs
+ * that are already on that host.
+ */
+async function readKey() {
+  const names = await readdir(KEY_DIR);
+  const keyFiles = names.filter(name => /^[0-9a-f]{8,128}\.txt$/i.test(name));
+
+  if (keyFiles.length !== 1) {
+    throw new Error(
+      `Expected exactly one IndexNow key file in ${KEY_DIR}/, found ${keyFiles.length}.`
+    );
+  }
+
+  return keyFiles[0].replace(/\.txt$/i, "");
+}
 
 // Read from the deployed sitemap rather than dist/, so this runs after the
 // Pages deploy and never announces a URL that isn't serving yet.
@@ -24,6 +47,8 @@ const SITEMAP =
   process.env.SITEMAP_URL ?? "https://williamvdg.me/sitemap-0.xml";
 
 async function main() {
+  const key = await readKey();
+
   const sitemapResponse = await fetch(SITEMAP);
 
   if (!sitemapResponse.ok) {
@@ -59,8 +84,8 @@ async function main() {
     headers: { "Content-Type": "application/json; charset=utf-8" },
     body: JSON.stringify({
       host,
-      key: KEY,
-      keyLocation: `https://${host}/${KEY}.txt`,
+      key,
+      keyLocation: `https://${host}/${key}.txt`,
       urlList: urls,
     }),
   });
