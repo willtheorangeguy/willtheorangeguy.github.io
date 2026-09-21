@@ -40,8 +40,18 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
   }
   <p class="mt-2 mb-6 italic">{props.pageDesc}</p>
   <slot />
-  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+  <script
+    is:inline
+    async
+    defer
+    src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript
+    ><img
+      src="https://queue.simpleanalyticscdn.com/noscript.gif"
+      alt=""
+      referrerpolicy="no-referrer-when-downgrade"
+    /></noscript
+  >
 </main>
 
 <script>

@@ -6,15 +6,20 @@ postSlug: ltt-commuter-backpack-four-months-review
 featured: true
 draft: false
 tags:
-    - reviews
+  - reviews
 description: Reviewing my experience with the LTT Commuter Backpack after completing a trip in Southeast Asia for four months.
+review:
+  itemName: LTT Commuter Backpack
+  itemType: Product
+  itemUrl: https://global.lttstore.com/products/commuter-backpack
+  rating: 4.5
 ---
 
-I came back to Canada a little under a month ago from a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). While traveling, I wrote a blog post on my experiences with the bag [after one month](/posts/ltt-commuter-backpack-review), and decided it was worth a follow-up, after completing the entire four-month trip. I will keep to the same categories, and build upon what I learned previously, and how I grew with the bag.
+I came back to Canada a little under a month ago from a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). While traveling, I wrote a blog post on my experiences with the bag [after one month](/posts/ltt-commuter-backpack-review/), and decided it was worth a follow-up, after completing the entire four-month trip. I will keep to the same categories, and build upon what I learned previously, and how I grew with the bag.
 
 It remained clear that this was _not_ a backpacking bag, and was more suited to being used for your daily commute - so I will not be taking any marks off for features that are missing or problems I had that were clearly outside the scope of this bag. That being said, the bag worked amazingly well for such heavy, constant use, and I did not find myself unsatisfied at any point in the journey.
 
-![The LTT Commuter Bag at Prambanan Temple in Indonesia](/assets/imgs/blog/lttbagmain2.jpg)
+![The LTT Commuter Bag at Prambanan Temple in Indonesia](../../assets/imgs/blog/lttbagmain2.jpg)
 
 ## Loadout
 
@@ -38,7 +43,7 @@ As I progressed to the warmer months during my travels, I found the backpack to 
 
 The backpack continued to fit as well as ever, and over the last months on the trip, I would just make small adjustments to the straps, depending on the load of the bag or the activity I was doing. I prefer it lower on my back while walking around a city, but tighter and higher when it is heavier or while hiking. The padded shoulder straps were a feature that any bag in this price point should have, and they get more and more useful as you wear the bag for longer, with heavier loads. I was thankful for them every day I put the bag on and took it off.
 
-![The LTT Commuter Bag being used while hiking](/assets/imgs/blog/lttbagfit.JPG)
+![The LTT Commuter Bag being used while hiking](../../assets/imgs/blog/lttbagfit.JPG)
 
 ## Durability
 
@@ -46,7 +51,7 @@ After an additional three months of heavy daily use for over eight hours a day, 
 
 Upon return to Canada, I gave the bag a bath, and all of the dirt washed off, returning the bag to its "like new" condition. This is the first time I have ever had a bag clean off so well after a long trip! That might have been due to its brand-new state immediately before departing, but it was a positive sign.
 
-![The LTT Commuter Bag (among others) taking a bath upon arrival in Canada](/assets/imgs/blog/lttbagbath.jpg)
+![The LTT Commuter Bag (among others) taking a bath upon arrival in Canada](../../assets/imgs/blog/lttbagbath.jpg)
 
 I did continue to experience the tech pocket zipper getting stuck in the inside pocket fabric, but I was yet to experience any tears.
 

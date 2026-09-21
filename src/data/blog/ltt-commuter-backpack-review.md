@@ -6,9 +6,11 @@ postSlug: ltt-commuter-backpack-review
 featured: false
 draft: false
 tags:
-    - reviews
+  - reviews
 description: Reviewing my experience with the LTT Commuter Backpack after traveling in Southeast Asia for one month.
 ---
+
+> **This is the one-month review.** I carried the bag for another three months after writing this and published a full verdict in [Four Months Traveling with the LTT Commuter Backpack](/posts/ltt-commuter-backpack-four-months-review/) — start there for the complete picture.
 
 I recently (as in two months ago) started a [trip through Southeast Asia](daniela-and-will-travel.github.io) armed with my [LTT Commuter Backpack](https://global.lttstore.com/products/commuter-backpack). I kept notes for the first month on my experiences with it, and thought they deserved a write up!
 
@@ -16,39 +18,39 @@ Obviously, the main point of a commuter backpack is not to travel to SEA for fou
 
 I received my bag on January 17, 2025 (the beauty of living in Langley, BC), and left for Japan on January 20.
 
-![The LTT Commuter Bag in Japan](/assets/imgs/blog/lttbagmain.JPG)
+![The LTT Commuter Bag in Japan](../../assets/imgs/blog/lttbagmain.JPG)
 
 ## Loadout
 
 **Tech Area**
 
--   13" Dell XPS
--   Small Wacom tablet
--   2x Amazon Kindle Paperwhite (5th generation)
--   Elastic pockets: iPhone/Apple Watch chargers, USB-C dongle, tablet pen
--   Zippered pocket: nothing, but became a postcard holder as I traveled
+- 13" Dell XPS
+- Small Wacom tablet
+- 2x Amazon Kindle Paperwhite (5th generation)
+- Elastic pockets: iPhone/Apple Watch chargers, USB-C dongle, tablet pen
+- Zippered pocket: nothing, but became a postcard holder as I traveled
 
 **Pocket of Holding**
 
--   Zippered pocket: 2x AirPods, cards, sunscreen, bug spray, tiny 7-Eleven yogurt spoons, camping utensils, assorted knickknacks
--   Magnet pocket: portable charger, two sets of charging cables
--   Elastic pocket: mini wipes
--   Screwdriver pocket: umbrella
--   AirTag pocket: AirTag
--   GoPro kit/case
--   DJI Neo
--   First aid kit
--   Toilet Paper roll
--   Laptop charger
--   Travel adapter
--   Scarf
--   Snacks
+- Zippered pocket: 2x AirPods, cards, sunscreen, bug spray, tiny 7-Eleven yogurt spoons, camping utensils, assorted knickknacks
+- Magnet pocket: portable charger, two sets of charging cables
+- Elastic pocket: mini wipes
+- Screwdriver pocket: umbrella
+- AirTag pocket: AirTag
+- GoPro kit/case
+- DJI Neo
+- First aid kit
+- Toilet Paper roll
+- Laptop charger
+- Travel adapter
+- Scarf
+- Snacks
 
 **Side Pockets**
 
--   1 40oz Hydroflask
--   1 40oz Grayl
--   Sunglasses pocket: sunglasses, small Lidl tissue pack, gum, motion sickness pills, chapstick, assorted hair ties
+- 1 40oz Hydroflask
+- 1 40oz Grayl
+- Sunglasses pocket: sunglasses, small Lidl tissue pack, gum, motion sickness pills, chapstick, assorted hair ties
 
 ## Storage
 
@@ -64,7 +66,7 @@ I have not used the screwdriver storage pocket for its intended purpose yet, but
 
 The AirTag pocket was a little hard to find (and that seems to be the consensus on Reddit), but hopefully, that works the way it was intended to! Additionally, the zippered hold-everything pocket is very nice, and I found it serves its purpose best as a catch-all pocket.
 
-![The LTT Commuter Bag in Singapore's Central Public Library](/assets/imgs/blog/lttbagdesign.jpg)
+![The LTT Commuter Bag in Singapore's Central Public Library](../../assets/imgs/blog/lttbagdesign.jpg)
 
 ## Design
 

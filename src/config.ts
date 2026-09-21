@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://williamvdg.me/",
   desc: "A dev blog, with random personal thoughts, tech stuff, and travel musings.",
   title: "To Be Continued",
-  ogImage: "hero.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerIndex: 5,
   postPerPage: 10,

@@ -16,3 +16,8 @@
 # Generated build output that lands inside /public
 /public/pagefind
 /public/styleguide
+
+# Vendored third-party assets kept in their upstream formatting
+/public/redcross/css
+/public/speedtest/speedtest.js
+/public/speedtest/speedtest_worker.js

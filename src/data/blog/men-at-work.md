@@ -6,9 +6,9 @@ postSlug: men-at-work-photography-project
 featured: false
 draft: false
 tags:
-    - travel
-    - photography
-    - videography
+  - travel
+  - photography
+  - videography
 description: Access the photos of the construction sites and signs I took in Europe.
 ---
 

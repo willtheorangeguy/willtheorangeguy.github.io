@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";function t(e){return n[e]||null}var n;e((()=>{n={"100234331600740025841":{userId:`100234331600740025841`,totalPoints:49083,totalViews:144087394,totalPhotos:8577,totalReviews:166,lastUpdated:new Date(`2026-08-27T17:10:54.423Z`)}}}))();export{t as getCachedStats};

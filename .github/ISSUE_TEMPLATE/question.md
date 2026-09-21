@@ -1,10 +1,9 @@
 ---
 name: Question
 about: Let us know if you have a question!
-title: ''
+title: ""
 labels: question
 assignees: willtheorangeguy
-
 ---
 
 **Is your question related to a problem? Please describe.**

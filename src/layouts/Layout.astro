@@ -1,60 +1,123 @@
 ---
+import { readFileSync } from "node:fs";
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
+import {
+  blogPosting,
+  collectionPage,
+  profilePage,
+  review,
+  webPage,
+  webSite,
+  type ReviewInput,
+} from "@/utils/structuredData";
 import "@/styles/global.css";
+
+// Inlined rather than linked: it must run before first paint to prevent a
+// theme flash, so as an external file it blocked rendering on every page.
+const themeScript = readFileSync("public/toggle-theme.js", "utf-8");
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
   author?: string;
-  profile?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  /**
+   * What this route actually is, which decides its JSON-LD type. Defaults to
+   * an article when the page has a publication date and a plain page
+   * otherwise -- every route used to claim to be a blog post.
+   */
+  pageType?: "website" | "profile" | "collection" | "page" | "article";
+  /**
+   * Keeps thin or utility routes out of the index while still letting link
+   * equity flow. Pages marked this way are also dropped from the sitemap --
+   * see the `sitemapPostProcess` integration in astro.config.ts.
+   */
+  noindex?: boolean;
+  /** Turns an article into a Review of a named thing. */
+  review?: ReviewInput;
+  /**
+   * Adjacent pages of a paginated listing. Google dropped rel=prev/next as an
+   * indexing signal in 2019, but Bing still uses it and it is a real
+   * accessibility affordance, so paginated routes pass their neighbours here.
+   */
+  prevUrl?: string;
+  nextUrl?: string;
 }
 
 const {
   title = SITE.title,
   author = SITE.author,
-  profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage ? `/${SITE.ogImage}` : "/og.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.url),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  pageType,
+  noindex = false,
+  review: reviewData,
+  prevUrl,
+  nextUrl,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      ...(profile && { url: profile }),
-    },
-  ],
+const pageInput = {
+  title,
+  description,
+  url: canonicalURL.toString(),
+  image: socialImageURL.toString(),
 };
+
+// Only pages that carry a publication date are articles. Everything else opts
+// into its own type via `pageType`, falling back to a plain WebPage.
+const resolvedPageType = pageType ?? (pubDatetime ? "article" : "page");
+
+function buildStructuredData() {
+  if (reviewData && pubDatetime) {
+    return review({
+      ...pageInput,
+      pubDatetime,
+      modDatetime,
+      review: reviewData,
+    });
+  }
+  switch (resolvedPageType) {
+    case "website":
+      return webSite(pageInput);
+    case "profile":
+      return profilePage(pageInput);
+    case "collection":
+      return collectionPage(pageInput);
+    case "article":
+      return pubDatetime
+        ? blogPosting({ ...pageInput, pubDatetime, modDatetime })
+        : webPage(pageInput);
+    default:
+      return webPage(pageInput);
+  }
+}
+
+const structuredData = buildStructuredData();
 ---
 
 <!doctype html>
-<html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
+<html lang={SITE.lang ?? "en"} class:list={[{ "scroll-smooth": scrollSmooth }]}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {prevUrl && <link rel="prev" href={new URL(prevUrl, Astro.url)} />}
+    {nextUrl && <link rel="next" href={new URL(nextUrl, Astro.url)} />}
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->
@@ -111,7 +174,12 @@ const structuredData = {
       href={new URL("rss.xml", Astro.site)}
     />
 
-    <meta name="theme-color" content="" />
+    {
+      /* Light-mode background. toggle-theme.js overwrites this with the real
+        computed background once it runs, but an empty value in the served HTML
+        left the browser chrome uncoloured until then. */
+    }
+    <meta name="theme-color" content="#fdfdfd" />
 
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
@@ -127,18 +195,23 @@ const structuredData = {
 
     <ClientRouter />
 
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline set:html={themeScript} />
   </head>
   <body>
     <slot />
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <script
-        async
-        data-collect="outbound,emails,downloads"
-        data-extensions="pdf,csv,docx,xlsx,zip,doc,xls"
-        data-use-title="true"
-        data-full-urls="false"
-        src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+      is:inline
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script
+      is:inline
+      async
+      data-collect="outbound,emails,downloads"
+      data-extensions="pdf,csv,docx,xlsx,zip,doc,xls"
+      data-use-title="true"
+      data-full-urls="false"
+      src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
   </body>
 </html>
 

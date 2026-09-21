@@ -4,62 +4,60 @@ import IconInstagram from "@/assets/icons/instagram-brands.svg";
 import IconLinkedin from "@/assets/icons/linkedin-brands.svg";
 import IconTwitter from "@/assets/icons/x-twitter-brands.svg";
 import IconMastodon from "@/assets/icons/mastodon-brands.svg";
-import IconBluesky from "@/assets/icons/bluesky-brands.svg";
 import IconStackOverflow from "@/assets/icons/stack-overflow-brands.svg";
 import IconYouTube from "@/assets/icons/youtube-brands.svg";
 import IconSteam from "@/assets/icons/steam-brands.svg";
-import { SITE } from "@/config";
 import type { GiscusProps } from "@giscus/react";
 
 export const SOCIALS = [
-{
+  {
     name: "Github",
     href: "https://github.com/willtheorangeguy/",
     linkTitle: `@willtheorangeguy on Github`,
     icon: IconGitHub,
-},
-{
+  },
+  {
     name: "Instagram",
     href: "https://instagram.com/william.vdg/",
     linkTitle: `@william.vdg on Instagram`,
     icon: IconInstagram,
-},
-{
+  },
+  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/william-v-38981428b/",
     linkTitle: `as William V on LinkedIn`,
     icon: IconLinkedin,
-},
-{
+  },
+  {
     name: "X",
     href: "https://x.com/williamvdg1",
     linkTitle: `@willtheorangeguy on X`,
     icon: IconTwitter,
-},
-{
+  },
+  {
     name: "Mastodon",
     href: "https://techhub.social/@willtheorangeguy",
     linkTitle: `@willtheorangeguy on Mastodon`,
     icon: IconMastodon,
-},
-{
+  },
+  {
     name: "StackOverflow",
     href: "https://stackoverflow.com/users/6806860/william-v",
     linkTitle: `as William V on StackOverflow`,
     icon: IconStackOverflow,
-},
-{
+  },
+  {
     name: "YouTube",
     href: "https://www.youtube.com/@willtheorangeguy",
     linkTitle: `@willtheorangeguy on YouTube`,
     icon: IconYouTube,
-},
-{
+  },
+  {
     name: "Steam",
     href: "https://steamcommunity.com/id/lcskid/",
     linkTitle: `@lcskid on Steam`,
     icon: IconSteam,
-},
+  },
 ] as const;
 
 export const SHARE_LINKS = [
@@ -72,14 +70,14 @@ export const SHARE_LINKS = [
 ] as const;
 
 export const GISCUS: GiscusProps = {
-    repo: "willtheorangeguy/willtheorangeguy.github.io",
-    repoId: "R_kgDOGHnPnA",
-    category: "Blog Comments",
-    categoryId: "DIC_kwDOGHnPnM4ClLlc",
-    mapping: "title",
-    reactionsEnabled: "0",
-    emitMetadata: "1",
-    inputPosition: "bottom",
-    lang: "en",
-    loading: "lazy",
-  };
+  repo: "willtheorangeguy/willtheorangeguy.github.io",
+  repoId: "R_kgDOGHnPnA",
+  category: "Blog Comments",
+  categoryId: "DIC_kwDOGHnPnM4ClLlc",
+  mapping: "title",
+  reactionsEnabled: "0",
+  emitMetadata: "1",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
+};

@@ -6,6 +6,10 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   update-stats:
     runs-on: ubuntu-latest
@@ -65,7 +69,7 @@ jobs:
         uses: actions/github-script@v9
         with:
           script: |
-            github.rest.actions.createWorkflowDispatch({
+            await github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: 'astro.yml',

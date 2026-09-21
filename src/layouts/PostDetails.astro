@@ -6,7 +6,6 @@ import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
-import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import Comments from "@/components/Comments";
 import { getPath } from "@/utils/getPath";
@@ -33,6 +32,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  review,
 } = post.data;
 
 const { Content } = await render(post);
@@ -65,6 +65,7 @@ const layoutProps = {
   canonicalURL,
   ogImage,
   scrollSmooth: true,
+  review,
 };
 
 /* ========== Prev/Next Posts ========== */
@@ -111,8 +112,10 @@ const nextPost =
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
     </ul>
 
-    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4">
-      <EditPost {post} />
+    <div
+      class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4"
+    >
+      <EditPost {post} {hideEditPost} />
       <button
         id="back-to-top"
         class="focus-outline py-1 whitespace-nowrap hover:opacity-75"
@@ -129,7 +132,7 @@ const nextPost =
       {
         prevPost && (
           <a
-            href={`/posts/${prevPost.slug}`}
+            href={`/posts/${prevPost.slug}/`}
             class="flex w-full gap-1 hover:opacity-75"
           >
             <IconChevronLeft class="inline-block flex-none" />
@@ -143,7 +146,7 @@ const nextPost =
       {
         nextPost && (
           <a
-            href={`/posts/${nextPost.slug}`}
+            href={`/posts/${nextPost.slug}/`}
             class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           >
             <div>
@@ -155,8 +158,8 @@ const nextPost =
         )
       }
     </div>
-    <br>
-    <Comments client:only="react" />
+    <br />
+    <Comments client:visible />
   </main>
   <Footer />
 </Layout>

@@ -58,6 +58,6 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
-.social-icon{
+.social-icon {
   fill: var(--foreground) !important;
 }

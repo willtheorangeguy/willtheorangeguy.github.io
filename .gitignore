@@ -30,3 +30,6 @@ public/pagefind
 # storybook
 
 public/styleguide
+
+.bandit/
+.recall/

@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { fetchGoogleMapsStats, formatNumber, extractUserIdFromUrl, type GoogleMapsStats } from '@/utils/googleMaps';
+import React, { useState, useEffect } from "react";
+import {
+  fetchGoogleMapsStats,
+  formatNumber,
+  extractUserIdFromUrl,
+  type GoogleMapsStats,
+} from "@/utils/googleMaps";
 
 interface GoogleMapsStatsCardProps {
   profileUrl: string;
 }
 
-export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({ 
-  profileUrl 
+export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({
+  profileUrl,
 }) => {
   const [stats, setStats] = useState<GoogleMapsStats | null>(null);
   const [loading, setLoading] = useState(true);
@@ -22,7 +27,7 @@ export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({
         const mapsStats = await fetchGoogleMapsStats(userId);
         setStats(mapsStats);
       } catch {
-        setError('Failed to load Google Maps stats');
+        setError("Failed to load Google Maps stats");
       } finally {
         setLoading(false);
       }
@@ -31,26 +36,31 @@ export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({
     if (userId) {
       loadStats();
     } else {
-      setError('Invalid Google Maps profile URL');
+      setError("Invalid Google Maps profile URL");
       setLoading(false);
     }
   }, [userId]);
 
   if (loading) {
     return (
-      <div 
+      <div
         className="card border-skin-line"
         style={{
-          display: 'block',
-          padding: '16px',
-          textDecoration: 'none',
-          color: 'inherit',
-          border: '1px solid #e5e7eb',
-          borderRadius: '8px'
+          display: "block",
+          padding: "16px",
+          textDecoration: "none",
+          color: "inherit",
+          border: "1px solid #e5e7eb",
+          borderRadius: "8px",
         }}
       >
         <div className="card-content">
-          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Google Maps Stats</h2>
+          <h2
+            className="text-skin-accent text-lg font-medium decoration-dashed hover:underline"
+            style={{ color: "var(--accent)" }}
+          >
+            Google Maps Stats
+          </h2>
           <p>Loading stats...</p>
         </div>
       </div>
@@ -59,24 +69,29 @@ export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({
 
   if (error || !stats) {
     return (
-      <div 
+      <div
         className="card border-skin-line"
         style={{
-          display: 'block',
-          padding: '16px',
-          textDecoration: 'none',
-          color: 'inherit',
-          border: '1px solid #e5e7eb',
-          borderRadius: '8px'
+          display: "block",
+          padding: "16px",
+          textDecoration: "none",
+          color: "inherit",
+          border: "1px solid #e5e7eb",
+          borderRadius: "8px",
         }}
       >
         <div className="card-content">
-          <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>Google Maps Stats</h2>
-          <p>{error || 'Unable to load stats'}</p>
+          <h2
+            className="text-skin-accent text-lg font-medium decoration-dashed hover:underline"
+            style={{ color: "var(--accent)" }}
+          >
+            Google Maps Stats
+          </h2>
+          <p>{error || "Unable to load stats"}</p>
           <p>
-            <a 
-              href={profileUrl} 
-              target="_blank" 
+            <a
+              href={profileUrl}
+              target="_blank"
               rel="noopener noreferrer"
               className="text-skin-accent hover:underline"
             >
@@ -89,38 +104,43 @@ export const GoogleMapsStatsCard: React.FC<GoogleMapsStatsCardProps> = ({
   }
 
   return (
-    <a 
+    <a
       href={profileUrl}
-      target="_blank" 
+      target="_blank"
       rel="noopener noreferrer"
       className="card border-skin-line"
       style={{
-        display: 'block',
-        padding: '16px',
-        textDecoration: 'none',
-        color: 'inherit',
-        transition: 'transform 0.2s, box-shadow 0.2s',
-        border: '1px solid #e5e7eb',
-        borderRadius: '8px'
+        display: "block",
+        padding: "16px",
+        textDecoration: "none",
+        color: "inherit",
+        transition: "transform 0.2s, box-shadow 0.2s",
+        border: "1px solid #e5e7eb",
+        borderRadius: "8px",
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-5px)';
-        e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+      onMouseEnter={e => {
+        e.currentTarget.style.transform = "translateY(-5px)";
+        e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
       }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'none';
+      onMouseLeave={e => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "none";
       }}
     >
       <div className="card-content">
-        <h2 className="text-lg text-skin-accent font-medium decoration-dashed hover:underline" style={{color: 'var(--accent)'}}>
+        <h2
+          className="text-skin-accent text-lg font-medium decoration-dashed hover:underline"
+          style={{ color: "var(--accent)" }}
+        >
           Google Maps Stats
         </h2>
         <p>
-          <strong>{formatNumber(stats.totalPoints)}</strong> points • <strong>{formatNumber(stats.totalViews)}</strong> views
+          <strong>{formatNumber(stats.totalPoints)}</strong> points •{" "}
+          <strong>{formatNumber(stats.totalViews)}</strong> views
         </p>
         <p>
-          <strong>{stats.totalPhotos}</strong> photos • <strong>{stats.totalReviews}</strong> reviews
+          <strong>{stats.totalPhotos}</strong> photos •{" "}
+          <strong>{stats.totalReviews}</strong> reviews
         </p>
       </div>
     </a>
