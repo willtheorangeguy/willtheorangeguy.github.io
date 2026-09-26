@@ -79,8 +79,8 @@ importers:
         specifier: ^10.5.7
         version: 10.5.7(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(esbuild@0.28.1)(rollup@4.62.2)(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))(vite@8.2.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       '@storybook/addon-themes':
-        specifier: ^10.5.7
-        version: 10.5.7(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))
+        specifier: ^10.6.0
+        version: 10.6.0(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))
       '@storybook/builder-vite':
         specifier: ^10.5.7
         version: 10.5.7(esbuild@0.28.1)(rollup@4.62.2)(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))(vite@8.2.0(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
@@ -1924,10 +1924,10 @@ packages:
       '@types/react':
         optional: true
 
-  '@storybook/addon-themes@10.5.7':
-    resolution: {integrity: sha512-A3xMGyvfvPigSGiWiefgEd4MlV/taxeVsF7uj/oUO1DTrTEd9q2lIrwLtLmGvl/rUhpeP7yx33wrGronl8ym7A==}
+  '@storybook/addon-themes@10.6.0':
+    resolution: {integrity: sha512-PJtRtaCzKCAcouEqkHevMwv0aeQNsYWab4K/qszNGuSyFXxdcPQguKwmbB6Ajd/FxW+Of/mLXjRgpjrGVSgm1g==}
     peerDependencies:
-      storybook: ^10.5.7
+      storybook: ^10.6.0
 
   '@storybook/builder-vite@10.5.7':
     resolution: {integrity: sha512-fShF/aQaITqcJuMCLr42BGNUAbhDi4IboqvlbZqXAwgrrTslnZEUnY8GcEcvpZmjl11VwlmazhMJdH50fIgBPg==}
@@ -5991,7 +5991,7 @@ snapshots:
       - vite
       - webpack
 
-  '@storybook/addon-themes@10.5.7(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))':
+  '@storybook/addon-themes@10.6.0(storybook@10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4))':
     dependencies:
       storybook: 10.6.0(@types/react@19.2.14)(prettier@3.9.4)(react@19.2.4)
       ts-dedent: 2.3.0
