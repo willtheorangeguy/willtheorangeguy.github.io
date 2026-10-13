@@ -463,7 +463,7 @@
         iframe.setAttribute("loop", "1");
         iframe.setAttribute("rel", "0");
 
-        container.innerHTML = ""; // Clear the container
+        container.replaceChildren();
         container.appendChild(iframe);
       }
     </script>
