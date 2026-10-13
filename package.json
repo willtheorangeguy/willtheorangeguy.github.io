@@ -36,6 +36,16 @@
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.0"
   },
+  "overrides": {
+    "fflate": "^0.7.5",
+    "postcss-selector-parser": "^7.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "fflate": "^0.7.5",
+      "postcss-selector-parser": "^7.1.6"
+    }
+  },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@pagefind/default-ui": "^1.5.0",
