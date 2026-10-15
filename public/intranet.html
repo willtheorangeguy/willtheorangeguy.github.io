@@ -33,6 +33,31 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
+      .link-mode-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 16px;
+        color: white;
+      }
+
+      .link-mode-control button {
+        border: 2px solid white;
+        border-radius: 999px;
+        padding: 9px 16px;
+        background: white;
+        color: #4c548f;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .link-mode-control button:focus-visible {
+        outline: 3px solid #222;
+        outline-offset: 3px;
+      }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -181,6 +206,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="link-mode-control">
+        <span id="link-mode-label">Service links use HTTPS</span>
+        <button id="link-mode-toggle" type="button" aria-pressed="false">
+          Switch to IP addresses
+        </button>
+      </div>
       <h1>Server</h1>
 
       <!-- Help Forms Section -->
@@ -1205,5 +1236,6 @@
         </a>
       </div>
     </div>
+    <script src="intranet-links.js"></script>
   </body>
 </html>
