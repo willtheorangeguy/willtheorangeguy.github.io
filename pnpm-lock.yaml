@@ -3,6 +3,9 @@ lockfileVersion: '9.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+  overrides:
+    fflate: ^0.7.5
+    postcss-selector-parser: ^7.1.6
 
 importers:
 
