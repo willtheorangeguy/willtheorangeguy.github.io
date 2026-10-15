@@ -63,7 +63,7 @@
     "pagefind": "^1.5.2",
     "playwright": "^1.64.0",
     "prettier": "^3.9.10",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "^1.1.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "remark-gfm": "^4.0.1",
     "storybook": "^10.6.2",
