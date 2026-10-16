@@ -32,7 +32,7 @@
     "react-dom": "19.3.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
-    "satori": "^0.47.1",
+    "satori": "^0.52.0",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
   },
