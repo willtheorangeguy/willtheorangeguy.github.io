@@ -44,7 +44,6 @@ and the container looks broken. Recorded in
 | `update-google-maps-stats.yml` | daily, plus manual | Refresh contribution stats and commit them |
 | `codeql.yml` | push, PR, schedule | Security analysis |
 | `gitleaks.yml` | push, PR | Secret scanning |
-| `diagram.yml` | scheduled | Regenerates `diagram.svg`, the codebase visualisation |
 
 The Google Maps workflow commits back to the repository and then triggers a rebuild, so the
 site's stats stay current without a manual step. [Google Maps

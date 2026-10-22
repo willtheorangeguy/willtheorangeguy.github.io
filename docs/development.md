@@ -59,8 +59,8 @@ automated correctness gate, and it is a type check.
 
 ## CI
 
-`astro.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, `diagram.yml` regenerates
-`diagram.svg`, and `update-google-maps-stats.yml` refreshes the stats cache on a schedule.
+`astro.yml` builds and deploys, `codeql.yml` and `gitleaks.yml` scan, and
+`update-google-maps-stats.yml` refreshes the stats cache on a schedule.
 [Deployment](./deployment.md) has the full table.
 
 ## Working on the Projects page

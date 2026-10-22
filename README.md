@@ -90,8 +90,6 @@ Full documentation lives in [`docs/`](docs/README.md):
 
 Legal text served by the site lives in [`docs/legal/`](docs/legal/): [Privacy Policy](docs/legal/privacy.md) and [Terms and Conditions](docs/legal/terms.md).
 
-![Visualization of the codebase](./diagram.svg)
-
 ## Support
 
 Open a [GitHub Discussion](https://github.com/willtheorangeguy/willtheorangeguy.github.io/discussions/new) or file an [issue](https://github.com/willtheorangeguy/willtheorangeguy.github.io/issues/new/choose).
