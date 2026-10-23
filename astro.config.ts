@@ -20,9 +20,15 @@ const NOTES_SITEMAP = new URL("notes/sitemap.xml", SITE.website).href;
 
 /** Where a sitemap <loc> lands on disk in the build output. */
 function outputPathFor(loc: string, dir: URL): URL | undefined {
-  const path = loc.slice(SITE.website.replace(/\/$/, "").length + 1);
-  if (path === "" || path === "/") return new URL("index.html", dir);
-  return new URL(`${path.replace(/\/$/, "")}/index.html`, dir);
+  // Use the URL path, not SITE.website: GitHub Pages supplies a different
+  // --site value during its build, while the rendered files still live under
+  // the same relative paths in `dir`.
+  const path = decodeURIComponent(new URL(loc).pathname).replace(
+    /^\/+|\/+$/g,
+    ""
+  );
+  if (path === "") return new URL("index.html", dir);
+  return new URL(`${path}/index.html`, dir);
 }
 
 function sitemapPostProcess(): AstroIntegration {
@@ -45,7 +51,15 @@ function sitemapPostProcess(): AstroIntegration {
         for (const file of index.matchAll(
           /<loc>([^<]*sitemap-\d+\.xml)<\/loc>/g
         )) {
-          const url = new URL(file[1].slice(SITE.website.length), dir);
+          // Sitemap <loc> entries use the deployment origin, which may differ
+          // from SITE.website in a GitHub Pages build. The generated sitemap
+          // file itself is at the root of Astro's output directory.
+          const sitemapFile = new URL(file[1]).pathname
+            .split("/")
+            .filter(Boolean)
+            .pop();
+          if (!sitemapFile) continue;
+          const url = new URL(sitemapFile, dir);
           const xml = await readFile(url, "utf-8");
           const kept: string[] = [];
           let dropped = 0;
