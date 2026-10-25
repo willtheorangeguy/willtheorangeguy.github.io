@@ -38,12 +38,14 @@
   },
   "overrides": {
     "fflate": "^0.7.5",
-    "postcss-selector-parser": "^7.1.6"
+    "postcss-selector-parser": "^7.1.6",
+    "undici": "^8.12.2"
   },
   "pnpm": {
     "overrides": {
       "fflate": "^0.7.5",
-      "postcss-selector-parser": "^7.1.6"
+      "postcss-selector-parser": "^7.1.6",
+      "undici": "^8.12.2"
     }
   },
   "devDependencies": {
