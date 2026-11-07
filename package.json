@@ -59,7 +59,7 @@
     "@tailwindcss/typography": "^0.5.20",
     "@types/lodash.kebabcase": "^4.1.9",
     "@typescript-eslint/parser": "^8.72.0",
-    "eslint": "^10.13.0",
+    "eslint": "^10.14.0",
     "eslint-plugin-astro": "^3.2.1",
     "globals": "^17.14.0",
     "pagefind": "^1.5.2",
