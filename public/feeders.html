@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Station pages, maps, and status checks for my Calgary ADS-B receiver."
+    />
+    <title>ADS-B Feeders</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        background: linear-gradient(135deg, #5761a2 0%, #e99253 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #293047;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .back-link {
+        color: white;
+        text-underline-offset: 4px;
+        display: inline-block;
+        padding: 8px 0;
+      }
+      header {
+        text-align: center;
+        padding: 16px 0 26px;
+        color: white;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        margin-bottom: 10px;
+      }
+      header p {
+        line-height: 1.6;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+      .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .quick-links a {
+        color: #454d84;
+        background: white;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .usage-note {
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        line-height: 1.65;
+        margin-bottom: 26px;
+      }
+      .usage-note strong {
+        color: #454d84;
+      }
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+        color: white;
+      }
+      h2 {
+        font-size: 1.65em;
+      }
+      #feed-count {
+        margin-top: 5px;
+        font-size: 0.95em;
+      }
+      .search {
+        width: min(100%, 350px);
+      }
+      .search label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      .search input {
+        width: 100%;
+        min-height: 44px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 10px 13px;
+        font: inherit;
+        color: #293047;
+        background: white;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.24);
+      }
+      .card-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 10px;
+        padding: 20px 20px 16px;
+        background: linear-gradient(135deg, #edf0fc, #fff3e8);
+      }
+      .card-icon {
+        font-size: 2em;
+        line-height: 1.2;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        gap: 5px;
+      }
+      .tag {
+        font-size: 0.75em;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: #e3e7f8;
+        color: #454d84;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .tag-muted {
+        background: #eeeaf1;
+        color: #625468;
+      }
+      .card-content {
+        padding: 18px 20px 20px;
+        flex: 1;
+      }
+      h3 {
+        color: #4c548f;
+        font-size: 1.25em;
+        margin-bottom: 8px;
+        overflow-wrap: anywhere;
+      }
+      .station {
+        font-weight: 600;
+        color: #454d63;
+        font-size: 0.85em;
+        margin-bottom: 12px;
+        overflow-wrap: anywhere;
+      }
+      .card-content p:not(.station) {
+        font-size: 0.93em;
+        color: #555;
+        line-height: 1.6;
+      }
+      .card-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        padding: 0 20px 20px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 9px 12px;
+        border: 1px solid #4c548f;
+        border-radius: 7px;
+        background: #4c548f;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85em;
+      }
+      .button:hover {
+        background: #39416e;
+        border-color: #39416e;
+      }
+      .button-secondary {
+        background: white;
+        color: #4c548f;
+      }
+      .button-secondary:hover {
+        background: #eef0fa;
+        color: #39416e;
+      }
+      a:focus-visible,
+      input:focus-visible {
+        outline: 3px solid #202640;
+        outline-offset: 4px;
+      }
+      .no-results {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+      }
+      footer {
+        color: white;
+        text-align: center;
+        padding: 28px 0 12px;
+        font-size: 0.9em;
+        line-height: 1.6;
+      }
+      @media (max-width: 1100px) {
+        .grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 850px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 540px) {
+        body {
+          padding: 16px;
+        }
+        h1 {
+          font-size: 2em;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .section-heading {
+          align-items: stretch;
+        }
+        .search {
+          width: 100%;
+        }
+        .quick-links {
+          gap: 8px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          transition: none;
+        }
+        .card:hover {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>ADS-B Feeders</h1>
+        <nav class="quick-links" aria-label="Local receiver tools">
+          <a
+            href="https://skyaware.home.williamvdg.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SkyAware</a
+          >
+          <a
+            href="https://flightjar.home.williamvdg.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FlightJar</a
+          >
+          <a
+            href="http://192.168.68.137/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Receiver status (LAN)</a
+          >
+        </nav>
+      </header>
+      <section aria-labelledby="networks-heading">
+        <div class="section-heading">
+        <div class="grid" id="feeder-grid">
+          <article class="card" data-feeder aria-labelledby="feeder-0">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">📡</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-0">1090MHz UK</h3>
+              <p class="station">CALGARYNW</p>
+              <p>Find CALGARYNW in the receiver status table.</p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.1090mhz.uk/stations.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Receiver status</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://map.1090mhz.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live map</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-1">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🛩️</span>
+              <div class="tags"><span class="tag">MyIP at home</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-1">ADS-B Exchange</h3>
+              <p class="station">bKIJVRFXOK2M</p>
+              <p>
+                Your feeder statistics, aircraft map, and home-IP connection
+                check.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.adsbexchange.com/api/feeders/?feed=bKIJVRFXOK2M"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Statistics</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://globe.adsbexchange.com/?feed=bKIJVRFXOK2M"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My aircraft</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://www.adsbexchange.com/myip/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MyIP check</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-2">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">📡</span>
+              <div class="tags"><span class="tag">Home network</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-2">adsb.fi</h3>
+              <p class="station">Community network</p>
+              <p>
+                The homepage recognizes your home connection; the network map
+                shows feeders.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://adsb.fi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feed check</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://adsb.fi/network"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Network map</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-3">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🌐</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-3">ADSBHub</h3>
+              <p class="station">Station 6890 · willtheorangeguy</p>
+              <p>
+                Calgary, Alberta. Open your station or the searchable station
+                list.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.adsbhub.org/station.php?id=6890"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My station</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://www.adsbhub.org/stations.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Station list</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-4">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">✈️</span>
+              <div class="tags"><span class="tag">API at home</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-4">ADSB.lol</h3>
+              <p class="station">willtheorangeguy</p>
+              <p>
+                Your receiver's aircraft map and a JSON check of your feed
+                connections.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://thirteen-william-arizona-ceiling.my.adsb.lol"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My aircraft</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://api.adsb.lol/0/me"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feed status API</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://mlat.adsb.lol/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MLAT map</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-5">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">📡</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-5">AirNav Radar</h3>
+              <p class="station">RadarBox · EXTRPI716102</p>
+              <p>
+                Calgary station statistics, range, rankings, and MLAT
+                synchronization.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.airnavradar.com/stations/EXTRPI716102"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My station</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-6">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">✈️</span>
+              <div class="tags"><span class="tag">Status at home</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-6">airplanes.live</h3>
+              <p class="station">willtheorangeguy</p>
+              <p>
+                Your receiver's aircraft map, connection details, and MLAT
+                peers.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://globe.airplanes.live/?uuid=f953932a1fde4e34"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My aircraft</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://airplanes.live/myfeed/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My Feed</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://api.airplanes.live/feed-status"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feed status API</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-7">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🌍</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-7">AvDelphi</h3>
+              <p class="station">Provider website</p>
+              <p>
+                Open the provider website. No public page for this individual
+                station was identified.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.avdelphi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-8">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🛫</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-8">FlightAware</h3>
+              <p class="station">Site 270835 · willtheorangeguy</p>
+              <p>
+                Receiver check-ins, aircraft statistics, coverage, and MLAT
+                synchronization.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.flightaware.com/adsb/stats/user/willtheorangeguy#stats-270835"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My statistics</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-9">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🛫</span>
+              <div class="tags">
+                <span class="tag">Sign-in</span
+                ><span class="tag tag-muted">MLAT off</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-9">Flightradar24</h3>
+              <p class="station">T-CYYC273</p>
+              <p>
+                Your radar statistics require an account. The local page shows
+                the feeder connection.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.flightradar24.com/account/feed-stats/?id=80681"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My statistics</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://www.flightradar24.com/share-statistics"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leaderboard</a
+              >
+              <a
+                class="button button-secondary"
+                href="http://192.168.68.137:8754/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Local status</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-10">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🇮🇹</span>
+              <div class="tags"><span class="tag">Home network</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-10">FlyItalyADSB</h3>
+              <p class="station">willtheorangeguy</p>
+              <p>
+                Check whether FlyItaly is receiving your ADS-B and MLAT streams.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://flyitalyadsb.com/community/feeder-status/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feed check</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://api.flyitalyadsb.com/api/am_i_feeding"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Status API</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-11">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">📡</span>
+              <div class="tags">
+                <span class="tag tag-muted">MLAT off</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-11">HP Radar</h3>
+              <p class="station">Network map</p>
+              <p>
+                The global aircraft map is available; no individual ADS-B status
+                page was identified.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://skylink.hpradar.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live map</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-12">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🌐</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-12">OpenSky</h3>
+              <p class="station">Receiver -1407983889</p>
+              <p>
+                OpenSky's receiver data. The message-rate link opens a fresh
+                30-minute window.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://opensky-network.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://opensky-network.org/"
+                data-opensky-rates
+                hidden
+                target="_blank"
+                rel="noopener noreferrer"
+                >Recent message rates</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-13">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🛩️</span>
+              <div class="tags"><span class="tag">Sign-in</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-13">plane.watch</h3>
+              <p class="station">Feeder account</p>
+              <p>
+                Sign in to the ATC portal to inspect your ADS-B and MLAT
+                connections.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://atc.plane.watch/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feeder portal</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-14">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🛫</span>
+              <div class="tags"><span class="tag">Sign-in</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-14">Plane Finder</h3>
+              <p class="station">Receiver account</p>
+              <p>
+                Open your receiver dashboard, public rankings, or the local
+                feeder interface.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://planefinder.net/account/receivers"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My receivers</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://planefinder.net/coverage/receivers/all"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leaderboard</a
+              >
+              <a
+                class="button button-secondary"
+                href="http://192.168.68.137:30053/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Local status</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-15">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">✈️</span>
+              <div class="tags">
+                <span class="tag tag-muted">MLAT off</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-15">Planespotters.net</h3>
+              <p class="station">Receiver status</p>
+              <p>
+                Your UUID-based feeder status page. A browser verification may
+                be required.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://www.planespotters.net/feed/status/62877f3a-6e13-4dd0-9564-a33eb10a93ef"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My feed status</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-16">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🗺️</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-16">RadarVirtuel</h3>
+              <p class="station">WILLTHEORANGEGUY</p>
+              <p>
+                Your public station page with current aircraft and station
+                information.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://radarvirtuel.com/station/WILLTHEORANGEGUY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My station</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-17">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">🗺️</span>
+              <div class="tags"></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-17">SDRmap</h3>
+              <p class="station">CalgaryNorth</p>
+              <p>
+                Your station's ADS-B data, MLAT peers, receiver telemetry, and
+                graphs.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://sdrmap.org/?station=CalgaryNorth"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My station</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-feeder aria-labelledby="feeder-18">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">✈️</span>
+              <div class="tags"><span class="tag">MyIP at home</span></div>
+            </div>
+            <div class="card-content">
+              <h3 id="feeder-18">TheAirTraffic</h3>
+              <p class="station">willtheorangeguy · Americas West</p>
+              <p>
+                Check feed receipt from home, or open your station's MLAT
+                synchronization page.
+              </p>
+            </div>
+            <div class="card-links">
+              <a
+                class="button"
+                href="https://theairtraffic.com/myip"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feed check</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://theairtraffic.com/sync/americas-west/feeder?id=willtheorangeguy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My MLAT sync</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://theairtraffic.com/feeder-map"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Feeder map</a
+              >
+            </div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>
+          No matching networks. Try another network or station name.
+        </p>
+      </section>
+      <footer>
+        MLAT is disabled for Flightradar24, HP Radar, and Planespotters. Their
+        ADS-B feeds remain enabled.
+      </footer>
+    </main>
+    <script src="feeders.js" defer></script>
+  </body>
+</html>
