@@ -25,6 +25,7 @@ This system automatically scrapes and updates your Google Maps contribution stat
 
 - **Schedule**: Runs daily at 6 AM UTC
 - **Manual**: Can be triggered manually from GitHub Actions tab
+- **Dependencies**: Uses `npm ci` with `package-lock.json` so the install honors the overrides in `package.json`. The npm and Playwright caches use this same lockfile.
 - **Auto-commit**: Commits updated stats back to the repository
 - **Auto-deploy**: Triggers a website rebuild when stats change
 
@@ -82,6 +83,10 @@ node scripts/update-maps-cache.mjs
 2. Verify your Google Maps profile is public
 3. Test the scraper locally
 4. Check if Google changed their HTML structure
+
+### Dependency Installation Failures
+
+If the workflow fails before fetching stats with `ERR_PNPM_LOCKFILE_CONFIG_MISMATCH`, it is using the older pnpm installation step. The stats workflow uses `npm ci` and `package-lock.json` to avoid that mismatch. Keep `package-lock.json` in sync with `package.json` when updating dependencies; `npm ci` will fail if they disagree.
 
 ### Rate Limiting
 
